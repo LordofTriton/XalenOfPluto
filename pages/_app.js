@@ -1,3 +1,5 @@
+
+import Head from 'next/head'
 import React, { useState } from 'react'
 import "./components/alert/alert.css"
 import "./components/chatWindow/chatWindow.css"
@@ -91,17 +93,40 @@ const Cortex = () => {
     }
 
     return(
-      <div className="backDrop" style={{backgroundColor: theme === "Light" ? "slategrey" : "hsla(0, 0%, 7%, 0.952)"}}>
-        <Title CortexControl={CortexControl} />
-        <div className="displayContent" style={{backgroundImage: theme === "Light" ? "url("+lightBckg+")" : "url("+darkBckg+")"}}>
-            <TopNav CortexControl={CortexControl} />
-            <ChatWindow CortexControl={CortexControl} />
-            <PopMenu CortexControl={CortexControl} />
-            <Offline CortexControl={CortexControl} />
-            <InfoPage CortexControl={CortexControl} />
-            {alert ? <Alert CortexControl={CortexControl} /> : null}
-        </div>
-      </div>
+        <>
+            <Head>
+                <meta charset="utf-8" />
+                <link rel="icon" href="/titleLogo.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+                <meta name="theme-color" content="#000000" />
+                <meta
+                    name="description"
+                    content="Xalen is a conversational chatbot designed to hold funny and witty conversations with users through artificial intelligence methods that enable the program to communicate like an actual human being."
+                />
+                <meta
+                    name="keywords"
+                    content="Xalen, Xalen Chatbot, Fun Chatbot, Free Chatbot Online, Alien from Pluto, Xalen Artificial Intelligence, Alien Artificial Intelligence"
+                />
+                <meta
+                    name="author"
+                    content="Joshua Agboola"
+                />
+                <meta name="google-site-verification" content="x4_ZeLu9t-PZhpex_43mVbhzjAB-fs8mEfxC7qjt270" />
+                <title>Xalen - Chat With An Alien From Pluto.</title>
+            </Head>
+
+            <div className="backDrop" style={{backgroundColor: theme === "Light" ? "slategrey" : "hsla(0, 0%, 7%, 0.952)"}}>
+                <Title CortexControl={CortexControl} />
+                <div className="displayContent" style={{backgroundImage: theme === "Light" ? "url("+lightBckg+")" : "url("+darkBckg+")"}}>
+                    <TopNav CortexControl={CortexControl} />
+                    <ChatWindow CortexControl={CortexControl} />
+                    <PopMenu CortexControl={CortexControl} />
+                    <Offline CortexControl={CortexControl} />
+                    <InfoPage CortexControl={CortexControl} />
+                    {alert ? <Alert CortexControl={CortexControl} /> : null}
+                </div>
+            </div>
+        </>
     )
 }
 
