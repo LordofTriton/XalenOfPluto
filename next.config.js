@@ -3,5 +3,9 @@
  */
 
 module.exports = {
-    trailingSlash: false
+    trailingSlash: false,
+    images: {
+        loader: 'akamai',
+        path: '/',
+    },
 }
