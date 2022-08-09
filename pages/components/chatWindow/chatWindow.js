@@ -103,7 +103,7 @@ const ChatWindow = ({CortexControl}) => {
             setAncestor(re.data.newAncestor);
             setParent(re.data.newParent);
             setParentHistory(parentHistory.concat(re.data.newParent));
-            setCurrentMessage(childMessage)
+            if (subject === "xalen") setCurrentMessage(childMessage);
         })
     }
 
