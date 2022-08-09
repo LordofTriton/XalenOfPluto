@@ -1,0 +1,192 @@
+@keyframes emerge_zoom {
+    0% {transform: scale(0.5,0.5);}
+    100% {transform: scale(1,1);}
+}
+
+@keyframes strobe {
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.1,1.1);}
+    100% {transform: scale(1,1);}
+}
+
+.chatWindow {
+    width: 100%;
+    height: calc(100vh - 160px);
+    float: right;
+    background-size: contain;
+    overflow-y: auto;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    padding: 0px 30px 50px 30px;
+    box-sizing: border-box;
+}
+
+.dateTimeDisplay {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    font-size: 13px;
+    margin: 0px 10% 40px 10%;
+    padding: 10px 0px 10px 0px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.chatMessage {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    margin: 0px 0px 10px 0px;
+}
+
+.chatMessageTime {
+    display: none;
+    color: white;
+    font-weight: 200;
+    margin: 8px 10px 10px 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+.chatMessage:hover .chatMessageTime {
+    display: block;
+}
+
+.chatContent {
+    background-color: white;
+    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    padding: 10px 20px 10px 20px;
+    margin: 0px;
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+    animation: emerge_zoom 0.1s ease-in-out;
+    font-weight: 400;
+}
+
+.chatContentTyping {
+    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    padding: 10px 20px 10px 20px;
+    margin: 0px;
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 15px;
+    max-width: 60%;
+    word-wrap: break-word;
+    animation: strobe 5s infinite;
+    position: absolute;
+}
+
+.chatInputDock {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.emojiButton {
+    height: 50px;
+    float: left;
+    margin: 10px 0px 10px 2%;
+    cursor: pointer;
+}
+
+.emojiButton:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.chatInputDockField {
+    width: calc(76% - 50px);
+    height: 50px;
+    margin: 10px 0px 10px 2%;
+    border: 0px;
+    outline: 0px;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.chatInputDockSubmit {
+    width: 16%;
+    height: 50px;
+    margin: 10px 0px 10px 2%;
+    float: left;
+    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    color: var(--white);
+    border: 0px;
+    outline: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.5s;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.chatInputDockSubmit:hover {
+    background-image: linear-gradient(to bottom, var(--light-orange), var(--dark-orange));
+    transform: scale(1.1,1.1);
+}
+
+.chatInputDockSubmit img {
+    height: 80%;
+}
+
+.chatEmojiBox {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: -100vh;
+    left: 0px;
+    z-index: 19;
+    transition: all 0.5s;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.chatEmojiTray {
+    width: fit-content;
+    height: fit-content;
+}
+
+.chatEmoji {
+    padding: 5px 10px 7px 10px;
+    margin: 5px 5px 5px 5px;
+    float: left;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.chatEmoji:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (min-width: 1125px) {
+    .chatInputDockField {
+        width: calc(86% - 50px);
+    }
+    .chatInputDockSubmit {
+        width: 6%;
+    }
+}
