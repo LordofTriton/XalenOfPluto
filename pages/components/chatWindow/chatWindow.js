@@ -7,6 +7,7 @@ import Fallbacks from '../../../services/client/defaults';
 import Censor from '../../../services/client/censor';
 import Emoji from '../../../services/client/emoji';
 import ImageServer from '../../../services/client/image';
+import yam from "../"
 
 //Defaults
 let d = new Date();
@@ -103,7 +104,7 @@ const ChatWindow = ({CortexControl}) => {
             setAncestor(re.data.newAncestor);
             setParent(re.data.newParent);
             setParentHistory(parentHistory.concat(re.data.newParent));
-            if (subject === "xalen") setTimeout(() => setCurrentMessage(childMessage), 1000)
+            setCurrentMessage(childMessage)
         })
     }
 
