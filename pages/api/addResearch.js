@@ -4,7 +4,7 @@ import { connectToDatabase } from "../../util/mongodb";
 import Auth from "../../services/auth";
 import StoreService from "../../services/server/StoreService";
 
-export default async (req, res) => {
+export default async (req, response) => {
     const { db } = await connectToDatabase();
 
     if (req.headers.origin === Auth.ClientURL) {

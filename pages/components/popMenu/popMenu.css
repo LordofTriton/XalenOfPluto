@@ -11,6 +11,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background-size: cover;
+    box-shadow: -12px 0px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .popMenuProfile {

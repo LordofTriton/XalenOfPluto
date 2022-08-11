@@ -1,6 +1,7 @@
 
 import Head from 'next/head'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
 import "./components/alert/alert.css"
 import "./components/chatWindow/chatWindow.css"
 import "./components/infoPage/infoPage.css"
@@ -31,36 +32,46 @@ const Cortex = () => {
     const [titleDisplay, setTitleDisplay] = useState(true)
     const [botState, setBotState] = useState("Online");
     const [theme, setTheme] = useState("Light")
-    // const [theme, setTheme] = useState(localStorage.getItem("XalenTheme") ? localStorage.getItem("XalenTheme") : "Light")
     const [popMenuState, setPopMenuState] = useState(false)
     const [censor, setCensor] = useState("Off")
-    // const [censor, setCensor] = useState(localStorage.getItem("XalenCensor") ? localStorage.getItem("XalenCensor") : "Off")
     const [infoPage, setInfoPage] = useState(false)
     const [alert, setAlert] = useState({
         title: "Hello!",
         content: ["I'm Xalen. Welcome to my chat app! 😎", "I'm Xalen. You're gonna love me 🥰", "I'm Xalen. Can't wait to chat with you 😋"][Math.floor(Math.random() * 3)],
         button: "Continue."
     })
+    const [ready, setReady] = useState(false)
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            if (localStorage.getItem("XalenTheme")) setTheme(localStorage.getItem("XalenTheme"))
+            else setTheme("Light")
+            if (localStorage.getItem("XalenCensor")) setCensor(localStorage.getItem("XalenCensor"))
+            else setCensor("Off")
+
+            setReady(true)
+        }
+    }, [])
 
     function toggleTheme() {
         if (theme === "Light") {
             setTheme("Dark")
-            // localStorage.setItem("XalenTheme", "Dark")
+            localStorage.setItem("XalenTheme", "Dark")
         }
         else {
             setTheme("Light")
-            // localStorage.setItem("XalenTheme", "Light")
+            localStorage.setItem("XalenTheme", "Light")
         }
     }
 
     function toggleCensor() {
         if (censor === "On") {
             setCensor("Off")
-            // localStorage.setItem("XalenCensor", "Off")
+            localStorage.setItem("XalenCensor", "Off")
         }
         else {
             setCensor("On")
-            // localStorage.setItem("XalenCensor", "On")
+            localStorage.setItem("XalenCensor", "On")
         }
     }
 
@@ -115,17 +126,21 @@ const Cortex = () => {
                 <title>Xalen - Chat With An Alien From Pluto.</title>
             </Head>
 
-            <div className="backDrop" style={{backgroundColor: theme === "Light" ? "slategrey" : "hsla(0, 0%, 7%, 0.952)"}}>
-                <Title CortexControl={CortexControl} />
-                <div className="displayContent" style={{backgroundImage: theme === "Light" ? "url("+lightBckg+")" : "url("+darkBckg+")"}}>
-                    <TopNav CortexControl={CortexControl} />
-                    <ChatWindow CortexControl={CortexControl} />
-                    <PopMenu CortexControl={CortexControl} />
-                    <Offline CortexControl={CortexControl} />
-                    <InfoPage CortexControl={CortexControl} />
-                    {alert ? <Alert CortexControl={CortexControl} /> : null}
+            {
+                ready ?
+                <div className="backDrop" style={{backgroundColor: theme === "Light" ? "slategrey" : "hsla(0, 0%, 7%, 0.952)"}}>
+                    <Title CortexControl={CortexControl} />
+                    <div className="displayContent" style={{backgroundImage: theme === "Light" ? "url("+lightBckg+")" : "url("+darkBckg+")"}}>
+                        <TopNav CortexControl={CortexControl} />
+                        <ChatWindow CortexControl={CortexControl} />
+                        <PopMenu CortexControl={CortexControl} />
+                        <Offline CortexControl={CortexControl} />
+                        <InfoPage CortexControl={CortexControl} />
+                        {alert ? <Alert CortexControl={CortexControl} /> : null}
+                    </div>
                 </div>
-            </div>
+                : null
+            }
         </>
     )
 }
