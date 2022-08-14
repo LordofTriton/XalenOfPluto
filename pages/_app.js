@@ -112,7 +112,7 @@ const Cortex = () => {
                 <meta name="theme-color" content="#000000" />
                 <meta
                     name="description"
-                    content="Xalen is a conversational chatbot designed to hold funny and witty conversations with users through artificial intelligence methods that enable the program to communicate like an actual human being."
+                    content="Xalen is a self learning conversational chatbot designed to hold funny and witty conversations with users through artificial intelligence methods that enable the program to communicate like an actual human being."
                 />
                 <meta
                     name="keywords"

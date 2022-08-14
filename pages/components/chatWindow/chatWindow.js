@@ -84,8 +84,8 @@ const ChatWindow = ({CortexControl}) => {
     }, [currentMessage])
 
     async function learnStuff(subject, learningMaterial, childMessage) {
-        setXalenTurn(true)
-        
+        setXalenTurn(true);
+
         let parentMessage = learningMaterial.filter(msg => msg.parent === subject)
         parentMessage = parentMessage[parentMessage.length - 1]
         let newMessage = childMessage.fullContent
@@ -123,8 +123,7 @@ const ChatWindow = ({CortexControl}) => {
                     time: d
                 }
 
-                setChatHistory(chatHistory.concat(newMessage))
-                learnStuff("xalen", chatHistory.concat(newMessage), newMessage)
+                setChatHistory(chatHistory.concat(newMessage), learnStuff("xalen", chatHistory.concat(newMessage), newMessage))
                 setNewMsg("")
                 scrollDown()
             }
@@ -139,7 +138,7 @@ const ChatWindow = ({CortexControl}) => {
         else {
             CortexControl.setAlert({
                 title: ["Really?", "Seriously?", "Kidding me?"][Math.floor(Math.random() * 3)],
-                content: ["Don't type while I'm replying 😒", "At least lemme reply first? 😕", "Won't you let me reply before sending another message? 🤔"][Math.floor(Math.random() * 3)],
+                content: ["Don't type while I'm typing 😒", "At least lemme reply first? 😕", "Won't you let me reply before sending another message? 🤔"][Math.floor(Math.random() * 3)],
                 button: "Got it."
             })
         }
@@ -162,9 +161,7 @@ const ChatWindow = ({CortexControl}) => {
             scrollDown()
         }
         
-        setChatHistory(chatHistory.concat(fallbackMessages))
-        learnStuff("user", chatHistory.concat(fallbackMessages), fallbackMessages[fallbackMessages.length - 1])
-
+        setChatHistory(chatHistory.concat(fallbackMessages), learnStuff("user", chatHistory, fallbackMessages[fallbackMessages.length - 1]))
         setTyping(false)
         setXalenTurn(false)
     }
@@ -185,8 +182,8 @@ const ChatWindow = ({CortexControl}) => {
                 replyList.push(newXalenMessage)
                 scrollDown()
             }
-            setChatHistory(chatHistory.concat(replyList))
-            learnStuff("user", chatHistory.concat(replyList), replyList[replyList.length - 1])
+
+            setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory.concat(replyList), replyList[replyList.length - 1]))
             setTyping(false)
             setXalenTurn(false)
         }
