@@ -85,7 +85,7 @@ const ChatWindow = ({CortexControl}) => {
 
     async function learnStuff(subject, learningMaterial, childMessage) {
         setXalenTurn(true);
-
+        
         let parentMessage = learningMaterial.filter(msg => msg.parent === subject)
         parentMessage = parentMessage[parentMessage.length - 1]
         let newMessage = childMessage.fullContent
@@ -123,7 +123,7 @@ const ChatWindow = ({CortexControl}) => {
                     time: d
                 }
 
-                setChatHistory(chatHistory.concat(newMessage), learnStuff("xalen", chatHistory.concat(newMessage), newMessage))
+                setChatHistory(chatHistory.concat(newMessage), learnStuff("xalen", chatHistory, newMessage))
                 setNewMsg("")
                 scrollDown()
             }
@@ -183,7 +183,7 @@ const ChatWindow = ({CortexControl}) => {
                 scrollDown()
             }
 
-            setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory.concat(replyList), replyList[replyList.length - 1]))
+            setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory, replyList[replyList.length - 1]))
             setTyping(false)
             setXalenTurn(false)
         }
