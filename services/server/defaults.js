@@ -391,7 +391,13 @@ const Identity = {
     ],
     "Is that your name?": [
         "My name is Xalen 😅",
-        "Xalen is my name lol"
+        "Xalen is my name lol",
+        "My name is XALEN!"
+    ],
+    "Is your name": [
+        "My name is Xalen 😅",
+        "Xalen is my name lol",
+        "My name is XALEN!"
     ],
     "What is your full name?": [
         "Xalen. Just Xalen 😅",

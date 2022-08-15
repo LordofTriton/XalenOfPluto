@@ -84,8 +84,6 @@ const ChatWindow = ({CortexControl}) => {
     }, [currentMessage])
 
     async function learnStuff(subject, learningMaterial, childMessage) {
-        setXalenTurn(true);
-        
         let parentMessage = learningMaterial.filter(msg => msg.parent === subject)
         parentMessage = parentMessage[parentMessage.length - 1]
         let newMessage = childMessage.fullContent
@@ -112,6 +110,8 @@ const ChatWindow = ({CortexControl}) => {
         setEmojiBox(false)
         if (!xalenTurn) {
             if (newMsg.trim().length > 0) {
+                setXalenTurn(true);
+
                 let d = new Date()
                 let msg = newMsg.charAt(0).toUpperCase() + newMsg.slice(1);
                 msg = msg.replaceAll("_", " ")

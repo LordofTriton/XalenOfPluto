@@ -2,6 +2,7 @@ import { connectToDatabase } from "../../util/mongodb";
 
 //Services
 import Auth from "../../services/auth";
+import Atheneum from "../../services/server/Atheneum";
 import StoreService from "../../services/server/StoreService";
 import MatchService from "../../services/server/matcher";
 import DateTime from "../../services/server/dateTime";
@@ -25,8 +26,6 @@ export default async (req, response) => {
 
             let Yggdrasil = await StoreService.GetStore(db, "Yggdrasil")
             Yggdrasil = StoreService.StoreCompiler(Yggdrasil);
-            let Atheneum = await StoreService.GetStore(db, "Atheneum")
-            Atheneum = StoreService.StoreCompiler(Atheneum);
 
             let xalenMsg = chatHistory.filter(msg => msg.parent === "xalen")
             let userMsg = chatHistory.filter(msg => msg.parent === "user")

@@ -3,7 +3,7 @@ const overlook = ["im xalen"]
 function Corrector(text) {
     let result = text;
 
-    // 
+    // Joining
     result = result.replace("are not", "arent");
     result = result.replace("how are", "howre")
     result = result.replace("you are", "youre")
@@ -38,6 +38,33 @@ function Corrector(text) {
     result = result.replace("leave me", "lemme")
     result = result.replace("dont know", "dunno")
     result = result.replace("what do you", "whatcha")
+    result = result.replace(" u ", " you ")
+    result = result.replace("what do you", "whatcha")
+    result = result.replace("what do you", "whatcha")
+
+    // Synonyms
+    result = result.replace("beautiful", "cute")
+    result = result.replace("handsome", "cute")
+    result = result.replace("gorgeous", "cute")
+    result = result.replace("clever", "smart")
+    result = result.replace("intelligent", "smart")
+    result = result.replace("brilliant", "smart")
+    result = result.replace("dick", "penis")
+    result = result.replace("cock", "penis")
+    result = result.replace("🍆", "penis")
+    result = result.replace("pussy", "vagina")
+    result = result.replace("fanny", "vagina")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
+    result = result.replace("", "")
 
     // British/American
     result = result.replace(/w*our\b/, "or")
@@ -150,8 +177,8 @@ function Corrector(text) {
     result = result.replace(" already ", " ")
     result = result.replace(" still ", " ")
     result = result.replace(" basically ", " ")
-    result = result.replace("", "")
-    result = result.replace("", "")
+    result = result.replace(" a bit ", " ")
+    result = result.replace(" little ", " ")
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")
