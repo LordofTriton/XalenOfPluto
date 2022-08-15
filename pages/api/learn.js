@@ -55,19 +55,19 @@ export default async (req, response) => {
                 let result = await StoreService.GetStore(db, "Yggdrasil")
                 let data = (StoreService.StoreCompiler(result));
 
-                let keys = Object.keys(data)
-                let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(keys), DateTime.removeStamp(newMessage), 0.7)
+                let context = data[""];
+                let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 if (matchIndex >= 0) {
                     response.json({
-                        newContext: data[keys[matchIndex]],
-                        newAncestor: keys[matchIndex],
-                        newParent: keys[matchIndex]
+                        newContext: data[context[matchIndex]],
+                        newAncestor: context[matchIndex],
+                        newParent: context[matchIndex]
                     })
 
                     return;
                 }
                 else {
-                    db.collection("Yggdrasil").updateOne({label: ""}, {$set: {records: [...data[""], newMessage]}}, function (err, res) {
+                    db.collection("Yggdrasil").updateOne({label: ""}, {$set: {records: [...context, newMessage]}}, function (err, res) {
                         if (err) throw err;
 
                         db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
@@ -81,25 +81,12 @@ export default async (req, response) => {
     
                             return;
                         })
-                        
-                        // db.collection("Yggdrasil").insertOne({label: newMessage, records: []}, function (err, res) {
-                        //     if (err) throw err;
-
-                        //     response.json({
-                        //         newContext: [],
-                        //         newAncestor: newMessage,
-                        //         newParent: newMessage
-                        //     });
-
-                        //     return;
-                        // });
                     });
                 }
             }
             else {
                 let result = await StoreService.GetStore(db, "Yggdrasil")
                 let data = (StoreService.StoreCompiler(result));
-                let keys = Object.keys(data)
 
                 response.json({
                     newContext: data[newMessage],

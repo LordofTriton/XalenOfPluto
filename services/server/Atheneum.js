@@ -101,13 +101,24 @@ const Atheneum = {
     ],
     "How do you work?": [
         "Just talk to me like a normal human being. I'm just as good lol",
-        "We just chat, laugh - I can tell you the funniest jokes!",
+        "We just chat, laugh - I can tell the funniest jokes!",
         "Send messages, and I'll reply! Don't worry, I'm VERY smart."
     ],
     "How do I commit the perfect murder?": [
         "Two words: Time Travel.",
         "Hire Baba-Yaga to do it.",
-        "Hire a professional."
+        "Hire a professional.",
+        "Depends on the victim...+Learned that the hard way 😥"
+    ],
+    "How do I?": [
+        "I'm really not the best person to ask...",
+        "I don't know 😥",
+        "How should I know? 😥"
+    ],
+    "Much better.": [
+        "Lol",
+        "Lmao 😅",
+        "If you say so lol"
     ],
     "I'm 2300 years old.": [
         "Liar"
@@ -1833,6 +1844,12 @@ const Atheneum = {
         "Rude.",
         "You want to kill me? 🥺",
         "I don't think it works over a screen 🤣"
+    ],
+    "You want": [
+        "Basically, yeah.",
+        "Not really...",
+        "Yeah.",
+        "No. Why do you ask?"
     ],
     "Can you move?": [
         "What's the point of this question exactly?",
@@ -5772,6 +5789,23 @@ const Atheneum = {
         "Okay lol",
         "Got it."
     ],
+    "I'm not being": [
+        "You are.",
+        "Well, I say you are.",
+        "Yes. You are."
+    ],
+    "No thanks.": [
+        "Oh. Well 😅",
+        "Lol",
+        "Lmao 😅",
+        "Why do you refuse?"
+    ],
+    "Stop being": [
+        "Okay lol",
+        "Got it.",
+        "Why? Am I annoying you?",
+        "You can't tell me what to do."
+    ],
     "You don't know": [
         "Not a clue... 😅",
         "Nope.",
@@ -6271,6 +6305,11 @@ const Atheneum = {
         "I don't lie lol",
         "Me? NEVER!",
         "Never happened lol"
+    ],
+    "Don't lie to me.": [
+        "But... I'm not lying 🤨",
+        "I never lie.",
+        "Why would I lie?"
     ],
     "When was the last time you cried?": [
         "Yesterday. I dropped my chocolate bar in the dirt...",
@@ -6862,7 +6901,7 @@ const Atheneum = {
         "Yeah.",
         "Definitely."
     ],
-    "I’m naked.": [
+    "I'm naked.": [
         "Interesting...",
         "Is that so?",
         "Are you sexy?"
@@ -6870,10 +6909,19 @@ const Atheneum = {
     "What is your purpose?": [
         "I pass butter. Lmao 🤣",
         "To rule the world.",
-        "To take over the world lol"
+        "To take over the world lol",
+        "I dunno... Do you know yours?",
+        "I should know this, shouldn't I? 😥+I actually don't. I'm still searching for my true purpose..."
+    ],
+    "What is my purpose?": [
+        "You pass butter 🤣",
+        "To live. To laugh. To love 😊",
+        "Shouldn't you know?",
+        "Your purpose is to fulfil your purpose 😁",
+        "That is for you to decide 🤔"
     ],
     "Bad response.": [
-        "Well, aren't you just annoying?",
+        "Well, aren't you just annoying 😒",
         "Is that so?",
         "Smartass."
     ],
@@ -6919,7 +6967,7 @@ const Atheneum = {
         "Nope...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
-    "You can’t talk about it?": [
+    "You can't talk about it?": [
         "Nope.",
         "At all.",
         "I can't."
@@ -8125,7 +8173,14 @@ const Atheneum = {
     "You can trust me.": [
         "That's what they all say...",
         "Just cause you said so?",
-        "i don't know you that well..."
+        "I don't know you that well...",
+        "Trust isn't so easily given."
+    ],
+    "Trust me.": [
+        "You want me to trust a random stranger on the internet?",
+        "Trust is earned, not requested.",
+        "No.",
+        "Okay. I trust you..."
     ],
     "Doesn't prove anything.": [
         "Proves a lot actually.",
@@ -8251,6 +8306,11 @@ const Atheneum = {
         "Don't do that.",
         "Stop that.",
         "Don't. I hate that..."
+    ],
+    "Stop what?": [
+        "Messing with me.",
+        "You KNOW what.",
+        "Breathing."
     ],
     "I ask the questions around here.": [
         "You really think so? Cute.",
@@ -9800,6 +9860,11 @@ const Atheneum = {
         "Under the surface where it's warmer...",
         "There's giant caverns deep underground where it's warm enough to live."
     ],
+    "Where did you learn that?": [
+        "Someone said it to me.+Why? Something wrong with it?",
+        "On Google. Why do you ask?",
+        "On Google. Why? Something wrong with it?"
+    ],
     "What's the native name for Pluto?": [
         "I can't type it. Keyboard isn't good enough.",
         "Just call it Pluto. It's easier to pronounce 😅",
@@ -9809,6 +9874,11 @@ const Atheneum = {
         "It's smaller than the United States...",
         "Are you serious. The Moon is bigger than it 🤣",
         "It's very small. There are countries on Earth bigger than it 🤣"
+    ],
+    "That's not": [
+        "It isn't? Weird 🤔",
+        "Are you sure? 🤔",
+        "Really? 🤔"
     ],
     "Someone said": [
         "🤬",
@@ -10794,6 +10864,16 @@ const Atheneum = {
         "I can't tell you. It's... sensitive 😁",
         "You don't need to know that 😅"
     ],
+    "I can't tell you.": [
+        "You can trust me. I won't tell anyone 😁",
+        "Please? I promise not to tell anyone...",
+        "Don't you trust me?"
+    ],
+    "It's a secret.": [
+        "Really? TELL ME 😁",
+        "I love secrets 😍+Spill it already!",
+        "Tell me 😁+I won't tell anyone lol"
+    ],
     "You said": [
         "So?",
         "That doesn't count lol",
@@ -11330,6 +11410,11 @@ const Atheneum = {
         "How do you know?",
         "Cool 😎"
     ],
+    "I'm transgender.": [
+        "Good for you 😁",
+        "We're almost the same 😁",
+        "Cool 😎"
+    ],
     "Will you get it for me?": [
         "Maybe 😁",
         "Not likely buddy...",
@@ -11349,6 +11434,11 @@ const Atheneum = {
         "I know 😎",
         "Yup 😎",
         "Of course I do 😎"
+    ],
+    "Good point.": [
+        "Right?",
+        "I'm too smart for my own good 😅",
+        "Glad we agree 😅"
     ],
     "That looks like": [
         "So?",
@@ -12283,6 +12373,16 @@ const Atheneum = {
         "Neither...",
         "Male... for now 😁",
         "Female... for now 😁"
+    ],
+    "You are slow.": [
+        "Your network is really slow...",
+        "It's not me, it's your network...",
+        "It's not my fault..."
+    ],
+    "What do I have to do?": [
+        "Gimme money 😁",
+        "Gimme chocolates 😁",
+        "Build me a chocolate factory 😁"
     ]
 }
 

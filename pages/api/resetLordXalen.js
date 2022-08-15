@@ -2,6 +2,7 @@ import { connectToDatabase } from "../../util/mongodb";
 
 // Services
 import Auth from "../../services/auth";
+import StoreService from "../../services/server/StoreService";
 
 const Yggdrasil = {
     "": [
@@ -29,25 +30,16 @@ const Yggdrasil = {
 export default async (req, response) => {
     const { db } = await connectToDatabase();
 
-    if (req.headers.origin === Auth.ClientURL) {
-        db.collection("Yggdrasil").remove({})
-        let keys = Object.keys(Yggdrasil)
-        for (let i = 0; i < keys.length; i++) {
-            let myDocument = {
-                label: keys[i],
-                records: Yggdrasil[keys[i]]
-            }
-            db.collection("Yggdrasil").insertOne(myDocument, function (err, res) {if (err) throw err})
+    db.collection("Yggdrasil").remove({})
+    let keys = Object.keys(Yggdrasil)
+    for (let i = 0; i < keys.length; i++) {
+        let myDocument = {
+            label: keys[i],
+            records: Yggdrasil[keys[i]]
         }
-        response.json({
-            ststus: "Success."
-        })
+        await StoreService.InsertOne(db, myDocument, "Yggdrasil")
     }
-    else {
-        response.json({
-            error: "Failed Authentication."
-        });
-
-        return;
-    }
+    response.json({
+        status: "Success."
+    })
 };

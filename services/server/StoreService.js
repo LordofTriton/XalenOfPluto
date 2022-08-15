@@ -19,16 +19,22 @@ function ResearchCompiler(array) {
 // Generic Promise object for fetching stores from MongoDB.
 var GetStore = (db_connect, storeName) => (
     new Promise((resolve, reject) => {
-        db_connect
-            .collection(storeName)
-            .find({})
-            .toArray(function (err, result) {
-             var somethingWentWrong = (result == null);
+        db_connect.collection(storeName).find({}).toArray(function (err, result) {
+            var somethingWentWrong = (result == null);
             (somethingWentWrong) ? reject('Something messed up :)') : resolve(result);
         });
     })
 );
 
-const StoreService = {StoreCompiler, ResearchCompiler, GetStore};
+var InsertOne = (db_connect, item, storeName) => (
+    new Promise((resolve, reject) => {
+        db_connect.collection(storeName).insertOne(item, function (err, res) {
+            var somethingWentWrong = (res == null);
+            (somethingWentWrong) ? reject('Something messed up :)') : resolve(res);
+        })
+    })
+);
+
+const StoreService = {StoreCompiler, ResearchCompiler, GetStore, InsertOne};
 
 export default StoreService;

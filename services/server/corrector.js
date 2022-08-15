@@ -4,7 +4,7 @@ function Corrector(text) {
     let result = text;
 
     // Joining
-    result = result.replace("are not", "arent");
+    result = result.replace("are not", "arent")
     result = result.replace("how are", "howre")
     result = result.replace("you are", "youre")
     result = result.replace("i am", "im")
@@ -49,9 +49,10 @@ function Corrector(text) {
     result = result.replace("clever", "smart")
     result = result.replace("intelligent", "smart")
     result = result.replace("brilliant", "smart")
+
+    // Slang
     result = result.replace("dick", "penis")
     result = result.replace("cock", "penis")
-    result = result.replace("🍆", "penis")
     result = result.replace("pussy", "vagina")
     result = result.replace("fanny", "vagina")
     result = result.replace("", "")

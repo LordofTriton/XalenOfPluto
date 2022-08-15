@@ -21,7 +21,6 @@ export default async (req, response) => {
     let parent = req.body.parent;
 
     if (req.headers.origin === Auth.ClientURL) {
-        let matchIndex = -1;
         if (chatHistory.length > 0) {
 
             let Yggdrasil = await StoreService.GetStore(db, "Yggdrasil")
@@ -106,17 +105,12 @@ export default async (req, response) => {
             let keys = Object.keys(Yggdrasil)
             if (!ancestor && userMsg.length >= 2) {
                 let greatGrandParent = parentHistory[parentHistory.length - 3]
-                // let greatGrandParent = MatchService.StripMessage(DateTime.removeStamp(userMsg[userMsg.length - 2].fullContent)).trim()
                 let grandParent = parentHistory[parentHistory.length - 2]
-                // let grandParent = MatchService.StripMessage(DateTime.removeStamp(xalenMsg[xalenMsg.length - 1].fullContent)).trim()
 
                 if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
-                    let references = keys.filter(record => (MatchService.PureMatch(record, parent, 0.8) >= 0 &&
+                    let references = keys.filter(record => (MatchService.Compare(record, parent, 0.8) > 0 &&
                                         MatchService.PureMatch(Yggdrasil[greatGrandParent], grandParent, 0.8) >= 0 &&
                                         MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0))
-                    // let references = keys.filter(record => (MatchService.msgProcessor(record) === MatchService.msgProcessor(parent) && 
-                    //                     MatchService.storeProcessor(Yggdrasil[greatGrandParent]).includes(MatchService.msgProcessor(grandParent)) &&
-                    //                     MatchService.storeProcessor(Yggdrasil[grandParent]).includes(MatchService.msgProcessor(parent))))
                     if (references.length > 0) {
                         let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
                         replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
