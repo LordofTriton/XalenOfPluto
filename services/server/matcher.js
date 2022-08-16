@@ -49,6 +49,19 @@ function PureMatch(store, message, matchThreshold) {
     return index;
 }
 
+function PureCompare(store, message, matchThreshold) {
+    let userMessage = msgProcessor(message)
+    let storeMessage = msgProcessor(store)
+
+    if (userMessage.trim().length < 1) return 0;
+    if (emojiTest(userMessage)) return 0;
+
+    let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
+
+    if (difference >= matchThreshold) return difference;
+    else return 0;
+}
+
 function GetMatch(store, message, matchThreshold) {
     if (!message.content) message = {label: "Useless label.", content: message}
     let userMessage = msgProcessor(message.content)
@@ -189,8 +202,6 @@ function Compare(store, message, matchThreshold) {
         }
     }
 
-    if (emojiTest(store)) difference = 0;
-
     return difference >= matchThreshold;
 }
 
@@ -215,6 +226,6 @@ function GetParentIndex(store, parent) {
     return parentIndex;
 }
 
-const MatchService = {PureMatch, GetMatch, Compare, GetArrayMatch, GetParentIndex, StripMessage, msgProcessor, storeProcessor}
+const MatchService = {PureMatch, PureCompare, GetMatch, Compare, GetArrayMatch, GetParentIndex, StripMessage, msgProcessor, storeProcessor}
 
 module.exports = MatchService;

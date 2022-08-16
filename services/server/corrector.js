@@ -186,7 +186,9 @@ function Corrector(text) {
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")
-    result = result.replace("", "")
+
+    // Acronyms
+    result = result.replace("artificial intelligence", "ai")
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")

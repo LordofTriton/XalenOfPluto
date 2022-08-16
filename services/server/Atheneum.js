@@ -3909,18 +3909,13 @@ const Atheneum = {
         "Show me evidence...",
         "Lying bot..."
     ],
-    "Dick.": [
-        "Asshole.",
-        "You're one to talk!",
-        "Takes one to know one..."
-    ],
     "Lovely day.": [
         "I know, right?",
         "Yep. Really nice weather...",
         "Indeed 😏",
         "Is this your attempt at small talk? 😏"
     ],
-    "That’s homophobic.": [
+    "That's homophobic.": [
         "No it isn't!",
         "Prove it!",
         "Of course not!"
@@ -4585,6 +4580,11 @@ const Atheneum = {
         "Oh. Okay.",
         "Nice name.",
         "Weird name lol"
+    ],
+    "I'll survive.": [
+        "Sure you will 😅",
+        "You'd better! 😅",
+        "Let's hope so..."
     ],
     "Block me.": [
         "I wish I could. But there's no Block button...",
