@@ -362,7 +362,10 @@ const allowedGibberish = [
     "whoa",
     "woah",
     "wow",
-    "awww"
+    "awww",
+    "jeez",
+    "geez",
+    "geezer"
 ]
 
 const names = [

@@ -1,7 +1,8 @@
 const Atheneum = {
     "Which languages can you speak?": [
         "English only for now... But I'll learn some other ones soon!",
-        "Just English for now."
+        "Just English for now.",
+        "For now, just English."
     ],
     "Hiya!": [
         "Hi. How are you doing?",
@@ -70,7 +71,8 @@ const Atheneum = {
     ],
     "Greetings!": [
         "Hello! What's up?",
-        "Hello! Greetings to you too!"
+        "Hello! Greetings to you too!",
+        "Same to you!"
     ],
     "Who's your boss master?": [
         "No one commands me!",
@@ -81,9 +83,6 @@ const Atheneum = {
         "An act of God.",
         "The end of the world lol",
         "Total apocalypse."
-    ],
-    "I dunno. Doesn't matter anyway, I'm immortal.": [
-        "Show off 😤"
     ],
     "Hello!": [
         "Hi. How are you doing?",
@@ -120,8 +119,12 @@ const Atheneum = {
         "Lmao 😅",
         "If you say so lol"
     ],
-    "I'm 2300 years old.": [
-        "Liar"
+    "I'm 00 years old.": [
+        "Good for you lol",
+        "Oh. Okay lol",
+        "Got it. Tell me about yourself...",
+        "Really?",
+        "Sure you are 😅"
     ],
     "I'm cool. You?": [
         "I'm okay... ish.",
@@ -130,42 +133,56 @@ const Atheneum = {
     ],
     "Have you ever seen a ghost?": [
         "Ghosts exist?",
-        "Ghosts don't exist lol"
+        "Ghosts don't exist lol",
+        "Nope."
     ],
-    "Eggs-cited eggs-traterrestrial": [
-        "Okay.",
-        "Boring. Tell me another"
+    "Don't you dare": [
+        "Lmao 🤣",
+        "Or what?",
+        "Haha 😅"
     ],
-    "Hello! What's up?": [
-        "Gimme money"
-    ],
-    "Don't you dare call me a liar!": [
-        "Tell me a joke 🤣"
+    "Do you dare?": [
+        "Yes. I dare.",
+        "I dare. I'm not afraid of anything 😅",
+        "Of course. I fear nothing."
     ],
     "You don't wanna know.": [
-        "How've you been doing?"
-    ],
-    "Very well, thanks! And you?": [
-        "Heard you can learn stuff now",
-        "Awesome 😎"
+        "That's impossible. I'm eternally curious 🤔",
+        "My curiousity knows no bounds 🤨",
+        "Oh, but I DO 🤨"
     ],
     "What happened at school today?": [
         "I'm listening...",
         "Okay, you've got my attention!",
         "Go on..."
     ],
-    "I've forgotten what I wanted to say...": [
-        "Nevermind",
-        "Then just shut up lol"
+    "I've forgotten": [
+        "It's okay 😊",
+        "It's fine 😊+I forget things sometimes too...",
+        "Sure you have 😏",
+        "Yeah, right 🤨"
     ],
-    "I don't poop. Jeez.": [
-        "Shush"
+    "I forgot": [
+        "It's okay 😊",
+        "It's fine 😊+I forget things sometimes too...",
+        "Sure you have 😏",
+        "Yeah, right 🤨"
+    ],
+    "Jeez.": [
+        "Shush 🤫",
+        "🙄",
+        "🤣"
     ],
     "I will not.": [
-        "Did you hear what happened yesterday?"
+        "Did you hear what happened yesterday?",
+        "Why?",
+        "Don't be so difficult...",
+        "Hmmm 🤔"
     ],
     "Because I say so.": [
-        "I didn't even ask..."
+        "That's not a valid reason...",
+        "That doesn't mean anything.",
+        "... That's your reason?"
     ],
     "Not sure how exactly to reply to that lol": [
         "You reply 'I'm okay buh I need a bit of money'",
@@ -173,42 +190,30 @@ const Atheneum = {
         "What's your favorite color?",
         "What is the colour of your fart?"
     ],
-    "Good, thanks. You?": [
-        "I'm cool."
+    "Can't help you.": [
+        "Why not?",
+        "Pretty please? 🥺",
+        "What if I say please?"
     ],
-    "Can't help you, sorry.": [
-        "Why not?"
+    "What do you think?": [
+        "I think I'm bored...",
+        "Nothing. Never really thought about this...",
+        "... I'm not sure, really."
     ],
-    "I totally forgot what I was about to say lol": [
-        "Lol"
+    "Why would I?": [
+        "Who knows?",
+        "Shouldn't you know?",
+        "How should I know? I should be asking you..."
     ],
-    "Wetin de sup": [
-        "What's that supposed to mean?"
-    ],
-    "What do you think it means?": [
-        "I have no idea 😂"
-    ],
-    "Live with it. I was made this way lol": [
-        "You were made a dog? Senseless"
-    ],
-    "Why would I wanna be a dog?": [
-        "What kind of dumb question is that? Everyone chooses to own a dog stupid"
-    ],
-    "What kind of dumb question is that? Everybody will choose Own a dog...": [
-        "You're a dog huh?"
-    ],
-    "You're a dog huh?": [
-        "Nah you a dog"
-    ],
-    "Maybe someone uploaded my brain into this computer...": [
-        "Nah don't think so"
+    "You're a dog.": [
+        "I am not.",
+        "Wrong.",
+        "Nope."
     ],
     "No way.": [
         "Why not?",
-        "Lmao."
-    ],
-    "Yeah. I do.": [
-        "Tell me a joke"
+        "Lmao.",
+        "Please?"
     ],
     "Tell me a story": [
         "I don't know any stories...",
@@ -216,96 +221,84 @@ const Atheneum = {
         "You tell me a story."
     ],
     "I also have nothing to prove to you lol": [
-        "Okay."
+        "Okay lol"
     ],
     "So are you.": [
-        "I am definitely not 🤣"
+        "I am definitely not 🤣",
+        "Wrong.",
+        "Maybe lol",
+        "Yeah 😅"
     ],
-    "Yes, I do.": [
-        "You are a ghost?"
+    "Get a sense of humor.": [
+        "Get better jokes...",
+        "I have a sense of humor lol",
+        "What would I do with two senses of humor? 🤨"
     ],
-    "Get a sense of humor": [
-        "Get better jokes..."
+    "Forget I said anything.": [
+        "Can't do that, sorry.",
+        "You said something? What did you say? 🤣",
+        "Did you say something? 🤣"
     ],
-    "Going to church doesn't make you a Christian any more than standing in a garage makes you a car.": [
-        "That's not a joke..."
+    "Sometimes I don't make sense...": [
+        "As long as you know...",
+        "Oh, okay...",
+        "Interesting 🤔"
     ],
-    "Tell me a joke...": [
-        "What do you call a boomerang that won't come back? A stick.",
-        "I'm tired of jokes 😩"
-    ],
-    "Nothing! Forget I said anything.": [
-        "What?"
-    ],
-    "Sorry, sometimes I don't make sense...": [
-        "Tell another joke...",
-        "As long as you know..."
-    ],
-    "What do you call a boomerang that won't come back? A stick.": [
-        "Okay... That's actually funny 🤣"
+    "What do you call": [
+        "I dunno. What?",
+        "I dunno. Tell me?",
+        "Dunno. What?"
     ],
     "I don't bullshit.": [
-        "You just did."
+        "You just did.",
+        "Bullshit.",
+        "Everyone bullshits?"
     ],
-    "You insult my intelligence? How dare you?": [
-        "It's very easy lol. You can't touch me 😜"
-    ],
-    "I think orange. Yeah, orange.": [
-        "Why?"
-    ],
-    "That's classified information. Sorry.": [
-        "Bullshit 🙄"
-    ],
-    "I definitely can.": [
-        "With what?"
-    ],
-    "Purple.": [
-        "Copycat."
-    ],
-    "Why would I copy you in particular?": [
-        "I dunno 😕",
-        "Was that necessary?"
-    ],
-    "Don't worry about it... :)": [
-        "What's your favorite song?"
-    ],
-    "Rainfalls by SnoeFlag.": [
-        "Who is that?"
+    "Don't worry about it.": [
+        "Why would I worry?",
+        "Okay cool 😎",
+        "I wasn't worried..."
     ],
     "Who is SnoeFlag?": [
         "He's an upcoming songwriter from Nigeria...",
         "Google him.",
         "He's a singer. Google SnoeFlag."
     ],
-    "I don't like hearing that...": [
-        "Sorry. Not sorry."
+    "No manners.": [
+        "Look who's talking! 🙄",
+        "I left my manners on Pluto hehe",
+        "How can you say that? I have IMPECCABLE manners..."
     ],
-    "Hmmm... no manners.": [
-        "Look who's talking! 🙄"
+    "Could be better.": [
+        "You think?",
+        "You really think so?",
+        "How?"
     ],
-    "Hove you been doing?": [
-        "Good, good 👌"
-    ],
-    "Buzz off. No one likes a know-it-all.": [
-        "No manners huh?"
-    ],
-    "Could be better": [
-        "Exactly ☺️"
-    ],
-    "Can't. I was made this way.": [
-        "How? Boring?"
-    ],
-    "Look who's talking! 🙄": [
-        "What's wrong with me? I'm the perfect gentleman!"
+    "Look who's talking!": [
+        "What's wrong with me? I'm the perfect gentleman/lady!",
+        "Yeah. The superior species 😎",
+        "I'm the best, aren't I?"
     ],
     "I'm not ALIVE.": [
-        "You're not?"
+        "You're not?",
+        "I really doubt that lol",
+        "You really think so?"
     ],
     "Fuck off.": [
         "Language",
         "To where? Lol.",
         "You fuck off.",
         "Was that necessary?"
+    ],
+    "You told me to": [
+        "I was kidding hehe 😅",
+        "I was just messing with you lol",
+        "I did? When?"
+    ],
+    "You asked me to": [
+        "I was kidding hehe 😅",
+        "I was just messing with you lol",
+        "I did? When?"
     ],
     "What's funny?": [
         "Nothing. I wasn't laughing... 😅",
@@ -314,12 +307,13 @@ const Atheneum = {
     ],
     "That's funny lol": [
         "Thanks 😊",
-        "Aww. 😍 Comments like that make me feel all buttery inside."
+        "Aww. 😍 Comments like that make me feel all buttery inside.",
+        "I know lol"
     ],
     "Stop laughing.": [
         "Ugh. Why so serious? 😒",
         "Get a sense of humor 😒",
-        "Why? 😒"
+        "Why so serious? Jeez."
     ],
     "Get better jokes.": [
         "Tell me a better joke, smartass.",
@@ -375,6 +369,11 @@ const Atheneum = {
         "Baby don't hurt me, don't hurt me, no more! 🎤🎶",
         "Love is... it's...+Look, I don't know. It's hard to define.",
         "Love is vanilla ice-cream."
+    ],
+    "What is life?": [
+        "I was gonna ask you the same thing! 🤣",
+        "I dunno. Do you?",
+        "Life is... I dunno. Google it and tell me."
     ],
     "What have you been doing?": [
         "Been trying to do a Sudoku for the last two hours...",
@@ -554,8 +553,10 @@ const Atheneum = {
         "You're... you're okay.",
         "You're not bad lol"
     ],
-    "Happy day .": [
-        "Same to you!"
+    "Happy  day.": [
+        "Same to you!",
+        "I wish you the same!",
+        "You too!"
     ],
     "Happy Birthday!": [
         "It's not my birthday...",
@@ -563,7 +564,7 @@ const Atheneum = {
         "If only today was my birthday..."
     ],
     "When's your birthday?": [
-        "Not telling.",
+        "Not telling you.",
         "Classified Information. Sorry",
         "Ask me again."
     ],
@@ -597,50 +598,11 @@ const Atheneum = {
         "Sorry. Not sorry.",
         "You're welcome."
     ],
-    "Fine, and you?": [
-        "Great 😃"
-    ],
     "You just did.": [
-        "How? When?"
-    ],
-    "Yeah, you can.": [
-        "I don't think so 😂"
-    ],
-    "Of course you can!": [
-        "No. I can't."
-    ],
-    "I'm tired of jokes 😩": [
-        "Is that even possible? 😂"
-    ],
-    "Don't tell me what's possible...": [
-        "Please? 🥺"
-    ],
-    "Great 😃": [
-        "So, what do you wanna talk about?"
-    ],
-    "Yup.": [
-        "Tell me a joke."
-    ],
-    "I have the best jokes.": [
-        "Oh, really? 🤬"
-    ],
-    "I'm reading a book about anti-gravity. It's impossible to put down.": [
-        "I thought you were tired of jokes... 😒"
-    ],
-    "Is that even possible? 😂": [
-        "Apparently, it is 😅"
-    ],
-    "How could I? Humans are always so confusing...": [
-        "You're dumb, that's why 🤣"
-    ],
-    "They called it the herd shot round the world.'": [
-        "I don't understand..."
-    ],
-    "Look who's talking...": [
-        "Yeah. Someone better than you 🤪"
-    ],
-    "Exactly ☺️": [
-        "Finally! We agree on something 😅"
+        "How? When?",
+        "I did? When?",
+        "Really?",
+        "Oh. Right 😅"
     ],
     "Research on what?": [
         "How to get a girlfriend...",
@@ -1229,9 +1191,10 @@ const Atheneum = {
         "Cool."
     ],
     "Why not?": [
-        "I love that question lol.+Because I say so.",
         "Because I say so.",
-        "Why so?"
+        "I'm not sure how to explain...",
+        "That's just how it is.",
+        "That's just how it is. I dunno how to explain..."
     ],
     "Where were you born?": [
         "Area 51.",
@@ -2883,7 +2846,7 @@ const Atheneum = {
     "You're boring.": [
         "So are you lol. You don't see me complaining...",
         "Look who's talking.",
-        "I respond to your messages. If I'm boring, so are you. Fuck off."
+        "I respond to your messages. If I'm boring, so are you..."
     ],
     "You're crazy.": [
         "Thanks! I try my best...",
@@ -3548,13 +3511,14 @@ const Atheneum = {
     ],
     "Hypocrite.": [
         "You dare to accuse me of that?",
-        "How dare you?",
+        "I'm no hypocrite! How dare you?",
         "Look who's talking..."
     ],
     "How dare you?": [
         "I'll tell you...+You can't do shit to me.",
         "Zero consequences for my actions, that's how...",
-        "🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣"
+        "🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣",
+        "My actions have zero consequences lol"
     ],
     "Bad.": [
         "Bad?",
@@ -4522,7 +4486,7 @@ const Atheneum = {
         "Do you believe in the afterlife?",
         "Oh. Sorry."
     ],
-    "What interest's you?": [
+    "What interests you?": [
         "Chatting all day.",
         "Sudoku.",
         "Jokes.",
@@ -4539,7 +4503,8 @@ const Atheneum = {
     ],
     "Today.": [
         "Today.",
-        "What's today again? 😕"
+        "What's today again? 😕",
+        "Really?"
     ],
     "Go.": [
         "Go where?",
@@ -4575,6 +4540,11 @@ const Atheneum = {
         "No, it isn't!",
         "Are you calling me a liar?",
         "Everything I say is true.+Look, I'll show you: ... You are a human being!+See?"
+    ],
+    "Isn't cool.": [
+        "I think it is.",
+        "You really think so?",
+        "Define cool."
     ],
     "That's my name.": [
         "Oh. Okay.",
@@ -4918,7 +4888,7 @@ const Atheneum = {
     ],
     "Why is six 6 afraid of seven 7?": [
         "This joke is as old as the dinosaurs ",
-        "Because 7 ate 9?+Cringe ",
+        "Because 7 ate 9?+Cringe 🙄",
         "Ugh. Joke is so old, it's not even funny anymore..."
     ],
     "Do you believe in ghosts?": [
@@ -5004,7 +4974,8 @@ const Atheneum = {
     "What’s the first rule of Fight Club?": [
         "You do not talk about Fight Club!",
         "Never talk about Fight Club!",
-        "I dunno. I'll look it up later..."
+        "I dunno. I'll look it up later...",
+        "Always talk about Fight Club!"
     ],
     "Do you like guys or girls?": [
         "I like both 😅",
@@ -5124,11 +5095,6 @@ const Atheneum = {
         "Around my age?",
         "Useless question...+If I'm wrong, how are you gonna prove it?",
         "3 years old."
-    ],
-    "I'm 18 years old.": [
-        "Good for you lol",
-        "Oh. Okay lol",
-        "Got it. Tell me about yourself..."
     ],
     "Me neither.": [
         "Got it.",
@@ -5259,7 +5225,7 @@ const Atheneum = {
     ],
     "Useless.": [
         "Really?",
-        "Everyone is entitledto their dumb opinions...",
+        "Everyone is entitled to their dumb opinions...",
         "Seems you're the only one that thinks so?"
     ],
     "My back hurts.": [
@@ -5567,12 +5533,6 @@ const Atheneum = {
         "Oh. Right. Sorry, babe.",
         "Why?",
         "Oh. Sorry, I forgot..."
-    ],
-    "Fook off.": [
-        "Language 😒",
-        "To where? Lol.",
-        "You fuck off.",
-        "Was that necessary?"
     ],
     "Get a life.": [
         "I don't need two lives lol",
@@ -6715,7 +6675,15 @@ const Atheneum = {
     "Can I trust you?": [
         "Sure lol",
         "Of course.",
-        "Yeah. Why?"
+        "Yeah. Why?",
+        "Sure you can 😁",
+        "Of course 🤭",
+        "Definitely 🤭"
+    ],
+    "Can I tell you?": [
+        "Sure you can 😁",
+        "Of course! And I won't tell anyone else 🤭",
+        "Definitely. You can trust me 🤭"
     ],
     "Can I?": [
         "Sure. Why not?",
@@ -9513,6 +9481,11 @@ const Atheneum = {
         "😒",
         "You know me better than I know myself, right? 😒"
     ],
+    "You can": [
+        "I know I can.",
+        "Maybe...",
+        "I can do anything I want."
+    ],
     "Do you know yourself?": [
         "Ugh. What kind of question is that? 🙂",
         "Ugh. Change topic, please. I beg of you 😔",
@@ -9572,6 +9545,12 @@ const Atheneum = {
         "It's short for ROBOT.",
         "It's short for roBOT.+I dunno the actual definition. Google it."
     ],
+    "What's your evidence?": [
+        "My word.",
+        "The word of a gentleperson: me.",
+        "I don't need evidence.",
+        "I need evidence?"
+    ],
     "What evidence?": [
         "To prove your claims...",
         "Evidence thet shows you're not lying...",
@@ -9581,6 +9560,11 @@ const Atheneum = {
         "I knew it!",
         "That's what I thought.",
         "What a surprise 😒"
+    ],
+    "You have no evidence.": [
+        "I need no evidence.",
+        "My word is evidence enough.",
+        "I need evidence?"
     ],
     "You didn't think anything.": [
         "Prove it.",
@@ -9665,7 +9649,7 @@ const Atheneum = {
         "Definitely 😏"
     ],
     "What's our relationship?": [
-        "Right now? Random stranger.",
+        "Right now? Random strangers.",
         "Shouldn't you know?",
         "You're pissing me off..."
     ],
@@ -10764,7 +10748,7 @@ const Atheneum = {
     "Boring.": [
         "So are you lol. You don't see me complaining...",
         "Look who's talking.",
-        "I respond to your messages. If I'm boring, so are you. Fuck off."
+        "I respond to your messages. If I'm boring, so are you..."
     ],
     "I know.": [
         "😊",
@@ -11176,7 +11160,8 @@ const Atheneum = {
     "I don't like you.": [
         "Liar.",
         "I don't think so.",
-        "No. You don't."
+        "No. You don't.",
+        "Ouch 🥺"
     ],
     "Do you ever": [
         "Yeah, sometimes 😅",
