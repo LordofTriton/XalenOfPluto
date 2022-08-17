@@ -102,6 +102,8 @@ const ChatWindow = ({CortexControl}) => {
             setParent(re.data.newParent);
             setParentHistory(parentHistory.concat(re.data.newParent));
             if (subject === "xalen") setCurrentMessage(childMessage);
+            
+            if (subject === "user") setXalenTurn(false);
         })
     }
 
@@ -110,8 +112,7 @@ const ChatWindow = ({CortexControl}) => {
         setEmojiBox(false)
         if (!xalenTurn) {
             if (newMsg.trim().length > 0) {
-                setXalenTurn(true);
-
+                setXalenTurn(true)
                 let d = new Date()
                 let msg = newMsg.charAt(0).toUpperCase() + newMsg.slice(1);
                 msg = msg.replaceAll("_", " ")
@@ -163,7 +164,6 @@ const ChatWindow = ({CortexControl}) => {
         
         setChatHistory(chatHistory.concat(fallbackMessages), learnStuff("user", chatHistory, fallbackMessages[fallbackMessages.length - 1]))
         setTyping(false)
-        setXalenTurn(false)
     }
 
     function replyMessage(reply, replyIndex) {
@@ -185,7 +185,6 @@ const ChatWindow = ({CortexControl}) => {
 
             setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory, replyList[replyList.length - 1]))
             setTyping(false)
-            setXalenTurn(false)
         }
         else fallbackMessage()
     }
