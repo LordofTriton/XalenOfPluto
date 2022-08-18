@@ -78,7 +78,7 @@ export default async (req, response) => {
                                 newAncestor: newMessage,
                                 newParent: newMessage
                             });
-    
+
                             return;
                         })
                     });
