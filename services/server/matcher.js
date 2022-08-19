@@ -53,13 +53,12 @@ function PureCompare(store, message, matchThreshold) {
     let userMessage = msgProcessor(message)
     let storeMessage = msgProcessor(store)
 
-    if (userMessage.trim().length < 1) return 0;
-    if (emojiTest(userMessage)) return 0;
+    if (userMessage.trim().length < 1) return false;
+    if (emojiTest(userMessage)) return false;
 
     let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
 
-    if (difference >= matchThreshold) return difference;
-    else return 0;
+    return difference >= matchThreshold;
 }
 
 function GetMatch(store, message, matchThreshold) {
@@ -80,24 +79,6 @@ function GetMatch(store, message, matchThreshold) {
         }
     }
 
-    // if (index < 0) {
-    //     match = matchThreshold;
-    //     let shards = (message.content).split(".").join(",").split("!").join(",").split("?").join(",").split(":").join(",").split(";").join(",").split(",")
-
-    //     for (let x = 0; x < shards.length; x++) {
-    //         if (shards[x].length > 3) {
-    //             for (let i = 0; i < store.length; i++) {
-    //                 let difference = stringSimilarity.compareTwoStrings(DateTime.removeStamp(shards[x]).toLowerCase(), DateTime.removeStamp(store[i]).toLowerCase())
-            
-    //                 if (difference >= match) {
-    //                     index = i;
-    //                     match = difference;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
     if (index < 0) {
         let phrase = "";
         let phraseIndex = 0;
@@ -108,10 +89,12 @@ function GetMatch(store, message, matchThreshold) {
                 let processedMessage = ` ${userMessage} `
 
                 if (processedMessage.includes(processedStore) && !overlook.includes(processedStore.trim())) {
-                    if (((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) && processedStore.split(" ").length >= phrase.split(" ").length) {
-                        phraseIndex = processedMessage.indexOf(processedStore);
-                        index = i;
-                        phrase = processedStore;
+                    if ((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
+                        if (processedStore.split(" ").length >= phrase.split(" ").length) {
+                            phraseIndex = processedMessage.indexOf(processedStore);
+                            index = i;
+                            phrase = processedStore;
+                        }
                     }
                 }
             }
@@ -129,10 +112,12 @@ function GetMatch(store, message, matchThreshold) {
                 let processedMessage = ` ${userMessage} `
 
                 if (processedStore.includes(processedMessage)) {
-                    if (((processedStore.indexOf(processedMessage) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) && processedStore.split(" ").length >= phrase.split(" ").length) {
-                        phraseIndex = processedStore.indexOf(processedMessage);
-                        index = i;
-                        phrase = processedStore;
+                    if ((processedStore.indexOf(processedMessage) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
+                        if (processedStore.split(" ").length >= phrase.split(" ").length) {
+                            phraseIndex = processedStore.indexOf(processedMessage);
+                            index = i;
+                            phrase = processedStore;
+                        }
                     }
                 }
             }
@@ -148,23 +133,10 @@ function Compare(store, message, matchThreshold) {
     let userMessage = msgProcessor(message)
     let storeMessage = msgProcessor(store)
 
-    if (userMessage.trim().length < 1) return 0;
-    if (emojiTest(userMessage)) return 0;
+    if (userMessage.trim().length < 1) return false;
+    if (emojiTest(userMessage)) return false;
 
     let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
-
-    // if (difference < matchThreshold) {
-    //     match = matchThreshold;
-    //     let shards = (message).split(".").join(",").split("!").join(",").split("?").join(",").split(":").join(",").split(";").join(",").split(",")
-
-    //     for (let x = 0; x < shards.length; x++) {
-    //         if (shards[x].length > 3) {
-    //             for (let i = 0; i < store.length; i++) {
-    //                 difference = stringSimilarity.compareTwoStrings(DateTime.removeStamp(shards[x]).toLowerCase(), DateTime.removeStamp(store[i]).toLowerCase())
-    //             }
-    //         }
-    //     }
-    // }
 
     if (difference < matchThreshold) {
         let phrase = "";
@@ -175,10 +147,12 @@ function Compare(store, message, matchThreshold) {
             let processedMessage = ` ${userMessage} `
 
             if (processedMessage.includes(processedStore) && !overlook.includes(processedStore.trim())) {
-                if (((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) && processedStore.split(" ").length >= phrase.split(" ").length) {
-                    phraseIndex = processedMessage.indexOf(processedStore);
-                    difference = 1;
-                    phrase = processedStore;
+                if ((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
+                    if (processedStore.split(" ").length >= phrase.split(" ").length) {
+                        phraseIndex = processedMessage.indexOf(processedStore);
+                        difference = 1;
+                        phrase = processedStore;
+                    }
                 }
             }
         }
@@ -193,10 +167,12 @@ function Compare(store, message, matchThreshold) {
             let processedMessage = ` ${userMessage} `
 
             if (processedStore.includes(processedMessage)) {
-                if (((processedStore.indexOf(processedMessage) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) && processedStore.split(" ").length >= phrase.split(" ").length) {
-                    phraseIndex = processedStore.indexOf(processedMessage);
-                    difference = 1;
-                    phrase = processedStore;
+                if ((processedStore.indexOf(processedMessage) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
+                    if (processedStore.split(" ").length >= phrase.split(" ").length) {
+                        phraseIndex = processedStore.indexOf(processedMessage);
+                        difference = 1;
+                        phrase = processedStore;
+                    }
                 }
             }
         }

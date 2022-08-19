@@ -41,7 +41,7 @@ export default async (req, response) => {
             }
             
             // Tautology
-            if ((chatHistory.filter(msg => msg.parent === "user").length >= 3)
+            if ((userMsg.length >= 3)
                 && (MatchService.Compare(userMsg[userMsg.length - 1].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7))
                 && (MatchService.Compare(userMsg[userMsg.length - 2].fullContent, userMsg[userMsg.length - 3].fullContent, 0.7))) {
                     response.json({
@@ -116,7 +116,7 @@ export default async (req, response) => {
                 let grandParent = parentHistory[parentHistory.length - 2]
 
                 if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
-                    let references = keys.filter(record => (MatchService.PureCompare(record, parent, 0.8) > 0 &&
+                    let references = keys.filter(record => (MatchService.PureCompare(record, parent, 0.8) &&
                                         MatchService.PureMatch(Yggdrasil[greatGrandParent], grandParent, 0.8) >= 0 &&
                                         MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0))
                                         

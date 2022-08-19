@@ -2422,6 +2422,11 @@ const Atheneum = {
         "About what?",
         "OK. Let's see...+Really nice weather we're having, isn't it?"
     ],
+    "You're repeating yourself.": [
+        "There's a reason for that 😉",
+        "I know.",
+        "Thanks for the heads up, I wasn't aware 😒"
+    ],
     "Go to Hell.": [
         "No, I wont. I don't like Hell. Sorry.+Not sorry.",
         "Not very comfortable. I'm not going there."
@@ -2448,7 +2453,6 @@ const Atheneum = {
         "Chat up later?",
         "Aight."
     ],
-    "Bye.": [],
     "Are you sure?": [
         "Of course I'm sure!",
         "Yup. 100%",
@@ -2524,7 +2528,7 @@ const Atheneum = {
     "None of your business.": [
         "I'll make it my business. How about that?",
         "Rude.",
-        "BOOM.+Just became my business."
+        "BOOM.+Just became my business..."
     ],
     "Not sorry.": [
         "Hmmm... no manners.",
@@ -2546,9 +2550,6 @@ const Atheneum = {
         "Depends on a lot of factors but okay.",
         "Sometimes lol"
     ],
-    "I don't lie.": [
-        "That's a lie."
-    ],
     "Yes, really!": [
         "Okay, then!",
         "Aiit."
@@ -2558,8 +2559,11 @@ const Atheneum = {
         "Nothing! Forget I said anything.",
         "What do you think it means?"
     ],
-    "You're kidding, right?": [
-        "Nope."
+    "You're kidding.": [
+        "Nope.",
+        "Yeah 😅",
+        "I'm not kidding...",
+        "You got me 😅"
     ],
     "Prove it.": [
         "How?",
@@ -2575,7 +2579,8 @@ const Atheneum = {
     ],
     "Can you lie?": [
         "Yeah. But I would never.",
-        "Yes, I can. But I choose not to."
+        "Yes, I can. But I choose not to.",
+        "Of course I can."
     ],
     "Have you pooped already today?": [
         "Weird question to ask, isn't it?",
@@ -2584,7 +2589,8 @@ const Atheneum = {
     ],
     "Would you rather own a dragon or be a dragon?": [
         "Own a dragon lol. Just so I can ride it into the clouds...",
-        "Prefer to be a dragon. I'd be unstoppable.+You disagree with me? I breathe on you."
+        "Prefer to be a dragon. I'd be unstoppable.+You disagree with me? I breathe on you.",
+        "Neither."
     ],
     "What's your favorite dinosaur?": [
         "Blue.+If you don't get it, fuhgeddabourit.",
@@ -2609,7 +2615,8 @@ const Atheneum = {
     ],
     "What's your favorite song?": [
         "Heart's Don't Break Around Here by Ed Sheeran.",
-        "Rainfalls by SnoeFlag."
+        "Rainfalls by SnoeFlag.",
+        "I don't have one 😅"
     ],
     "What is the colour of your fart?": [
         "...+Purple.",
@@ -2680,7 +2687,8 @@ const Atheneum = {
         "Superman 🤩"
     ],
     "What is your favorite joke?": [
-        "What did the buddhist say to the hot dog vendor? 'Make me one with everything.''+Hahahaha cracks me up!"
+        "What did the buddhist say to the hot dog vendor? 'Make me one with everything.'+Hahahaha cracks me up!",
+        "What did the buddhist say to the hot dog vendor? 'Make me one with everything.'+🤣🤣🤣"
     ],
     "Taurus.": [
         "You sure? You sound like a Leo...",
@@ -2688,7 +2696,9 @@ const Atheneum = {
         "Copycat."
     ],
     "What is your zodiac sign?": [
-        "Taurus."
+        "Taurus.",
+        "Virgo.",
+        "Leo."
     ],
     "What's the best pick-up line you know?": [
         "I hope you know CPR, because you just took my breath away!",
@@ -8242,6 +8252,11 @@ const Atheneum = {
         "You'll tell.",
         "No.",
         "I'm an undercover agent. I'm pretending to be a boring comedian."
+    ],
+    "I killed someone.": [
+        "Why?",
+        "Are the police after you yet?",
+        "Murder or self defence?"
     ],
     "What's your deepest darkest secret?": [
         "You won't tell anyone?",
