@@ -14,13 +14,14 @@ export default async (req, response) => {
     let newMessage = req.body.newMessage;
     let context = req.body.context;
     let subject = req.body.subject;
+    
+    let result = await StoreService.GetStore(db, "Yggdrasil")
+    let data = (StoreService.StoreCompiler(result));
+    let keys = Object.keys(data)
 
     if (req.headers.origin === Auth.ClientURL) {
         if (parentMessage) {
             if (ancestor) {parentMessage = ancestor}
-
-            let result = await StoreService.GetStore(db, "Yggdrasil")
-            let data = (StoreService.StoreCompiler(result));
             
             let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
             if (matchIndex >= 0) {
@@ -36,9 +37,7 @@ export default async (req, response) => {
                 db.collection("Yggdrasil").updateOne({label: parentMessage}, {$set: {records: [...context, newMessage]}}, function (err, res) {
                     if (err) throw err;
 
-                    db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                        if (err) throw err;
-
+                    if (keys.includes(newMessage)) {
                         response.json({
                             newContext: [],
                             newAncestor: "",
@@ -46,15 +45,25 @@ export default async (req, response) => {
                         });
 
                         return;
-                    })
+                    }
+                    else {
+                        db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
+                            if (err) throw err;
+
+                            response.json({
+                                newContext: [],
+                                newAncestor: "",
+                                newParent: newMessage      
+                            });
+
+                            return;
+                        })
+                    }
                 });
             }
         }
         else {
             if (subject === "xalen") {
-                let result = await StoreService.GetStore(db, "Yggdrasil")
-                let data = (StoreService.StoreCompiler(result));
-
                 let context = data[""];
                 let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 if (matchIndex >= 0) {
@@ -70,17 +79,28 @@ export default async (req, response) => {
                     db.collection("Yggdrasil").updateOne({label: ""}, {$set: {records: [...context, newMessage]}}, function (err, res) {
                         if (err) throw err;
 
-                        db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                            if (err) throw err;
-    
+                        if (keys.includes(newMessage)) {
                             response.json({
                                 newContext: [],
-                                newAncestor: newMessage,
-                                newParent: newMessage
+                                newAncestor: "",
+                                newParent: newMessage      
                             });
-
+    
                             return;
-                        })
+                        }
+                        else {
+                            db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
+                                if (err) throw err;
+        
+                                response.json({
+                                    newContext: [],
+                                    newAncestor: newMessage,
+                                    newParent: newMessage
+                                });
+
+                                return;
+                            })
+                        }
                     });
                 }
             }

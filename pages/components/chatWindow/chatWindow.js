@@ -159,7 +159,6 @@ const ChatWindow = ({CortexControl}) => {
                 time: d
             }
             fallbackMessages.push(newXalenMessage)
-            scrollDown()
         }
         
         setChatHistory(chatHistory.concat(fallbackMessages), learnStuff("user", chatHistory, fallbackMessages[fallbackMessages.length - 1]))
@@ -167,6 +166,8 @@ const ChatWindow = ({CortexControl}) => {
     }
 
     function replyMessage(reply, replyIndex) {
+        scrollDown();
+
         if (reply && reply.length > 0) {
             reply = reply[replyIndex]
             let replyMessages = reply.split("+")
@@ -180,7 +181,6 @@ const ChatWindow = ({CortexControl}) => {
                     time: d
                 }
                 replyList.push(newXalenMessage)
-                scrollDown()
             }
 
             setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory, replyList[replyList.length - 1]))

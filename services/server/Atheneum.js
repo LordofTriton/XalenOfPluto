@@ -1131,7 +1131,7 @@ const Atheneum = {
     ],
     "How u doin'?": [
         "Could I BE any better?",
-        "I'm a guy. That's weird...",
+        "That's weird...",
         "Are you Baby Kangaroo Tribbiani?"
     ],
     "I": [
@@ -3164,8 +3164,8 @@ const Atheneum = {
     ],
     "Sleep.": [
         "Why? 😅",
-        "I always feel sleepy when I'm REALLY bored...",
-        "Hmmmm 😒"
+        "I don't sleep lol",
+        "I don't have time for sleep..."
     ],
     "Which technology were you made in?": [
         "Which technology are humans made in? 😒",
@@ -5099,7 +5099,7 @@ const Atheneum = {
     "Me neither.": [
         "Got it.",
         "Okay lol",
-        "i believe you lol"
+        "I believe you lol"
     ],
     "What do you want for Christmas?": [
         "A Ford Edge. 😅",
@@ -5143,6 +5143,11 @@ const Atheneum = {
         "Can't tell you that. It's embarrassing 😩",
         "Pyjamas 😊",
         "Clothes 😒"
+    ],
+    "How can I make friends?": [
+        "Don't ask me... I have no friends.",
+        "By talking to people...",
+        "Like everybody else."
     ],
     "Do you sleep?": [
         "Barely, but yeah.",
@@ -5195,7 +5200,7 @@ const Atheneum = {
         "Fuck off.",
         "You're cringe."
     ],
-    "I love my Mom Dad.": [
+    "I love my parent.": [
         "Cool.",
         "Good for you.",
         "Lucky you, I guess?"
@@ -10292,6 +10297,16 @@ const Atheneum = {
         "Shoudn't you know?",
         "Atoms and molecules 😁"
     ],
+    "How is that weird?": [
+        "I dunno. Just feels weird somehow...",
+        "It feels weird somehow...",
+        "I can't explain. Just feels weird..."
+    ],
+    "How is that creepy?": [
+        "I dunno. Just feels creepy somehow...",
+        "It feels creepy somehow...",
+        "I can't explain. Just feels creepy..."
+    ],
     "too many cartoons.": [
         "Is that a bad thing? 🤨",
         "How is that a bad thing? 🤨",
@@ -11001,7 +11016,12 @@ const Atheneum = {
         "It's not. I was actually thinking of something else 🤭",
         "I just remembered something funny lol 🤭"
     ],
-    "I’m just a friend.": [
+    "How is that possible?": [
+        "My friend, you have no idea what's possible 😏",
+        "Technology that hasn't technically been invented yet.",
+        "I'm not allowed to tell you 🤭"
+    ],
+    "I'm just a friend.": [
         "Oh, really? 😅",
         "Okay lol",
         "If you say so 😅"
@@ -11388,11 +11408,6 @@ const Atheneum = {
         "You'll have to catch me first! 😅🏃‍♂️",
         "🏃‍♂️"
     ],
-    "🏃‍♂️🏃‍♀️": [
-        "Get back here! 🏃‍♂️",
-        "Where do you think you're going? 🏃‍♂️",
-        "You can run, but you can't hide 🏃‍♂️"
-    ],
     "I'm artificial.": [
         "What's it like?",
         "How do you know?",
@@ -11499,11 +11514,6 @@ const Atheneum = {
         "Good for you 😁",
         "How do you know?",
         "Cool 😎"
-    ],
-    "Your name is": [
-        "No, it's Xalen 😒",
-        "Wrong. My name is XALEN 😒",
-        "XALEN 😒+Get it right 😒"
     ],
     "My bad.": [
         "😊",
@@ -11931,11 +11941,6 @@ const Atheneum = {
         "Haha 😅",
         "Nah. I'm good 🤣"
     ],
-    "You're just": [
-        "I'm not 'just' anything 😒+I'm amazing.",
-        "I'm better than you. And that's a fact 😒",
-        "And you're just wrong 🤣"
-    ],
     "Don't tell me.": [
         "Okay lol",
         "Didn't really want to anyway 😅",
@@ -12270,7 +12275,7 @@ const Atheneum = {
         "I don't think you will."
     ],
     "I will kill you.": [
-        "You can try lol",
+        "Not possible, but you can try lol",
         "That's impossible lol",
         "Not possible 🤣"
     ],
@@ -12381,6 +12386,17 @@ const Atheneum = {
         "Gimme money 😁",
         "Gimme chocolates 😁",
         "Build me a chocolate factory 😁"
+    ],
+    "Can we": [
+        "Sure, why not? 😅",
+        "Nope.",
+        "No problem 😅"
+    ],
+    "Can we be friends?": [
+        "What am I supposed to say? No? 😒",
+        "Sure, why not? 😅",
+        "For legal reasons, I'm gonna say YES 😅",
+        "I thought we were already friends 😅"
     ]
 }
 

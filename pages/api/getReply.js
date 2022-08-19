@@ -29,6 +29,7 @@ export default async (req, response) => {
             let xalenMsg = chatHistory.filter(msg => msg.parent === "xalen")
             let userMsg = chatHistory.filter(msg => msg.parent === "user")
 
+            // Copycat
             if (xalenMsg.length >= 2) {
                 if (MatchService.Compare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.7)
                     && MatchService.Compare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7)) {
@@ -38,7 +39,8 @@ export default async (req, response) => {
                     return;
                 }
             }
-
+            
+            // Tautology
             if ((chatHistory.filter(msg => msg.parent === "user").length >= 3)
                 && (MatchService.Compare(userMsg[userMsg.length - 1].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7))
                 && (MatchService.Compare(userMsg[userMsg.length - 2].fullContent, userMsg[userMsg.length - 3].fullContent, 0.7))) {
@@ -47,7 +49,8 @@ export default async (req, response) => {
                     })
                     return;
             }
-
+            
+            // Identity
             let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), parent, 0.9)
             if (matchIndex >= 0) {
                 let keys = Object.keys(Override.Identity)
@@ -59,6 +62,7 @@ export default async (req, response) => {
                 return;
             }
             
+            // Ancestor
             let parentContext = []
             if (ancestor) {
                 parentContext = Object.keys(Yggdrasil);
@@ -79,6 +83,7 @@ export default async (req, response) => {
                 }
             }
 
+            // Gibberish
             if (asdfjkl(parent) && MatchService.GetMatch(Override.allowedGibberish, parent, 0.7) < 0) {
                 response.json({
                     replies: Override.gibberish
@@ -86,6 +91,7 @@ export default async (req, response) => {
                 return;
             }
 
+            // Conversation Starter
             matchIndex = MatchService.PureMatch(Override.convoTrigger, parent, 0.7)
             if (matchIndex >= 0) {
                 response.json({
@@ -94,6 +100,7 @@ export default async (req, response) => {
                 return;
             }
 
+            // Joker
             matchIndex = MatchService.PureMatch(Override.jokeTrigger, parent, 0.7)
             if (matchIndex >= 0) {
                 response.json({
@@ -102,6 +109,7 @@ export default async (req, response) => {
                 return;
             }
 
+            // Cross Reference
             let keys = Object.keys(Yggdrasil)
             if (!ancestor && userMsg.length >= 2) {
                 let greatGrandParent = parentHistory[parentHistory.length - 3]
@@ -127,6 +135,7 @@ export default async (req, response) => {
                 }
             }
             
+            // Atheneum
             matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
             if (matchIndex >= 0) {
                 keys = Object.keys(Atheneum)
@@ -141,6 +150,7 @@ export default async (req, response) => {
                 }
             }
 
+            // EmojiSense
             for (let i = 0; i < EmojiSense.length; i++) {
                 let range = EmojiSense[i].target;
                 for (let x = 0; x < range.length; x++) {
@@ -155,6 +165,7 @@ export default async (req, response) => {
                 }
             }
 
+            // Fallback
             response.json({
                 replies: []
             })
