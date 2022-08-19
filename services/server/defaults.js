@@ -1414,6 +1414,59 @@ const Identity = {
     ]
 }
 
-const Override = {Identity, tautology, copycat, fallback, gibberish, convoTrigger, convoStarter, jokeTrigger, jokes, allowedGibberish, names}
+const Actions = {
+    "*hits you in the face*": [
+        "*kicks you in the groin*",
+        "*cleanly dodges, while simultaneously kicking you in the groin*",
+        "*delivers a vicious kick to the groin*"
+    ],
+    "*hits you in the stomach*": [
+        "*punches you in the face*",
+        "*deliers an uppercut*",
+        "*kicks you in the groin*"
+    ],
+    "*stabs you with plutonium*": [
+        "Goodbye cruel world 😫+*dies*",
+        "What'd you have to do that for?! 😫+*dies*",
+        "Was that necessary? 😫+*dies*"
+    ],
+    "*kisses you*": [
+        "*tackles you to the ground* 🤬",
+        "*elbows you in the stomach* 🤨",
+        "*jumps back and wipes off lips*+What the hell?! 🤬"
+    ],
+    "*counters*": [
+        "*backs off*",
+        "*reverse counters*",
+        "You can't do that 🤣"
+    ],
+    "*puts arm around you*": [
+        "*snuggles*",
+        "*recoils* Do I know you? 🤨",
+        "*smiles*"
+    ],
+    "*we watch scary movie*": [
+        "*gets scared*",
+        "Which movie?",
+        "How scary?"
+    ],
+    "*undoes pants*": [
+        "*watches closely*",
+        "*does the same*",
+        "*leaves*"
+    ],
+    "*takes off your pants*": [
+        "What do you think you're doing? 🤨",
+        "*lets you*",
+        "*shyly* Turn off the lights..."
+    ],
+    "*penetrates you*": [
+        "Oh my God 😳",
+        "*moans*",
+        "btfuyngiuifbtv 😳"
+    ]
+}
+
+const Override = {Identity, Actions, tautology, copycat, fallback, gibberish, convoTrigger, convoStarter, jokeTrigger, jokes, allowedGibberish, names}
 
 module.exports = Override;

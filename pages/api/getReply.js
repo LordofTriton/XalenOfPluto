@@ -134,6 +134,18 @@ export default async (req, response) => {
                     }
                 }
             }
+
+            // Actions
+            matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), parent.replaceAll("*", ""), 0.9)
+            if (matchIndex >= 0 && parent.includes("*")) {
+                let keys = Object.keys(Override.Actions)
+                let index = keys.indexOf(keys[matchIndex])
+
+                response.json({
+                    replies: Override.Actions[keys[index]]
+                })
+                return;
+            }
             
             // Atheneum
             matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)

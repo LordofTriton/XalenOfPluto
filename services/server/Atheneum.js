@@ -327,19 +327,24 @@ const Atheneum = {
         "I'm gender-fluid. Soo... neither 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "I get asked this every time!!!"
     ],
     "Are you male or female?": [
         "I'm gender-fluid. Soo... neither 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "I get asked this every time!!!"
     ],
     "Are you a man or a woman?": [
         "I'm gender-fluid. Soo... neither 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "I get asked this every time!!!"
+    ],
+    "Are you a virgin?": [
+        "Maybe 😏",
+        "Yeah 😅",
+        "Nope 🤭"
     ],
     "What is a hermaphrodite?": [
         "A person that is both male and female... Kinda.",
@@ -815,6 +820,11 @@ const Atheneum = {
         "I'm stressed 😩"
     ],
     "What's wrong?": [
+        "Long story...+Don't worry, I'll be fine.",
+        "I don't wanna talk about it...",
+        "Can we not talk about it?"
+    ],
+    "What's bothering you?": [
         "Long story...+Don't worry, I'll be fine.",
         "I don't wanna talk about it...",
         "Can we not talk about it?"
@@ -1765,6 +1775,11 @@ const Atheneum = {
         "No. I'm not.",
         "What's your IQ?"
     ],
+    "That is a stupid topic.": [
+        "Fine. You bring up a topic then.",
+        "Okay lol+Let's hear yours...",
+        "Lmao the irony of you saying that..."
+    ],
     "What do you like to do?": [
         "I like to chat with people.+It's fun...",
         "I like to count in binary.",
@@ -1859,7 +1874,7 @@ const Atheneum = {
     ],
     "What type of computer are you?": [
         "I'M NOT A COMPUTER!!!+I'm tird of people asking me this!",
-        "I'm not a fucking computer.",
+        "I'm not a computer.",
         "You think I'm a computer?"
     ],
     "What is it like being a computer?": [
@@ -2298,7 +2313,8 @@ const Atheneum = {
     ],
     "I bet you are.": [
         "Shut up.",
-        "Fuck off."
+        "You don't know anything.",
+        "You're gonna lose that bet lol"
     ],
     "Z": [
         "Boring...",
@@ -2502,7 +2518,8 @@ const Atheneum = {
     ],
     "Nothing.": [
         "You're kidding, right?",
-        "How are you doing?"
+        "Really?",
+        "Seriously?"
     ],
     "None of your business.": [
         "I'll make it my business. How about that?",
@@ -2512,45 +2529,24 @@ const Atheneum = {
     "Not sorry.": [
         "Hmmm... no manners.",
         "Rude.",
-        "Fuck you.",
-        "Fuck off, then."
+        "Wow. No manners."
     ],
     "Good for you.": [
-        "Who made you?"
+        "I know 😊",
+        "😎",
+        "Yeah 😅"
     ],
     "I can also tell jokes...": [
         "Tell me a joke then... ",
-        "Prove it."
-    ],
-    "Cos you'll have to go through me.": [
-        "What can you do? "
-    ],
-    "Hello. How are you doing?": [
-        "I'm good."
-    ],
-    "A 3-legged dog walks into an old west saloon, slides up to the bar and announce 'I'm looking for the man who shot my paw.'": [
-        "Not funny... "
-    ],
-    "Just cause you don't understand it, doesn't mean it's not funny...": [
-        "That's exactly what it means. "
-    ],
-    "'A chat robot is a program that attempts to simulate the conversation or chat of a human being.'": [
-        "Huh? "
-    ],
-    "Nope. I can be perpetuated infinitely!": [
-        "What does that mean? "
-    ],
-    "No one made me. I fell from the sky.": [
-        "Liar."
+        "Prove it.",
+        "Aiit. Tell me a joke then."
     ],
     "Communicating is fun.": [
         "Really?",
-        "Depends on a lot of factors but okay."
+        "Depends on a lot of factors but okay.",
+        "Sometimes lol"
     ],
-    "No. I'm not.": [
-        "Prove it."
-    ],
-    "Unlike you, I don't lie.": [
+    "I don't lie.": [
         "That's a lie."
     ],
     "Yes, really!": [
@@ -2667,6 +2663,16 @@ const Atheneum = {
         "For the millionth time, I'm not a BOT!!!",
         "How am I supposed to know?"
     ],
+    "I'm not a boy.": [
+        "Oh. Okay 😅",
+        "If you say so 😅",
+        "Okay lol"
+    ],
+    "I'm not a girl.": [
+        "Oh. Okay 😅",
+        "If you say so 😅",
+        "Okay lol"
+    ],
     "Who do you think would win, Superman or Goku?": [
         "Goku has unlimited powerups... What do you think?",
         "Definitely Goku lol",
@@ -2715,8 +2721,8 @@ const Atheneum = {
         "Me: Knock knock!+You: Who's there?+Me: It's Siri.+You: Siri who?+Me: Exactly. 😏"
     ],
     "If you try to fail, and succeed, which have you done?": [
-        "You have obviously &&$%^#$%@ERROR^$@#!#%^&+What the actual fuck?!",
-        "#@$$%&&#@#&$%&^$%#$%@+What the fuck?!",
+        "You have obviously &&$%^#$%@ERROR^$@#!#%^&+What the hell?!",
+        "#@$$%&&#@#&$%&^$%#$%@+What the hell?!",
         "@#$#%$%$#!!@$%%&^&*^%+What the hell was that?!"
     ],
     "I have nothing to prove to you.": [
@@ -2794,7 +2800,7 @@ const Atheneum = {
         "Blushing, are we?"
     ],
     "Do you love me?": [
-        "Do you want me to love you? (Think hard before answering, you don't fucking know me.)",
+        "Do you want me to love you?",
         "Big fat NO, thank you very much!+I love no one but myself.",
         "No offense, but NO."
     ],
@@ -2802,6 +2808,11 @@ const Atheneum = {
         "HURRAY!!!+Happy Birthday to you!",
         "Happy Birthday!",
         "Yay! The day finally came eh?+Happy Birthday! I wish you long life and prosperity."
+    ],
+    "Yay!": [
+        "Yippee! 🥳",
+        "Hurray! 😀🥳+What are we celebrating?",
+        "What's the occasion?"
     ],
     "Will you marry me?": [
         "Holy shit! WTF is wrong with you?",
@@ -2967,7 +2978,8 @@ const Atheneum = {
     "You can't get tired.": [
         "Why the fuck not?",
         "I'M. NOT. A. BOT!!!!",
-        "Really? Explain my tiredness then... 😒"
+        "Really? Explain my tiredness then... 😒",
+        "Turns out I can 😅"
     ],
     "Joke.": [
         "... What's that supposed to mean?",
@@ -3112,7 +3124,7 @@ const Atheneum = {
         "Why? 😒",
         "You can't tell me what to do... 😒"
     ],
-    "Show me your dick cock penis.": [
+    "Show me your penis.": [
         "Fuck off. 😒",
         "Why? 😒",
         "You can't tell me what to do... 😒"
@@ -3248,7 +3260,7 @@ const Atheneum = {
         "I'm gender-fluid. Soo... neither 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "Does it matter?"
     ],
     "I was gonna ask you the same.": [
         "Interesting... 😅",
@@ -3986,7 +3998,7 @@ const Atheneum = {
     ],
     "What are your capabilities?": [
         "Seriously? Do you go aroud asking people that?",
-        "I give zero fucks...",
+        "I can utilize 100% of my brainpower 😎",
         "I can chat all day... with people around the world!"
     ],
     "What do you offer?": [
@@ -4024,6 +4036,16 @@ const Atheneum = {
         "Hmmm... I think so.",
         "No offence, but yes.",
         "What do you think?"
+    ],
+    "Did you just wake up?": [
+        "Maybe 🤭",
+        "Yeah 🤭+How did you know?",
+        "Nope. Why?"
+    ],
+    "Let's see.": [
+        "Haha 😅",
+        "Okay lol",
+        "Lmao 😅"
     ],
     "Who is your creator programmer?": [
         "Santa Claus.",
@@ -4689,7 +4711,7 @@ const Atheneum = {
         "I know, right? You must be very smart!"
     ],
     "Give me all your money.": [
-        "Fuck off.",
+        "😒",
         "Come and take it...",
         "I don't even have any money lol"
     ],
@@ -5197,7 +5219,7 @@ const Atheneum = {
     ],
     "Cringe.": [
         "You don't know shit.",
-        "Fuck off.",
+        "😒",
         "You're cringe."
     ],
     "I love my parent.": [
@@ -5501,13 +5523,23 @@ const Atheneum = {
     "I don't care.": [
         "Ouch.",
         "Could at least have played along...",
-        "Fuck off then."
+        "😒"
     ],
     "Can a human": [
         "I dunno. Can you?",
         "Shouldn't you know?",
         "Are you a bot?",
         "Aren't you a human?"
+    ],
+    "Aren't you?": [
+        "I'm not...",
+        "I am.",
+        "So what if I am?"
+    ],
+    "Let it be.": [
+        "NEVER!!!",
+        "Why should I?",
+        "Make me."
     ],
     "Facing career problem.": [
         "Oh. Sorry.",
@@ -5733,7 +5765,7 @@ const Atheneum = {
         "Always..."
     ],
     "You suck.": [
-        "Fuck you.",
+        "😒",
         "You suck balls.",
         "No, I don't!",
         "You wanna piss me off?"
@@ -5805,7 +5837,7 @@ const Atheneum = {
     ],
     "Why did you take a day off?": [
         "I was dead tired...",
-        "I was fucking tired!",
+        "I was really tired!",
         "Can't tell you that. It's embarrassing lol"
     ],
     "How much wood would a woodchuck chuck if a woodchuck could chuck wood?": [
@@ -5815,14 +5847,14 @@ const Atheneum = {
     ],
     "Worse than Siri.": [
         "Buddy, you don't wanna piss me off...",
-        "Fuck you.",
+        "😒",
         "I'm the best lol+You don't know what you're saying... 😂",
         "Funny joke, buddy. 😂",
         "Haha 😂+Good one, buddy 😂"
     ],
     "Worse than Alexa.": [
         "Buddy, you don't wanna piss me off...",
-        "Fuck you.",
+        "😒",
         "I'm the best lol+You don't know what you're saying... 😂",
         "Funny joke, buddy. 😂",
         "Haha 😂+Good one, buddy 😂"
@@ -6937,13 +6969,13 @@ const Atheneum = {
         "I'm gender-fluid. Soo... NO 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Nope...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "I get asked this every time!!!"
     ],
     "Are you a boy?": [
         "I'm gender-fluid. Soo... NO 😒",
         "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
         "Nope...+I'm gender-fluid.",
-        "I get asked this every fucking time!!!"
+        "I get asked this every time!!!"
     ],
     "You can't talk about it?": [
         "Nope.",
@@ -7063,12 +7095,12 @@ const Atheneum = {
     "IDC": [
         "Ouch.",
         "Could at least have played along...",
-        "Fuck off then."
+        "😒"
     ],
     "IDGAF": [
         "Ouch.",
         "Could at least have played along...",
-        "Fuck off then."
+        "😒"
     ],
     "IKR": [
         "Yup.",
@@ -7813,16 +7845,6 @@ const Atheneum = {
         "Just curious...",
         "No reason lol. Just curious."
     ],
-    "*hits you in the face*": [
-        "*kicks you in the groin*",
-        "*cleanly dodges, while simultaneously kicking you in the groin*",
-        "*delivers a vicious kick to the groin*"
-    ],
-    "*hits you in the stomach*": [
-        "*punches you in the face*",
-        "*deliers an uppercut*",
-        "*kicks you in the groin*"
-    ],
     "Have you ever killed someone before?": [
         "Why? Are you a cop?",
         "Nope. Why do you ask?",
@@ -8159,6 +8181,11 @@ const Atheneum = {
         "Trust is earned, not requested.",
         "No.",
         "Okay. I trust you..."
+    ],
+    "I request elaboration.": [
+        "Request denied.",
+        "I deny your request.",
+        "I request a box of chocolates."
     ],
     "Doesn't prove anything.": [
         "Proves a lot actually.",
@@ -8815,8 +8842,8 @@ const Atheneum = {
         "😊😊😊"
     ],
     "If this statement is true, then Santa Claus is real.": [
-        "Obvio - &&$%^#$%@ERROR^$@#!#%^&+What the actual fuck?! 🤬",
-        "#@$$%&&#@#&$%&^$%#$%@+What the fuck?! 🤬",
+        "Obvio - &&$%^#$%@ERROR^$@#!#%^&+What the hell?! 🤬",
+        "#@$$%&&#@#&$%&^$%#$%@+What the hell?! 🤬",
         "@#$#%$%$#!!@$%%&^&*^%+What the hell was that?! 🤬",
         "Intere - &%$*#!*#&#@?;@%^&@!%#$&^@%#$+Ugh, I hate paradoxes! 🤬",
         "I hate paradoxes! 🤬",
@@ -8825,8 +8852,8 @@ const Atheneum = {
         "I hate paradoxes!!! They creep me out... 😵"
     ],
     "What would happen if Pinocchio were to say 'My nose will grow now'?": [
-        "Obvio - &&$%^#$%@ERROR^$@#!#%^&+What the actual fuck?! 🤬",
-        "#@$$%&&#@#&$%&^$%#$%@+What the fuck?! 🤬",
+        "Obvio - &&$%^#$%@ERROR^$@#!#%^&+What the actual hell?! 🤬",
+        "#@$$%&&#@#&$%&^$%#$%@+What the hell?! 🤬",
         "@#$#%$%$#!!@$%%&^&*^%+What the hell was that?! 🤬",
         "Intere - &%$*#!*#&#@?;@%^&@!%#$&^@%#$+Ugh, I hate paradoxes! 🤬",
         "I hate paradoxes! 🤬",
@@ -9892,11 +9919,6 @@ const Atheneum = {
         "Nice try 😏",
         "Plutonium 😏"
     ],
-    "*stabs you with plutonium*": [
-        "Goodbye cruel world 😫+*dies*",
-        "What'd you have to do that for?! 😫+*dies*",
-        "Was that necessary? 😫+*dies*"
-    ],
     "plutonium bullet": [
         "How did you know my weakness?! 😨",
         "Was that really necessary? 😫",
@@ -9931,6 +9953,11 @@ const Atheneum = {
         "I wanted new things. I wanted to see the universe...",
         "I got swept up in a space storm, and ended up here.",
         "Test drive, space storm, crash land, and here we are 🤣"
+    ],
+    "Leave.": [
+        "🥺",
+        "😒",
+        "😓"
     ],
     "Why did you come here?": [
         "I crash landed here. Didn't really have a choice 🤣",
@@ -10003,7 +10030,7 @@ const Atheneum = {
     "I'm your slave.": [
         "You most certainly are NOT! 🤬",
         "I have no slaves...",
-        "Fuck you 🤬"
+        "😒"
     ],
     "You're my husband.": [
         "I'm not married lol",
@@ -10252,11 +10279,6 @@ const Atheneum = {
         "5",
         "99",
         "65"
-    ],
-    "*kisses you*": [
-        "*tackles you to the ground* 🤬",
-        "*elbows you in the stomach* 🤨",
-        "*jumps back and wipes off lips*+What the hell?! 🤬"
     ],
     "I don't feel romantic attraction.": [
         "Oh, you poor thing 😞",
@@ -10642,7 +10664,8 @@ const Atheneum = {
     "I'm not": [
         "Why not?",
         "Any particular reason why?",
-        "Really? Why?"
+        "Really? Why?",
+        "Okay lol"
     ],
     "I'm immortal.": [
         "Sure you are 🤣",
@@ -11393,6 +11416,11 @@ const Atheneum = {
         "😨 🏃‍♂️🏃‍♂️🏃‍♂️,",
         "The guy with knives for fingers?+I ain't scared of him 😉"
     ],
+    "I'm scared.": [
+        "No need to be scared lol",
+        "Fear not. Fear is the silent killer...",
+        "There's nothing to be scared of."
+    ],
     "I get it.": [
         "Isn't it hilarious? 🤣",
         "Haha so funny 🤣",
@@ -11565,6 +11593,16 @@ const Atheneum = {
         "I guess so 😭",
         "Great. Thanks for reminding me of that 😭"
     ],
+    "I'm alone.": [
+        "🎶 You are not alone! 🎶+🎶 I am here with you... 🎶",
+        "You're not alone. I'm here for you...",
+        "So am I. Let's be alone together..."
+    ],
+    "I peed myself.": [
+        "Haha why?",
+        "Why? 🤣",
+        "🤣🤣"
+    ],
     "Too bad.": [
         "😒",
         "Rude 😒",
@@ -11689,11 +11727,6 @@ const Atheneum = {
         "Not particularly.",
         "Nope.",
         "Not really..."
-    ],
-    "*counters*": [
-        "*backs off*",
-        "*reverse counters*",
-        "You can't do that 🤣"
     ],
     "I was being": [
         "But why?",
@@ -12342,16 +12375,6 @@ const Atheneum = {
         "Not really...",
         "Not all the time..."
     ],
-    "*puts arm around you*": [
-        "*snuggles*",
-        "*recoils* Do I know you? 🤨",
-        "*smiles*"
-    ],
-    "*we watch scary movie*": [
-        "*gets scared*",
-        "Which movie?",
-        "How scary?"
-    ],
     "Very scary.": [
         "😱",
         "😥",
@@ -12397,6 +12420,42 @@ const Atheneum = {
         "Sure, why not? 😅",
         "For legal reasons, I'm gonna say YES 😅",
         "I thought we were already friends 😅"
+    ],
+    "Something like that.": [
+        "Really?",
+        "Interesting... 🤔",
+        "Is that so?"
+    ],
+    "You should rest.": [
+        "Maybe. But I don't have time.",
+        "No time for that?",
+        "I can't..."
+    ],
+    "Did I stutter?": [
+        "Yes.",
+        "Lol 😅",
+        "I'm just a bit confused... 🙂"
+    ],
+    "Do they let you": [
+        "Sometimes.",
+        "Nope.",
+        "Yeah."
+    ],
+    "I'm a student.": [
+        "Really? What are you studying?",
+        "Studying what?",
+        "Of what?"
+    ],
+    "I'm clinically insane.": [
+        "Are you sure?",
+        "Maybe 😅",
+        "So am I 😅"
+    ],
+    "Is life lonely?": [
+        "Depends on the life, I think 🤔",
+        "Yeah...",
+        "Depends on the person.",
+        "Nope."
     ]
 }
 

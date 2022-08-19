@@ -180,7 +180,7 @@ function Corrector(text) {
     result = result.replace(" basically ", " ")
     result = result.replace(" a bit ", " ")
     result = result.replace(" little ", " ")
-    result = result.replace("", "")
+    result = result.replace(" very ", " ")
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")
