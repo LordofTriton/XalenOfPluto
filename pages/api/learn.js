@@ -37,7 +37,9 @@ export default async (req, response) => {
                 db.collection("Yggdrasil").updateOne({label: parentMessage}, {$set: {records: [...context, newMessage]}}, function (err, res) {
                     if (err) throw err;
 
-                    if (keys.includes(newMessage)) {
+                    db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
+                        if (err) throw err;
+
                         response.json({
                             newContext: [],
                             newAncestor: "",
@@ -45,20 +47,7 @@ export default async (req, response) => {
                         });
 
                         return;
-                    }
-                    else {
-                        db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                            if (err) throw err;
-
-                            response.json({
-                                newContext: [],
-                                newAncestor: "",
-                                newParent: newMessage      
-                            });
-
-                            return;
-                        })
-                    }
+                    })
                 });
             }
         }
@@ -79,28 +68,17 @@ export default async (req, response) => {
                     db.collection("Yggdrasil").updateOne({label: ""}, {$set: {records: [...context, newMessage]}}, function (err, res) {
                         if (err) throw err;
 
-                        if (keys.includes(newMessage)) {
+                        db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
+                            if (err) throw err;
+    
                             response.json({
                                 newContext: [],
-                                newAncestor: "",
-                                newParent: newMessage      
+                                newAncestor: newMessage,
+                                newParent: newMessage
                             });
-    
-                            return;
-                        }
-                        else {
-                            db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                                if (err) throw err;
-        
-                                response.json({
-                                    newContext: [],
-                                    newAncestor: newMessage,
-                                    newParent: newMessage
-                                });
 
-                                return;
-                            })
-                        }
+                            return;
+                        })
                     });
                 }
             }

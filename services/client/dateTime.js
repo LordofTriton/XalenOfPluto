@@ -63,8 +63,7 @@ function removeArrayStamp(array) {
 }
 
 function addStamp(text) {
-    if (text.includes("_")) return text;
-    else return `${Date.now()}_${text}`
+    return `${Date.now()}_${removeStamp(text)}`
 }
 
 const DateTime = {getDateFormatOne, dayPeriod, formatTime, removeStamp, removeArrayStamp, addStamp}

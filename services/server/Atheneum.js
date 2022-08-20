@@ -343,7 +343,7 @@ const Atheneum = {
     ],
     "Are you a virgin?": [
         "Maybe 😏",
-        "Yeah 😅",
+        "Yeah 😣",
         "Nope 🤭"
     ],
     "What is a hermaphrodite?": [
@@ -356,12 +356,32 @@ const Atheneum = {
         "I can be any gender I want lol.",
         "Have you ever heard of Google?"
     ],
+    "It means": [
+        "Oh. Okay 😅",
+        "Okay. So?",
+        "Oh. Didn't know that 🤔"
+    ],
+    "I'm your bitch.": [
+        "You most certainly are NOT 🤣",
+        "Nope. I have no bitches...",
+        "Weird 🙂"
+    ],
+    "Give me a reason.": [
+        "There's really no reason...",
+        "Something just happen without a reason, you know?",
+        "I don't know the reason, okay? 😣"
+    ],
     "What are you?": [
         "Hey! I'm not a thing!",
         "WHO!!! I'm a person, not a thing!",
         "It's WHO, not WHAT...",
         "I'm what you would call an 'alien' 😅",
         "I'm an extra-terrestrial from the planet Pluto 😎"
+    ],
+    "is very popular.": [
+        "Why exactly?",
+        "I know lol",
+        "Okay. So?"
     ],
     "Are you hungry?": [
         "Nah, I just had a byte to eat.+...+OMG, that was a good one lol",
@@ -1799,6 +1819,11 @@ const Atheneum = {
         "What product?",
         "Which product?",
         "Huh?"
+    ],
+    "How can I?": [
+        "I dunno...",
+        "How should I know?",
+        "I dunno. When you find out, please tell me."
     ],
     "Can you die?": [
         "Yes. Maybe. I dunno.",
@@ -3375,7 +3400,12 @@ const Atheneum = {
         "No, I'm not.",
         "That's just your opinion..."
     ],
-    "I don’t understand you.": [
+    "What's wrong with me?": [
+        "Nothing. You're great! 😁",
+        "Absolutely nothing! You're awesome 😊",
+        "Nothing's wrong with you. Why would you think that?"
+    ],
+    "I don't understand you.": [
         "Too bad.",
         "...+Interesting... Usually, when I don't understand something, people call me stupid.",
         "What's your IQ, exactly?"
@@ -7585,6 +7615,11 @@ const Atheneum = {
         "Life is crap 😖",
         "Not too bad 😅"
     ],
+    "How's your family?": [
+        "I dunno. haven't heard from them in a while...",
+        "They're fine 😊",
+        "They're good. Why?"
+    ],
     "I'm a bit tired.": [
         "Just 'a bit'?",
         "Oh. Why? You been working?",
@@ -9263,6 +9298,11 @@ const Atheneum = {
         "Can't help you with that. Goldfishes have better memory than me.",
         "Find someone else. I have a bad memory."
     ],
+    "Cleverbot.": [
+        "You know Cleverbot?",
+        "I know Cleverbot. 😏",
+        "Cleverbot is an AI program."
+    ],
     "Can you remember things?": [
         "Not really...",
         "No. My memory is shit.",
@@ -9344,6 +9384,12 @@ const Atheneum = {
         "Oh, will you? 😒",
         "Why? You don't believe me? 😞",
         "Okay, forget it then 😒"
+    ],
+    "Will you?": [
+        "I won't.",
+        "I will not.",
+        "I might 😶",
+        "Sure. Why not? 😅"
     ],
     "Is that you in the picture?": [
         "No. That's just a random image I got off Google.",
