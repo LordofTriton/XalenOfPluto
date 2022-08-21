@@ -147,6 +147,11 @@ const Atheneum = {
         "Or what?",
         "Haha 😅"
     ],
+    "You don't care?": [
+        "Not one bit.",
+        "Of course I do 😊",
+        "I do. But what am I supposed to do?"
+    ],
     "Do you dare?": [
         "Yes. I dare.",
         "I dare. I'm not afraid of anything 😅",
@@ -11720,6 +11725,11 @@ const Atheneum = {
         "I don't care if you do 😒",
         "Believe if it you like 🤣",
         "It's the truth. Doesn't matter if you believe it or not 😉"
+    ],
+    "What am I supposed to get?": [
+        "If you don't get it, fuhgeddabourit 😅",
+        "Forget it. Twas just a silly joke...",
+        "It was a joke... Forget it."
     ],
     "What color is": [
         "Blue. 💙",

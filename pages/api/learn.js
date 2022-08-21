@@ -85,9 +85,11 @@ export default async (req, response) => {
             else {
                 let result = await StoreService.GetStore(db, "Yggdrasil")
                 let data = (StoreService.StoreCompiler(result));
+                let context = data[""]
 
+                let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 response.json({
-                    newContext: data[newMessage],
+                    newContext: data[context[matchIndex]],
                     newAncestor: newMessage,
                     newParent: newMessage
                 });
