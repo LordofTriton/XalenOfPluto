@@ -118,7 +118,7 @@ export default async (req, response) => {
                 if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
                     let references = keys.filter(record => (MatchService.PureCompare(record, parent, 0.8) &&
                                         MatchService.PureMatch(Yggdrasil[greatGrandParent], grandParent, 0.8) >= 0 &&
-                                        MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0))
+                                        MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0));
                                         
                     if (references.length > 0) {
                         let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]

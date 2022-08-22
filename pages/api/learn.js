@@ -22,6 +22,7 @@ export default async (req, response) => {
     if (req.headers.origin === Auth.ClientURL) {
         if (parentMessage) {
             if (ancestor) {parentMessage = ancestor}
+            context = data[parentMessage]
             
             let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
             if (matchIndex >= 0) {

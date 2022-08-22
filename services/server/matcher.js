@@ -38,11 +38,13 @@ function PureMatch(store, message, matchThreshold) {
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
         let storeMessage = msgProcessor(store[i])
-        let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
+        if (storeMessage.length > 0) {
+            let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
 
-        if (difference >= match) {
-            index = i;
-            match = difference;
+            if (difference >= match) {
+                index = i;
+                match = difference;
+            }
         }
     }
 
@@ -71,11 +73,14 @@ function GetMatch(store, message, matchThreshold) {
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
         let storeMessage = msgProcessor(store[i])
-        let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
+        
+        if (storeMessage.length > 0) {
+            let difference = stringSimilarity.compareTwoStrings(userMessage, storeMessage)
 
-        if (difference >= match) {
-            index = i;
-            match = difference;
+            if (difference >= match) {
+                index = i;
+                match = difference;
+            }
         }
     }
 

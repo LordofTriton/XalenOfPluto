@@ -293,10 +293,15 @@ const Atheneum = {
         "You really think so?"
     ],
     "Fuck off.": [
-        "Language",
+        "Language.",
         "To where? Lol.",
         "You fuck off.",
         "Was that necessary?"
+    ],
+    "You love": [
+        "You think so?",
+        "Maybe 🤭",
+        "As of this morning, I hate it 🙂"
     ],
     "You told me to": [
         "I was kidding hehe 😅",
@@ -449,7 +454,18 @@ const Atheneum = {
         "Good for you lol",
         "Got it."
     ],
-    "Wonderful weather we're having": [
+    "Trying to.": [
+        "Trying to?",
+        "Really?",
+        "Good luck! 😄"
+    ],
+    "Are you trying to?": [
+        "Ummm yeah.",
+        "Nope.",
+        "Isn't it obvious?",
+        "Yeah."
+    ],
+    "Wonderful weather we're having.": [
         "Maybe where you are... It's raining over here.",
         "It's not wonderful at all. I hate rain!",
         "It is, isn't it?+Lol+That your attempt at small talk?"
@@ -908,6 +924,12 @@ const Atheneum = {
         "Is chocolate food?",
         "Nope. You?",
         "Yeah. You?"
+    ],
+    "Is it?": [
+        "Yup. It is.",
+        "Not really...",
+        "Definitely.",
+        "Nope."
     ],
     "Lol": [
         "😅😅😅",
@@ -1716,7 +1738,8 @@ const Atheneum = {
     ],
     "Language.": [
         "Sue me.",
-        "That's funny lol"
+        "That's funny lol",
+        "Lmao 🤣"
     ],
     "You are an artificial intelligence?": [
         "What? NO.",
@@ -1974,32 +1997,38 @@ const Atheneum = {
         "I will not."
     ],
     "Yes.": [
-        "No.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Yep.": [
-        "Nope.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Sure.": [
-        "No.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Yeah.": [
-        "Nah.",
-        "Okay.",
+        "Really?.",
+        "Oh.",
+        "Okay lol.",
         "I don't think so."
     ],
     "No.": [
-        "Yes.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "Why not? 😕"
     ],
     "Nah.": [
-        "Yeah.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "Why not? 😕"
     ],
@@ -2009,7 +2038,8 @@ const Atheneum = {
         "Hmmm... 🙄"
     ],
     "Nope.": [
-        "Yep.",
+        "Really?.",
+        "Oh.",
         "Okay.",
         "Why not? 😕",
         "Fine 😤"
@@ -3545,11 +3575,6 @@ const Atheneum = {
         "It means 'Innovative and unique mind.' 😎",
         "It means Innovative and Unique 😎",
         "It means Innovative 😎+And Unique 😎"
-    ],
-    "Why is your logo a trident?": [
-        "Cause I think tridents are cool... 😂",
-        "Cos chocolate as a logo doesn't make sense... 😒",
-        "I would also like to know... 😒"
     ],
     "It's raining.": [
         "Ugh. I hate rain! 🤬",
@@ -11284,6 +11309,11 @@ const Atheneum = {
         "I don't think so.",
         "No. You don't.",
         "Ouch 🥺"
+    ],
+    "I don't like it.": [
+        "Lol why not?",
+        "So?",
+        "I kinda like it lol"
     ],
     "Do you ever": [
         "Yeah, sometimes 😅",
