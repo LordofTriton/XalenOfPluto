@@ -1168,7 +1168,7 @@ const Atheneum = {
         "Have we met before? Sorry, I have a bad memory...+It's hard for me to remember people 🥺",
         "Sorry, I have a bad memory...+It's hard for me to remember people 🥺"
     ],
-    "The ceiling": [
+    "The ceiling.": [
         "😒😒😒"
     ],
     "Did you change your name?": [

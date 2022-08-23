@@ -350,14 +350,8 @@ const allowedGibberish = [
     "awww",
     "jeez",
     "geez",
-    "geezer"
-]
-
-const names = [
-    "Nice name 😎",
-    "Cool name 😎",
-    "Nice name. What does it mean? 🤔",
-    "Cool name. Does it mean anything? 🤔"
+    "geezer",
+    "yup",
 ]
 
 const Identity = {
