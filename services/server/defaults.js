@@ -1452,6 +1452,6 @@ const Actions = {
     ]
 }
 
-const Override = {Identity, Actions, tautology, copycat, fallback, gibberish, convoTrigger, convoStarter, jokeTrigger, jokes, allowedGibberish, names}
+const Override = {Identity, Actions, tautology, copycat, fallback, gibberish, convoTrigger, convoStarter, jokeTrigger, jokes, allowedGibberish}
 
 module.exports = Override;
