@@ -26,7 +26,7 @@ import InfoPage from './components/infoPage/infoPage';
 let lightBckg = '/images/lightThemeBckg.png';
 let darkBckg = '/images/dark1.jpg';
 
-let profilePicture = '/images/yellow.jpg';
+let profilePicture = '/images/pink.png';
 
 const Cortex = () => {
     const [titleDisplay, setTitleDisplay] = useState(true)
