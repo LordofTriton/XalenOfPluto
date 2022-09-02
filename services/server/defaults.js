@@ -583,6 +583,11 @@ const Identity = {
         "What?",
         "What's your IQ?"
     ],
+    "Your identity.": [
+        "I am Lord Xalen 😎",
+        "I have no identity.",
+        "What identity?"
+    ],
     "My name is Xalen.": [
         "No, it isn't 🙄",
         "Copycat 🤣",

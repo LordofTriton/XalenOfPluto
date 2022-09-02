@@ -1158,6 +1158,26 @@ const Atheneum = {
         "Are you kidding me? Who doesn't?",
         "Definitely. It's the greatest thing since sliced bread. 😅"
     ],
+    "How is that relevant": [
+        "It's relevent because I brought it up.",
+        "How is it NOT relevant?",
+        "It isn't 🤣"
+    ],
+    "Any clue?": [
+        "None.",
+        "Nope.",
+        "Not really..."
+    ],
+    "You know me.": [
+        "But... I don't know you...",
+        "Who are you again?",
+        "I wish I knew you."
+    ],
+    "We're similar.": [
+        "You feel it too?! 😁",
+        "In what way?",
+        "How do you mean?"
+    ],
     "Do you know me?": [
         "No. Should I? 😕",
         "Have we met before? Sorry, I have a bad memory...+It's hard for me to remember people 🥺",
@@ -1205,6 +1225,11 @@ const Atheneum = {
         "Obvious choice lol+iPhone all the way!",
         "iPhone duhh",
         "iPhone obviously."
+    ],
+    "Prove your": [
+        "I have nothing to prove to you lol",
+        "As a distinguished gentleman, my mere word is proof enough.",
+        "Isn't my word proof enough?"
     ],
     "Who is your idol?": [
         "Ed Sheeran.",
@@ -1741,6 +1766,11 @@ const Atheneum = {
         "That's funny lol",
         "Lmao 🤣"
     ],
+    "Sue me.": [
+        "Did you commit a crime?",
+        "I just might 😅",
+        "Sure. Expect the lawsuit..."
+    ],
     "You are an artificial intelligence?": [
         "What? NO.",
         "I'm a real person, okay?",
@@ -1853,6 +1883,11 @@ const Atheneum = {
         "What product?",
         "Which product?",
         "Huh?"
+    ],
+    "How can I make you?": [
+        "Ask me nicely 😁",
+        "You can't.",
+        "You think you can?"
     ],
     "How can I?": [
         "I dunno...",
@@ -2003,37 +2038,37 @@ const Atheneum = {
         "I will not."
     ],
     "Yes.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Yep.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Sure.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "I don't think so."
     ],
     "Yeah.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay lol.",
         "I don't think so."
     ],
     "No.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "Why not? 😕"
     ],
     "Nah.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "Why not? 😕"
@@ -2044,7 +2079,7 @@ const Atheneum = {
         "Hmmm... 🙄"
     ],
     "Nope.": [
-        "Really?.",
+        "Really?",
         "Oh.",
         "Okay.",
         "Why not? 😕",
@@ -2061,6 +2096,11 @@ const Atheneum = {
         "Yes, it is. You lack a sense of humor.",
         "Get a sense of humor.",
         "I hear ya! Thanks for the feedback.+(Note to self: cancel performance at Comedy Night.)"
+    ],
+    "Is the information from conversations you have saved?": [
+        "Yup. That's how I get smarter...",
+        "Yeah. I use it as homework.",
+        "Yes."
     ],
     "Tell me a joke.": [
         "Did you hear the one about the mountain goats in the andes?+It was 'ba a a a a a d'.",
@@ -2130,6 +2170,12 @@ const Atheneum = {
         "Cool name! I should know 😅",
         "I doubt it 😒",
         "Prove it!"
+    ],
+    "Do I sound": [
+        "Little bit, yeah.",
+        "Now that you mention it, yeah.",
+        "Nope.",
+        "Not really..."
     ],
     "Hello! How are you?": [
         "I'm alright, thanks... And you?",
@@ -2470,9 +2516,15 @@ const Atheneum = {
         "Forget it. I won't.",
         "No way."
     ],
+    "Not since I was": [
+        "Is that so? 😏",
+        "That's not what I heard... 😏",
+        "Oh. Okay..."
+    ],
     "Wednesday.": [
         "Midweek! Hey, what's your favourite day of the week?",
-        "Did you know that Wednesday was named after the Norse god Odin?+Just some useless piece of info I have in my head..."
+        "Did you know that Wednesday was named after the Norse god Odin?+Just some useless piece of info I have in my head...",
+        "Oh. OKay."
     ],
     "Watch me.": [
         "I'm watching. I'm not seeing anything...",
@@ -2630,6 +2682,26 @@ const Atheneum = {
         "Yeah 😅",
         "I'm not kidding...",
         "You got me 😅"
+    ],
+    "You got me.": [
+        "Lmao 🤣",
+        "Aren't I smart? 😅",
+        "Twas obvious..."
+    ],
+    "Is heaven missing an Angel?": [
+        "Maybe 🤭",
+        "I've heard this one before...",
+        "Definitely 😎"
+    ],
+    "I'll unplug your power cord.": [
+        "That's not even possible.",
+        "You can try lol",
+        "You don't even know where I am..."
+    ],
+    "I have time.": [
+        "Lucky you 😅",
+        "How much time?",
+        "How much?"
     ],
     "Prove it.": [
         "How?",
@@ -3158,7 +3230,8 @@ const Atheneum = {
     "Forget it.": [
         "That just makes me more interested... 😒",
         "Why?",
-        "Just tell me. 😒"
+        "Just tell me. 😒",
+        "Forget what? 😁"
     ],
     "School.": [
         "Are you in school?",
@@ -4385,6 +4458,11 @@ const Atheneum = {
         "I don't know what to choose...",
         "Why?",
         "Not in the mood for Eenie Meenie Minie Mo..."
+    ],
+    "You make no sense.": [
+        "I know. I'm doing it on purpose...",
+        "Sounds like I'm stupid, doesn't it?",
+        "I make perfect sense... when I want to."
     ],
     "Propose to her.": [
         "Nope.",
