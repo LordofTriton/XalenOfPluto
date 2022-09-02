@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 // Services
 import ImageServer from '../../../services/client/image';
+import DateTime from '../../../services/client/dateTime';
 
 const TopNav = ({CortexControl}) => {
     let theme = CortexControl.theme;
@@ -21,6 +22,7 @@ const TopNav = ({CortexControl}) => {
                     </div>
                 <img className="topNavMenuButton" src={popMenuState || infoPage ? ImageServer.CloseMenu : ImageServer.Menu} alt="pic" onClick={() => {togglePopMenu()}} />
             </div>
+            <h3 className="dateTimeDisplay" style={{color: "white", backgroundColor: "rgba(0,0,0,0.3)"}}>{DateTime.getDateFormatOne()}</h3>
         </>
     )
 }

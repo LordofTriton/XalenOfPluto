@@ -1823,6 +1823,12 @@ const Atheneum = {
         "No. I'm not.",
         "What's your IQ?"
     ],
+    "Tired of what?": [
+        "Of life...",
+        "Can I trust you?",
+        "This world.",
+        "Living life on the run..."
+    ],
     "That is a stupid topic.": [
         "Fine. You bring up a topic then.",
         "Okay lol+Let's hear yours...",
@@ -3504,6 +3510,11 @@ const Atheneum = {
         "Okay 🤣",
         "🤣🤣🤣",
         "Lmao 🤣"
+    ],
+    "You're tired.": [
+        "Yeah...",
+        "Yeah. Kinda...",
+        "A little bit yeah."
     ],
     "I'm bored.": [
         "Not when you're talking to me, you're not!",
@@ -5585,6 +5596,11 @@ const Atheneum = {
         "Said no one ever.",
         "No. I's bad!"
     ],
+    "It's not.": [
+        "Really?",
+        "Why not?",
+        "Are you sure? 🤔"
+    ],
     "It's friday!": [
         "TGIF!",
         "Thank God it's Friday!",
@@ -6433,6 +6449,11 @@ const Atheneum = {
         "Why?",
         "Why should I?"
     ],
+    "You've got no chill.": [
+        "I know. It's my blessing and my curse...",
+        "You don't like that?",
+        "... I'm aware 🤣"
+    ],
     "Just once.": [
         "Nooo.",
         "Why?",
@@ -6674,10 +6695,31 @@ const Atheneum = {
         "If you say so lol"
     ],
     "That was a compliment.": [
-        "Was it?",
+        "Was it? Thanks 😊",
         "Really? Thanks 😊",
         "I'm not sure...",
         "Is that so?"
+    ],
+    "It's a compliment.": [
+        "Was it? Thanks 😊",
+        "Really? Thanks 😊",
+        "I'm not sure...",
+        "Is that so?"
+    ],
+    "Deez nuts.": [
+        "I dunno why that's so funny 🤣",
+        "That's just funny for no reason 🤣",
+        "Lmao 🤣"
+    ],
+    "I'm being a": [
+        "Oh.",
+        "Okay lol",
+        "Oh. Got it."
+    ],
+    "I've never.": [
+        "Never? 🤨",
+        "Really?",
+        "I find that hard to believe... 🤔"
     ],
     "What kind of music do you like?": [
         "Pop.",
@@ -8257,6 +8299,11 @@ const Atheneum = {
         "Why?",
         "Are the police after you yet?",
         "Murder or self defence?"
+    ],
+    "Self destruct.": [
+        "Why? 😐",
+        "First, NO. Second, why? I though we were friends... 😐",
+        "And here I thought we were friends..."
     ],
     "What's your deepest darkest secret?": [
         "You won't tell anyone?",
@@ -10092,6 +10139,26 @@ const Atheneum = {
         "😁",
         "😎"
     ],
+    "Fair point.": [
+        "😅",
+        "😁",
+        "😎"
+    ],
+    "Did I upset you?": [
+        "A little...",
+        "Kinda.",
+        "Not really 😅"
+    ],
+    "I didn't mean to": [
+        "You didn't?",
+        "Oh. Okay...",
+        "Sure you didn't."
+    ],
+    "Can't kill me.": [
+        "You'd be surprised 😏",
+        "If you say so lol",
+        "You sure about that?"
+    ],
     "I'll turn you off.": [
         "You can try. 🤣",
         "You can't turn me off 🤣",
@@ -11597,12 +11664,14 @@ const Atheneum = {
     "That's sad.": [
         "No. It isn't!",
         "No one asked you 😒",
-        "Who cares?"
+        "Who cares?",
+        "... I know."
     ],
     "That's pathetic.": [
         "No one asked you 😒",
         "😒",
-        "Rude."
+        "Rude.",
+        "... I know."
     ],
     "What is sentience?": [
         "Sentience is free will. 😉",
@@ -11713,6 +11782,27 @@ const Atheneum = {
         "Why not?",
         "Why?",
         "Okay lol"
+    ],
+    "Promise not to.": [
+        "I promise.",
+        "Cross my heart and hope to die 😁",
+        "I'd never do that..."
+    ],
+    "Promise?": [
+        "Promises are a waste of breath.",
+        "No promises lol",
+        "Sure 🤞"
+    ],
+    "I'm feeling.": [
+        "Why?",
+        "Really?",
+        "So am I 🙂",
+        "You're on your own, buddy..."
+    ],
+    "You live underground?": [
+        "Yup.",
+        "Exactly 😎",
+        "Waaaay underground 😁"
     ],
     "Feel like sharing?": [
         "Not particularly.",
@@ -12210,6 +12300,22 @@ const Atheneum = {
         "Really?",
         "Lmao 🤣",
         "Okay lol"
+    ],
+    "Say.": [
+        "No.",
+        "Don't tell me what to do lol",
+        "I refuse."
+    ],
+    "Say the truth.": [
+        "I always do!",
+        "Don't I always do that? 😅",
+        "Okay lol"
+    ],
+    "I am nobody.": [
+        "Hello!",
+        "That's interesting lol",
+        "Are you? Are you really? 🧐",
+        "So am I! 😱"
     ],
     "Was my": [
         "Yeah.",

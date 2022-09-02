@@ -1405,6 +1405,7 @@ const Actions = {
         "*kicks you in the groin*"
     ],
     "*stabs you with plutonium*": [
+        "*clutches wound* Wh- Why?!",
         "Goodbye cruel world 😫+*dies*",
         "What'd you have to do that for?! 😫+*dies*",
         "Was that necessary? 😫+*dies*"
@@ -1449,6 +1450,12 @@ const Actions = {
         "Master, command me! 😵",
         "*reverse mindcontrols you*",
         "Nice try, buddy 😏"
+    ],
+    "*shoots you*": [
+        "*clutches wound* Wh- Why?!",
+        "Goodbye cruel world 😫+*dies*",
+        "What'd you have to do that for?! 😫+*dies*",
+        "Was that necessary? 😫+*dies*"
     ]
 }
 

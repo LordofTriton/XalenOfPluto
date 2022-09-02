@@ -77,6 +77,7 @@ const ChatWindow = ({CortexControl}) => {
                     replyIndex = Math.floor(Math.random() * data.length);
                     typingDelay = 100 * data[replyIndex].length;
                 }
+                scrollDown();
                 setTimeout(() => replyMessage(data, replyIndex), typingDelay)
             })
         }
@@ -166,8 +167,6 @@ const ChatWindow = ({CortexControl}) => {
     }
 
     function replyMessage(reply, replyIndex) {
-        scrollDown();
-
         if (reply && reply.length > 0) {
             reply = reply[replyIndex]
             let replyMessages = reply.split("+")
@@ -192,7 +191,6 @@ const ChatWindow = ({CortexControl}) => {
     return(
         <>
             <div className="chatWindow" id="chatWindow">
-                <h3 className="dateTimeDisplay" style={{color: "white", backgroundColor: "rgba(0,0,0,0.3)"}}>{DateTime.getDateFormatOne()}</h3>
                 {
                     chatHistory.map((message) =>
                         <div className="chatMessage" key={message.time}>

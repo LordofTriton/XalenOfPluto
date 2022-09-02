@@ -141,6 +141,7 @@ function Corrector(text) {
 
     // Adverbs
     result = result.replace(" actually ", " ")
+    result = result.replace(" also ", " ")
     result = result.replace(" really ", " ")
     result = result.replace(" usually ", " ")
     result = result.replace(" totally ", " ")
