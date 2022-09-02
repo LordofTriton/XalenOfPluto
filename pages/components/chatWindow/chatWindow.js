@@ -191,6 +191,7 @@ const ChatWindow = ({CortexControl}) => {
     return(
         <>
             <div className="chatWindow" id="chatWindow">
+                <h3 className="dateTimeDisplay" style={{color: "white", backgroundColor: "rgba(0,0,0,0.3)"}}>{DateTime.getDateFormatOne()}</h3>
                 {
                     chatHistory.map((message) =>
                         <div className="chatMessage" key={message.time}>

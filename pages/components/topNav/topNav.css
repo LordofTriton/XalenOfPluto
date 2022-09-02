@@ -102,17 +102,3 @@
 .topNavMenuOption:hover {
     transform: scale(1.2,1.2);
 }
-
-.dateTimeDisplay {
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    font-size: 13px;
-    margin: 0px 10% 40px 10%;
-    padding: 10px 0px 10px 0px;
-    border-radius: 0px 0px 30px 30px;
-    position: absolute;
-    top: 70px;
-    left: 10%;
-    right: 10%;
-}

@@ -2614,8 +2614,8 @@ const Atheneum = {
         "i doubt it."
     ],
     "I don't know.": [
-        "Your problem. Not mine...",
-        "Then find out!!",
+        "Ugh, really?",
+        "Can you find out?",
         "Ah... I see."
     ],
     "I like you.": [
