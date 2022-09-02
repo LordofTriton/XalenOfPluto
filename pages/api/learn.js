@@ -35,20 +35,14 @@ export default async (req, response) => {
                 return;
             }
             else {
-                db.collection("Yggdrasil").updateOne({label: parentMessage}, {$set: {records: [...context, newMessage]}}, function (err, res) {
-                    if (err) throw err;
+                await StoreService.UpdateYggdrasil(db, parentMessage, [...context, newMessage])
 
-                    db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                        if (err) throw err;
-
-                        response.json({
-                            newContext: [],
-                            newAncestor: "",
-                            newParent: newMessage      
-                        });
-
-                        return;
-                    })
+                await StoreService.InsertOne(db, {label: newMessage, records: []}, "Yggdrasil")
+                
+                response.json({
+                    newContext: [],
+                    newAncestor: "",
+                    newParent: newMessage      
                 });
             }
         }
@@ -66,20 +60,14 @@ export default async (req, response) => {
                     return;
                 }
                 else {
-                    db.collection("Yggdrasil").updateOne({label: ""}, {$set: {records: [...context, newMessage]}}, function (err, res) {
-                        if (err) throw err;
+                    await StoreService.UpdateYggdrasil(db, parentMessage, [...context, newMessage])
 
-                        db.collection("Yggdrasil").update({label: newMessage}, {$setOnInsert: {label: newMessage, records: []}}, {upsert: true}, function (err, res) {
-                            if (err) throw err;
-    
-                            response.json({
-                                newContext: [],
-                                newAncestor: newMessage,
-                                newParent: newMessage
-                            });
-
-                            return;
-                        })
+                    await StoreService.InsertOne(db, {label: newMessage, records: []}, "Yggdrasil")
+                    
+                    response.json({
+                        newContext: [],
+                        newAncestor: "",
+                        newParent: newMessage      
                     });
                 }
             }

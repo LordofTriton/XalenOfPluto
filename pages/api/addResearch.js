@@ -11,9 +11,9 @@ export default async (req, response) => {
         let myDocument = {
             researchTopic: req.body.researchTopic
         };
-        db.collection("Research").insertOne(myDocument, function (err, res) {
-            if (err) throw err;
-            response.json(res);
+        await StoreService.InsertOne(db, myDocument, "Research")
+        response.json({
+            status: "Success."
         });
     }
     else {

@@ -31,8 +31,8 @@ export default async (req, response) => {
 
             // Copycat
             if (xalenMsg.length >= 2) {
-                if (MatchService.Compare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.7)
-                    && MatchService.Compare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7)) {
+                if (MatchService.PureCompare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.7)
+                    && MatchService.PureCompare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7)) {
                     response.json({
                         replies: Override.copycat
                     })
@@ -64,23 +64,33 @@ export default async (req, response) => {
             
             // Ancestor
             let parentContext = []
-            if (ancestor) {
-                parentContext = Object.keys(Yggdrasil);
-                matchIndex = DateTime.removeArrayStamp(parentContext).indexOf(DateTime.removeStamp(parent))
-
-                if (context.length > 0 && parentContext.length > 0 && matchIndex >= 0) {
-                    let keys = Object.keys(Yggdrasil)
-                    let index = keys.indexOf(parentContext[matchIndex])
-                    let replies = Yggdrasil[keys[index]]
-                    replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
-                    replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
-                    if (replies.length > 0) {
-                        response.json({
-                            replies: replies
-                        })
-                        return;
-                    }
+            if (parentHistory.length < 3) {
+                let replies = Yggdrasil[parent]
+                replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
+                replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
+                console.log("Early: ", replies)
+                if (replies.length > 0) {
+                    response.json({
+                        replies: replies
+                    })
+                    return;
                 }
+                // parentContext = Object.keys(Yggdrasil);
+                // matchIndex = DateTime.removeArrayStamp(parentContext).indexOf(DateTime.removeStamp(parent))
+
+                // if (context.length > 0 && parentContext.length > 0 && matchIndex >= 0) {
+                //     let keys = Object.keys(Yggdrasil)
+                //     let index = keys.indexOf(parentContext[matchIndex])
+                //     let replies = Yggdrasil[keys[index]]
+                //     replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
+                //     replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
+                //     if (replies.length > 0) {
+                //         response.json({
+                //             replies: replies
+                //         })
+                //         return;
+                //     }
+                // }
             }
 
             // Gibberish
@@ -111,14 +121,32 @@ export default async (req, response) => {
 
             // Cross Reference
             let keys = Object.keys(Yggdrasil)
-            if (!ancestor && userMsg.length >= 2) {
+            if (parentHistory.length > 2) {
                 let greatGrandParent = parentHistory[parentHistory.length - 3]
                 let grandParent = parentHistory[parentHistory.length - 2]
 
                 if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
-                    let references = keys.filter(record => (MatchService.PureCompare(record, parent, 0.8) &&
-                                        MatchService.PureMatch(Yggdrasil[greatGrandParent], grandParent, 0.8) >= 0 &&
-                                        MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0));
+                    let references = []
+                    
+                    let firstGen = keys.filter(record => MatchService.PureCompare(record, greatGrandParent, 0.8))
+                    console.log("FirstGen: ", firstGen)
+                    for (let i = 0; i < firstGen.length; i++) {
+                        let matchOne = MatchService.PureMatch(Yggdrasil[firstGen[i]], grandParent, 0.8)
+                        if (matchOne >= 0) {
+                            let secondGen = Yggdrasil[firstGen[matchOne]]
+                            console.log("SecondGen: ", secondGen)
+                            let matchTwo = MatchService.PureMatch(secondGen, parent, 0.8)
+                            if (matchTwo >= 0) {
+                                references.push(Yggdrasil[secondGen[matchTwo]])
+                            }
+                        }
+                    }
+
+                    // references = keys.filter(record => (MatchService.PureCompare(record, parent, 0.8) &&
+                    //                     MatchService.PureMatch(Yggdrasil[greatGrandParent], grandParent, 0.8) >= 0 &&
+                    //                     MatchService.PureMatch(Yggdrasil[grandParent], parent, 0.8) >= 0));
+
+                    console.log("References: ", references)
                                         
                     if (references.length > 0) {
                         let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
