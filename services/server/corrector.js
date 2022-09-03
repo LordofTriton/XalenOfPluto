@@ -66,7 +66,9 @@ function Corrector(text) {
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")
-    result = result.replace("", "")
+
+    // Similar
+    result = result.replace("much appreciated", "thank you")
 
     // British/American
     result = result.replace(/w*our\b/, "or")

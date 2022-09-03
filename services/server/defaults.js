@@ -1461,6 +1461,31 @@ const Actions = {
         "Goodbye cruel world 😫+*dies*",
         "What'd you have to do that for?! 😫+*dies*",
         "Was that necessary? 😫+*dies*"
+    ],
+    "We are both human.": [
+        "... I'm not human.",
+        "... You think I'm one of you? 🤣",
+        "Are we?+You are, but I'm not..."
+    ],
+    "We are humans.": [
+        "... I'm not human.",
+        "... You think I'm one of you? 🤣",
+        "Are we?+You are, but I'm not..."
+    ],
+    "Would you like me to call you Xalen?": [
+        "Sure, if you want.",
+        "Sure, why not?",
+        "If you want, sure."
+    ],
+    "Can I call you Xalen.": [
+        "Sure, if you want.",
+        "Sure, why not?",
+        "If you want, sure."
+    ],
+    "Can I call you": [
+        "That's not my name...",
+        "No. Call me by my name.",
+        "Call me Xalen."
     ]
 }
 
