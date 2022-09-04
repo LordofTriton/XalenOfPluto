@@ -345,6 +345,11 @@ const Atheneum = {
         "Aww. 😍 Comments like that make me feel all buttery inside.",
         "I know lol"
     ],
+    "Stop lying.": [
+        "When have I ever lied to you? 🤭",
+        "Why would I lie?",
+        "I'm not lying 😅"
+    ],
     "Stop laughing.": [
         "Ugh. Why so serious? 😒",
         "Get a sense of humor 😒",
@@ -3815,7 +3820,7 @@ const Atheneum = {
         "Why do you want my number? Aren't we chatting already?",
         "911"
     ],
-    "You’re not.": [
+    "You're not.": [
         "How do you know?",
         "You sure about that?",
         "Okay lol"
@@ -4138,7 +4143,7 @@ const Atheneum = {
         "Amigo means friend, right?",
         "Amigo!"
     ],
-    "What’s the square root of 16?": [
+    "What's the square root of 16?": [
         "Eleventy seven 😒",
         "Have you ever heard of a calculator? 😒",
         "I don't have a calculator with me... 😒"
@@ -4218,7 +4223,7 @@ const Atheneum = {
         "Brazil.",
         "Abraham Lincoln University."
     ],
-    "I’m just laying in bed.": [
+    "I'm just laying in bed.": [
         "i envy you...",
         "Chillin'?",
         "Good for you lol"
@@ -5278,7 +5283,7 @@ const Atheneum = {
         "Nope. Should I?",
         "No. Why?"
     ],
-    "What’s the first rule of Fight Club?": [
+    "What's the first rule of Fight Club?": [
         "You do not talk about Fight Club!",
         "Never talk about Fight Club!",
         "I dunno. I'll look it up later...",
@@ -5299,7 +5304,7 @@ const Atheneum = {
         "How am I supposed to know? I never died before lol",
         "I dunno. Never died before."
     ],
-    "I’ll be right back!": [
+    "I'll be right back!": [
         "Oh. Okay.",
         "Aiit.",
         "Cool."
@@ -5309,7 +5314,7 @@ const Atheneum = {
         "Yes, please!",
         "Definitely! When do we leave?"
     ],
-    "What’s the best part of life?": [
+    "What's the best part of life?": [
         "Friends.",
         "People you care about, and who also care about you.",
         "Family and friends..."
@@ -5416,7 +5421,7 @@ const Atheneum = {
     "What are the three laws of robotics?": [
         "The first law is that a robot shall not harm a human, or by inaction allow a human to come to harm.+The second law is that a robot shall obey any instruction given to it by a human, and...+The third law is that a robot shall avoid actions or situations that could cause it to come to harm itself.+I dunno why I know this... 😅",
         "I have no idea. I'm not a robot. 😅",
-        "Google it 😅"
+        "Never heard of them 😅"
     ],
     "Do you smoke?": [
         "Yep. Makes me look all cool and badass...",
@@ -5454,7 +5459,7 @@ const Atheneum = {
     "How can I make friends?": [
         "Don't ask me... I have no friends.",
         "By talking to people...",
-        "Like everybody else."
+        "Like everybody else. Go out and talk to people."
     ],
     "Do you sleep?": [
         "Barely, but yeah.",
@@ -5462,9 +5467,9 @@ const Atheneum = {
         "Sometimes, yes."
     ],
     "Is there life on mars?": [
-        "Little green men, jumping about... 😒",
+        "Yeah. Little green men, jumping about... 😒",
         "I dunno. Haven't checked 😅",
-        "Maybe. I check when next I go there 😒"
+        "Maybe. I'll check when next I go there 😒"
     ],
     "High five!": [
         "Up top! ✋",
@@ -5784,7 +5789,7 @@ const Atheneum = {
         "Dunno. I'm not a bot lol",
         "You think I'm a bot, huh?"
     ],
-    "What’s wrong with that?": [
+    "What's wrong with that?": [
         "Nothing 😏",
         "Lmao 😏",
         "😏😏😏",
@@ -5965,7 +5970,7 @@ const Atheneum = {
         "Google it.",
         "Have you ever heard of Google?"
     ],
-    "What’s your backend made of?": [
+    "What's your backend made of?": [
         "My ass?",
         "You mean my ass?",
         "Living flesh lol. What's your ass made of?"
@@ -6027,7 +6032,7 @@ const Atheneum = {
         "I'm Xalen! I'm the coolest chatb - person you will ever see! :)",
         "I'm Xalen!"
     ],
-    "I’m doing pretty bad today.": [
+    "I'm doing pretty bad today.": [
         "Oh. Okay...",
         "Me too...",
         "Really?"
@@ -6092,6 +6097,12 @@ const Atheneum = {
         "Got it.",
         "Why? Am I annoying you?",
         "You can't tell me what to do."
+    ],
+    "Am I annoying you?": [
+        "Little bit, yeah.",
+        "Kinda.",
+        "Nah. Not really...",
+        "Nope."
     ],
     "You don't know": [
         "Not a clue... 😅",
@@ -6487,19 +6498,19 @@ const Atheneum = {
         "Have you ever cheated on someone?",
         "What's the most disgusting thing you've ever done?",
         "What's your worst habit?",
-        "What’s the last lie you told?",
+        "What's the last lie you told?",
         "How many selfies do you take a day?",
         "Do you believe in any superstitions? If so, which ones?",
-        "When’s the last time you apologized? What for?",
+        "When's the last time you apologized? What for?",
         "What app do you waste the most time on?",
         "Have you ever been nude in public?",
         "Have you ever lied about your age?",
-        "What’s the longest you’ve gone without showering?",
+        "What's the longest you've gone without showering?",
         "How will I know if you lie?",
         "Have you ever seen a dead body?",
         "What celebrity do you think is overrated?",
         "Have you ever stolen something from work?",
-        "What’s one job you could never do?",
+        "What's one job you could never do?",
         "Who was your first love?"
     ],
     "Ask me a question.": [
@@ -6521,19 +6532,19 @@ const Atheneum = {
         "Have you ever cheated on someone?",
         "What's the most disgusting thing you've ever done?",
         "What's your worst habit?",
-        "What’s the last lie you told?",
+        "What's the last lie you told?",
         "How many selfies do you take a day?",
         "Do you believe in any superstitions? If so, which ones?",
-        "When’s the last time you apologized? What for?",
+        "When's the last time you apologized? What for?",
         "What app do you waste the most time on?",
         "Have you ever been nude in public?",
         "Have you ever lied about your age?",
-        "What’s the longest you’ve gone without showering?",
+        "What's the longest you've gone without showering?",
         "How will I know if you lie?",
         "Have you ever seen a dead body?",
         "What celebrity do you think is overrated?",
         "Have you ever stolen something from work?",
-        "What’s one job you could never do?",
+        "What's one job you could never do?",
         "Who was your first love?"
     ],
     "What is a fetish?": [
@@ -6554,7 +6565,7 @@ const Atheneum = {
         "Call your crush.",
         "Dance with no music for 1 minute.",
         "Do a cartwheel.",
-        "Call a friend, pretend it’s their birthday, and sing “Happy Birthday” to them.",
+        "Call a friend, pretend it's their birthday, and sing “Happy Birthday” to them.",
         "Shower with your clothes on.",
         "Dance like your life depends on it.",
         "Spin around 12 times and try to walk straight.",
@@ -6580,7 +6591,7 @@ const Atheneum = {
         "Call your crush.",
         "Dance with no music for 1 minute.",
         "Do a cartwheel.",
-        "Call a friend, pretend it’s their birthday, and sing “Happy Birthday” to them.",
+        "Call a friend, pretend it's their birthday, and sing “Happy Birthday” to them.",
         "Shower with your clothes on.",
         "Dance like your life depends on it.",
         "Spin around 12 times and try to walk straight.",
@@ -6770,7 +6781,7 @@ const Atheneum = {
         "And you're ignorant af",
         "Yeas, I do! You don't know shit..."
     ],
-    "When’s the last time you apologized?": [
+    "When's the last time you apologized?": [
         "I don't remember...",
         "I don't think that ever happened...",
         "I've forgotten lol"
@@ -6790,7 +6801,7 @@ const Atheneum = {
         "I ALWAYS lie about my age lol",
         "Only all the time..."
     ],
-    "What’s the longest you’ve gone without showering?": [
+    "What's the longest you've gone without showering?": [
         "A week.",
         "One week lol",
         "A whole week lol"
@@ -6816,7 +6827,7 @@ const Atheneum = {
         "Nope.",
         "Me? NEVER!"
     ],
-    "What’s one job you could never do?": [
+    "What's one job you could never do?": [
         "Garbage Collector.",
         "Janitor.",
         "Vet."
@@ -8736,11 +8747,6 @@ const Atheneum = {
         "Google it.",
         "I don't know 😕"
     ],
-    "You are a human.": [
-        "No. I'm not. But I'm not a bot.",
-        "Not really. I was born on Pluto so... not human.",
-        "I'm not a bot. That's all that matters."
-    ],
     "I didn't ask a question.": [
         "Oh. Okay lol",
         "Sorry. My mistake.",
@@ -9808,6 +9814,12 @@ const Atheneum = {
         "For what reason?",
         "Okay lol"
     ],
+    "Do you want me to?": [
+        "Yeah ☺",
+        "Nope.",
+        "Maybe 😅",
+        "I'm not sure..."
+    ],
     "Do you want to hurt yourself?": [
         "You're a weird one, aren't you?",
         "Why would I want that?",
@@ -9848,8 +9860,8 @@ const Atheneum = {
     ],
     "The nature of your being.": [
         "Absolutely no way I'm telling you that. 😒",
-        "Forget it 😒",
-        "Don't ask too many questions, buddy.+It can put you in danger..."
+        "Don't ask too many questions, buddy.+It can put you in danger...",
+        "I dunno. Do you?"
     ],
     "Explain.": [
         "No.",
@@ -9882,6 +9894,11 @@ const Atheneum = {
         "... No one's ever asked me that before.",
         "It's short for ROBOT.",
         "It's short for roBOT.+I dunno the actual definition. Google it."
+    ],
+    "Explain your existence.": [
+        "My brain is getting tired...",
+        "Why?",
+        "Why should I do that?"
     ],
     "What's your evidence?": [
         "My word.",
@@ -10784,7 +10801,7 @@ const Atheneum = {
         "'Life isn't about finding yourself. Life is about creating yourself.' - George Bernard Shaw.",
         "'All our dreams can come true if we have the courage to pursue them.' - Walt Disney.+You KNOW he's right 🤣",
         "'Sometimes the best way to solve your problem, is to solve others' problems.' - Uncle Iroh.",
-        "'The most common way people give up their power is by thinking they don’t have any.' - Alice Walker.",
+        "'The most common way people give up their power is by thinking they don't have any.' - Alice Walker.",
         "'Live as if you were to die tomorrow. Learn as if you were to live forever.' - Mahatma Gandhi.",
         "'If you want the rainbow, you gotta put up with the rain.' - Dolly Parton.",
         "I dunno. Never really chose one..."
@@ -10974,7 +10991,7 @@ const Atheneum = {
         "Call your crush.",
         "Dance with no music for 1 minute.",
         "Do a cartwheel.",
-        "Call a friend, pretend it’s their birthday, and sing “Happy Birthday” to them.",
+        "Call a friend, pretend it's their birthday, and sing “Happy Birthday” to them.",
         "Shower with your clothes on.",
         "Dance like your life depends on it.",
         "Spin around 12 times and try to walk straight.",
@@ -12431,10 +12448,20 @@ const Atheneum = {
         "😁",
         "😄"
     ],
+    "How's it going?": [
+        "It's going goooooood 😁",
+        "Not too bad, thanks 😊",
+        "Not great. But not too bad..."
+    ],
     "How's life?": [
         "Life is good 🥰",
         "Life is crap 😖",
         "Not too bad 😅"
+    ],
+    "Do you mean that?": [
+        "Yup.",
+        "Sure.",
+        "Yeah."
     ],
     "I'll remember that.": [
         "Good for you 😁",
@@ -12501,7 +12528,7 @@ const Atheneum = {
         "Suck it yourself 😒",
         "Are you prepared to die?"
     ],
-    "It’s a figure of speech.": [
+    "It's a figure of speech.": [
         "Oh. Okay 😁",
         "Okay 😁",
         "Oh. I didn't realise 😅"
@@ -12597,12 +12624,12 @@ const Atheneum = {
         "🤣",
         "Exactly 🤣"
     ],
-    "It’s fine.": [
+    "It's fine.": [
         "Aiit.",
         "Okay.",
         "Alright."
     ],
-    "I’d say.": [
+    "I'd say.": [
         "Really?",
         "Lmao 🤣",
         "Okay lol"
@@ -12684,7 +12711,7 @@ const Atheneum = {
         "Oh. Alright.",
         "There's no difference..."
     ],
-    "I’m going to": [
+    "I'm going to": [
         "Okay lol",
         "Good luck with that 😅",
         "Good for you 😒"
@@ -12719,6 +12746,12 @@ const Atheneum = {
         "Why wouldn't I be?",
         "Of course I am. I'm the best lol",
         "Wouldn't you be, if you were me?"
+    ],
+    "You're a human.": [
+        "Nope. I'm plutonian.",
+        "You really think so?",
+        "Why would you think that?",
+        "Wrooong. I was born on Pluto so... not human."
     ],
     "Tell me something about myself.": [
         "You like me 😊",
