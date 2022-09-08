@@ -111,12 +111,12 @@ export default async (req, response) => {
                 if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
                     let references = []
                     
-                    let firstGen = keys.filter(record => MatchService.PureCompare(record, greatGrandParent, 0.8))
+                    let firstGen = keys.filter(record => MatchService.Compare(record, greatGrandParent, 0.8))
                     for (let i = 0; i < firstGen.length; i++) {
-                        let matchOne = MatchService.PureMatch(Yggdrasil[firstGen[i]], grandParent, 0.8)
+                        let matchOne = MatchService.GetMatch(Yggdrasil[firstGen[i]], grandParent, 0.8)
                         if (matchOne >= 0) {
                             let secondGen = Yggdrasil[firstGen[i]][matchOne]
-                            let matchTwo = MatchService.PureMatch(Yggdrasil[secondGen], parent, 0.8)
+                            let matchTwo = MatchService.GetMatch(Yggdrasil[secondGen], parent, 0.8)
                             if (matchTwo >= 0) {
                                 references.push(Yggdrasil[secondGen][matchTwo])
                             }

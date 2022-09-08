@@ -39,6 +39,8 @@ function Corrector(text) {
     result = result.replace("dont know", "dunno")
     result = result.replace("what do you", "whatcha")
     result = result.replace(" u ", " you ")
+    result = result.replace(" ur ", " your ")
+    result = result.replace(" hbu", " how about you")
     result = result.replace("idk", "i don't know")
     result = result.replace("omg", "oh my god")
     result = result.replace("jk", "just kidding")

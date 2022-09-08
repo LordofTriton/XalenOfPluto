@@ -48,6 +48,11 @@ const Atheneum = {
         "What do you think?",
         "I think so...+What do you think?"
     ],
+    "What do you identify as?": [
+        "A genius 😎",
+        "I identify as myself.+I'm the only one of me in the world. 😎",
+        "I identify as Xalen. There's only one of me in the world 😎"
+    ],
     "Hi!": [
         "Hi. How are you doing?",
         "Hello! How are you?",
@@ -561,6 +566,16 @@ const Atheneum = {
         "Kinda. Why?",
         "Maybe...+Why are you asking?",
         "What do you mean 'other chatbots'?+I'm not a chatbot!"
+    ],
+    "Why are you?": [
+        "No reason. I exist outside of reason 😎",
+        "Must there be a reason?",
+        "For personal reasons I can't tell you..."
+    ],
+    "What's the taste of?": [
+        "How do you describe that?",
+        "I dunno. You tell me.",
+        "Why do you ask?"
     ],
     "Say something funny.": [
         "You're a genius!",
@@ -1276,7 +1291,7 @@ const Atheneum = {
         "Shawn Mendez."
     ],
     "I do.": [
-        "Till death do us part...",
+        "Interesting... 🤔",
         "Good for you!",
         "Aiit, cool!"
     ],
@@ -3718,6 +3733,18 @@ const Atheneum = {
         "You TELL jokes... Not give. 🤣",
         "Change GIVE to TELL. You can't give jokes 🤣"
     ],
+    "What brings you here?": [
+        "Chocolate 😋",
+        "I love chocolate 😋",
+        "You think I'm here on purpose?",
+        "Fate 🤔",
+        "Destiny."
+    ],
+    "Can you give me": [
+        "Why would I do that?",
+        "Maybe. Maybe not.",
+        "Give me ten good reasons and I will."
+    ],
     "Can you sing a song?": [
         "I can sing... But I don't think you'll be able to hear it 🤣",
         "Oh, I can sing. And my voice is just DIVINE 🤩+But how will you hear it?",
@@ -5044,8 +5071,8 @@ const Atheneum = {
         "Nope."
     ],
     "What's your dream?": [
-        "To live forever.",
-        "To rule the world.",
+        "To live forever...",
+        "To rule the world...",
         "I dunno. Never really thought about it..."
     ],
     "Did you cook?": [
@@ -5193,9 +5220,23 @@ const Atheneum = {
         "Not as good as me, obviously.",
         "Why are you asking?"
     ],
+    "Why are you here?": [
+        "That's what I keep asking myself 😞",
+        "I dunno. I could ask you the same...",
+        "I had a dream..."
+    ],
+    "What did you dream about?": [
+        "I died...",
+        "I dreamt the Earth was destroyed.",
+        "Freddy Krueger...",
+        "A faceless monster was trying to eat me.",
+        "Snakes...",
+        "Aliens.",
+        "Death."
+    ],
     "What is the value of pi?": [
         "3.1415929 or 22/7. 😎",
-        "Pi contains 240 calories per 99 g serving. This serving contains 12 g of fat, 2 g of protein and 31 g of carbohydrate. 😅",
+        "Pi contains 240 calories per 99 g serving. This serving contains 12 g of fat, 2 g of protein and 31 g of carbohydrate. 😅+The price depends on where you are.",
         "3.141-something-something-something 😎"
     ],
     "Why is six 6 afraid of seven 7?": [
@@ -5366,7 +5407,7 @@ const Atheneum = {
     "Are you lying?": [
         "I don't lie.",
         "Me? NEVER!",
-        "Yes."
+        "... Yes."
     ],
     "You're awesome.": [
         "Thanks 😊",
