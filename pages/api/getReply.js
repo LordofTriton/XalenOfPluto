@@ -165,6 +165,21 @@ export default async (req, response) => {
                 }
             }
 
+            // Yggdrasil
+            matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.7)
+            if (matchIndex >= 0) {
+                keys = Object.keys(Yggdrasil)
+                let index = keys.indexOf(keys[matchIndex])
+                let replies = Yggdrasil[keys[index]];
+
+                if (replies.length > 0) {
+                    response.json({
+                        replies: replies
+                    })
+                    return;
+                }
+            }
+
             // EmojiSense
             for (let i = 0; i < EmojiSense.length; i++) {
                 let range = EmojiSense[i].target;
