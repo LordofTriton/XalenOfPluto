@@ -187,7 +187,7 @@ function Corrector(text) {
     result = result.replace(" a bit ", " ")
     result = result.replace(" little ", " ")
     result = result.replace(" very ", " ")
-    result = result.replace("", "")
+    result = result.replace(" too ", " ")
     result = result.replace("", "")
     result = result.replace("", "")
     result = result.replace("", "")

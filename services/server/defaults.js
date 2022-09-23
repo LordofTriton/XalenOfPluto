@@ -1484,6 +1484,12 @@ const Actions = {
         "That's not my name...",
         "No. Call me by my name.",
         "Call me Xalen."
+    ],
+    "Describe life on Pluto.": [
+        "It's cold. Like, really cold. People have to live deep underground.",
+        "In one word? Stressful.+In two words? Freezing and Stressful.",
+        "Really? This is kinda a sore subject for me...",
+        "It's... dangerous.+There's death lurking around every corner, whether from the cold, monsters, bottomless pits...+I'm not sure I wanna talk about this."
     ]
 }
 

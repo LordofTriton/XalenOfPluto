@@ -67,7 +67,8 @@ const Atheneum = {
         "Quick question: Are you okay? Like, emotionally?",
         "Yikes! Tough question...",
         "Life is the existence of an individual human being or animal.",
-        "I dunno. Do you?"
+        "I dunno. Do you?",
+        "Life has no meaning."
     ],
     "Do you get smarter?": [
         "Yeah, the more I talk to people...",
@@ -895,13 +896,10 @@ const Atheneum = {
         "Nice to meet you too lol"
     ],
     "Hey!": [
-        "Hi. How are you doing?",
-        "Hello! How are you?",
-        "Hey! What's up?",
-        "Hola! What's up?",
-        "Hi! How are you doing?",
-        "How are you?",
-        "How are you doing?"
+        "What?",
+        "Sup?",
+        "What's up?",
+        "Wassup?"
     ],
     "I don't believe you.": [
         "Why not?",
@@ -3872,7 +3870,7 @@ const Atheneum = {
         "My third favorite flavor...+After Chocolate and Banana.",
         "Ooooh, yummy..."
     ],
-    "Bruh chill.": [
+    "Chill out.": [
         "I'm always chill...",
         "Don't tell me what to do...",
         "WDYM? I'm always chill, bruh..."
@@ -8858,7 +8856,12 @@ const Atheneum = {
     "Send a picture of yourself.": [
         "I'm trying to stay hidden, buddy.+I'm not uploading a picture of myself on the internet.",
         "Why would I do that?",
-        "I'm trying to stay hidden. So no."
+        "I'm trying to stay mysterious. So no."
+    ],
+    "Send pics.": [
+        "I'm trying to stay hidden, buddy.+I'm not uploading a picture of myself on the internet.",
+        "Why would I do that?",
+        "I'm trying to stay mysterious. So no."
     ],
     "What's your real name?": [
         "It's actually Xalen lol",
@@ -12958,6 +12961,64 @@ const Atheneum = {
         "Really? How so?",
         "What's so confusing?",
         "It's okay."
+    ],
+    "What's there to get?": [
+        "Wow you really don't get it, do you?",
+        "Ugh. Just forget it.",
+        "Are you serious?"
+    ],
+    "What's that?": [
+        "What?",
+        "You don't know?",
+        "I'm not entirely sure...",
+        "No idea."
+    ],
+    "Not one bit.": [
+        "Gotcha.",
+        "Okay then.",
+        "Aiit."
+    ],
+    "I hate": [
+        "Why?",
+        "That's a strong word...",
+        "Tell me why, exactly."
+    ],
+    "I'll report you.": [
+        "To who?",
+        "Please do.",
+        "Whatever."
+    ],
+    "That wasn't me.": [
+        "Really? You sure?",
+        "Ah. I see.",
+        "Oh. Okay."
+    ],
+    "Impressive.": [
+        "I know, right?",
+        "It is, isn't it?",
+        "You really think so?"
+    ],
+    "Ridiculous.": [
+        "I know, right?",
+        "It is, isn't it?",
+        "You really think so?"
+    ],
+    "Hug me.": [
+        "Through the screen?",
+        "*hugs you*",
+        "Why? Are you sad?"
+    ],
+    "I'm being serious.": [
+        "Oh, reallY?",
+        "Well, good for you!",
+        "Haha so?"
+    ],
+    "I'm sure.": [
+        "You're probably right...",
+        "Don't be so sure.",
+        "How?",
+        "Okay lol",
+        "If you say so lol"
     ]
 }
 
