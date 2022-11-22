@@ -16,8 +16,7 @@ export default async (req, response) => {
     let subject = req.body.subject;
     
     let result = await StoreService.GetStore(db, "Yggdrasil")
-    let data = (StoreService.StoreCompiler(result));
-    let keys = Object.keys(data)
+    let data = StoreService.StoreCompiler(result);
 
     if (req.headers.origin === Auth.ClientURL) {
         if (parentMessage) {
@@ -72,8 +71,7 @@ export default async (req, response) => {
                 }
             }
             else {
-                let result = await StoreService.GetStore(db, "Yggdrasil");
-                let data = (StoreService.StoreCompiler(result));
+                data = (StoreService.StoreCompiler(result));
                 let context = data[""]
 
                 let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
