@@ -29,7 +29,6 @@ const ChatWindow = ({CortexControl}) => {
     const [parentHistory, setParentHistory] = useState([])
     const [xalenTurn, setXalenTurn] = useState(premierSpeaker)
     const [emojiBox, setEmojiBox] = useState(false)
-    const [myTurn, setMyTurn] = useState(false)
 
     let botState = CortexControl.botState;
     let setBotState = CortexControl.setBotState;
@@ -74,6 +73,7 @@ const ChatWindow = ({CortexControl}) => {
                 let typingDelay = 2000;
                 let replyIndex = 0;
                 if (data && data.length > 0) {
+                    if (data.filter(item => !Fallbacks.includes(item)).length > 0) data = data.filter(item => !Fallbacks.includes(item));
                     replyIndex = Math.floor(Math.random() * data.length);
                     typingDelay = 100 * data[replyIndex].length;
                 }
@@ -113,6 +113,7 @@ const ChatWindow = ({CortexControl}) => {
         setEmojiBox(false)
         if (!xalenTurn) {
             if (newMsg.trim().length > 0) {
+                CortexControl.setAlert(null)
                 setXalenTurn(true)
                 let d = new Date()
                 let msg = newMsg.charAt(0).toUpperCase() + newMsg.slice(1);

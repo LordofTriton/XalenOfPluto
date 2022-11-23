@@ -63,7 +63,6 @@ export default async (req, response) => {
             }
             
             // Ancestor
-            let parentContext = []
             if (parentHistory.length < 3) {
                 let replies = Yggdrasil[parent]
                 replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
@@ -113,26 +112,26 @@ export default async (req, response) => {
                     
                     let firstGen = keys.filter(record => MatchService.Compare(record, greatGrandParent, 0.8))
                     for (let i = 0; i < firstGen.length; i++) {
-                        let matchOne = MatchService.GetMatch(Yggdrasil[firstGen[i]], grandParent, 0.8)
+                        let matchOne = MatchService.PureMatch(Yggdrasil[firstGen[i]], grandParent, 0.8)
                         if (matchOne >= 0) {
                             let secondGen = Yggdrasil[firstGen[i]][matchOne]
-                            let matchTwo = MatchService.GetMatch(Yggdrasil[secondGen], parent, 0.8)
+                            let matchTwo = MatchService.PureMatch(Yggdrasil[secondGen], parent, 0.8)
                             if (matchTwo >= 0) {
                                 references.push(Yggdrasil[secondGen][matchTwo])
                             }
                         }
+                    }
                                         
-                        if (references.length > 0) {
-                            let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
-                            replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
-                            replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
+                    if (references.length > 0) {
+                        let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
+                        replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
+                        replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
 
-                            if (replies.length > 0) {
-                                response.json({
-                                    replies: replies
-                                })
-                                return;
-                            }
+                        if (replies.length > 0) {
+                            response.json({
+                                replies: replies
+                            })
+                            return;
                         }
                     }
                 }

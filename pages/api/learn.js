@@ -23,7 +23,7 @@ export default async (req, response) => {
             if (ancestor) {parentMessage = ancestor}
             context = data[parentMessage]
             
-            let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
+            let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
             if (matchIndex >= 0) {
                 response.json({
                     newContext: data[context[matchIndex]],
@@ -48,7 +48,7 @@ export default async (req, response) => {
         else {
             if (subject === "xalen") {
                 let context = data[""];
-                let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
+                let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 if (matchIndex >= 0) {
                     response.json({
                         newContext: data[context[matchIndex]],
@@ -71,10 +71,9 @@ export default async (req, response) => {
                 }
             }
             else {
-                data = (StoreService.StoreCompiler(result));
                 let context = data[""]
 
-                let matchIndex = MatchService.PureMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
+                let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 response.json({
                     newContext: data[context[matchIndex]],
                     newAncestor: context[matchIndex],

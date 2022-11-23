@@ -3294,11 +3294,6 @@ const Atheneum = {
         "Polo!+We're not in the same country lol",
         "No hope, buddy."
     ],
-    "Another.": [
-        "Another what?",
-        "Another?",
-        "Another....??? Another what?"
-    ],
     "What is your mission?": [
         "You ask too many questions...",
         "Can't tell you that...+It's highly classified.",
@@ -13019,6 +13014,23 @@ const Atheneum = {
         "How?",
         "Okay lol",
         "If you say so lol"
+    ],
+    "Why do you?": [
+        "No reason.",
+        "I just do.",
+        "Do I need a reason?",
+        "Must there be a reason?"
+    ],
+    "When do you?": [
+        "Whenever I want.",
+        "Whenever I get a chance...",
+        "Very soon. Not long now..."
+    ],
+    "When are you?": [
+        "Very soon. Not long now...",
+        "Not sure. I don't have my whole life planned out.",
+        "Tomorrow.",
+        "Next week, maybe?"
     ]
 }
 
