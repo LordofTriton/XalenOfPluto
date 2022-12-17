@@ -33,14 +33,3 @@
     width: 20%;
     margin: 0px 40%;
 }
-
-@media screen and (min-width: 1125px) {
-    .retryButton {
-        width: 10%;
-        margin: 0px 45%;
-    }
-    .retryButton:hover {
-        width: 20%;
-        margin: 0px 40%;
-    }
-}

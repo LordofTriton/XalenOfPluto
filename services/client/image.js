@@ -1,5 +1,5 @@
 const ImageServer = {
-    ProfilePicture: "/images/monarch.jpg",
+    ProfilePicture: "/images/yellow.jpg",
     LightBckg: "/images/lightThemeBckg.png",
     DarkBckg: "/images/dark1.jpg",
     SendMessage: "/images/send1.png",

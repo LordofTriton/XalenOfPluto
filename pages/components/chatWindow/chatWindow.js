@@ -11,7 +11,7 @@ import ImageServer from '../../../services/client/image';
 //Defaults
 let d = new Date();
 let premierSpeaker = Math.random() * 10 > 5;
-// premierSpeaker = false;
+premierSpeaker = true;
 
 const ChatWindow = ({CortexControl}) => {
     const [chatHistory, setChatHistory] = useState([])
@@ -215,21 +215,11 @@ const ChatWindow = ({CortexControl}) => {
                 }
                 <div className="chatInputDock">
                     <form onSubmit={handleSubmit}>
-                        <img className="emojiButton" src={ImageServer.Emoji} onClick={() => setEmojiBox(true)} alt="emoji" />
                         <input type="text" className="chatInputDockField" value={newMsg} onChange={(el) => setNewMsg(el.target.value)} 
                             style={{backgroundColor: theme === "Light" ? "white" : "#121212", color: theme === "Light" ? "#121212" : "white"}}
                             placeholder="Type your message here..." onClick={() => setEmojiBox(false)} />
                         <button className="chatInputDockSubmit"><img src={ImageServer.SendMessage} alt="Send" /></button>
                     </form>
-                </div>
-            </div>
-            <div className="chatEmojiBox" style={{bottom: emojiBox ? "90px" : "-100vh"}}>
-                <div className="chatEmojiTray">
-                {
-                    Emoji.map((emoji) =>
-                        <h3 className="chatEmoji" onClick={() => setNewMsg(newMsg.concat(emoji))} key={emoji}>{emoji}</h3>
-                    )
-                }
                 </div>
             </div>
         </>

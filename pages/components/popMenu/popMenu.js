@@ -24,7 +24,7 @@ const PopMenu = ({CortexControl}) => {
             <div className="dimmer" onClick={() => control(false)} 
                 style={{display: toggle ? "block" : "none", opacity:  toggle ? "1" : "0"}}>
             </div>
-            <div className="popMenuContainer" style={{right: toggle ? null : "-100vw", backgroundImage: theme === "Light" ? "url("+ImageServer.LightBckg+")" : "url("+ImageServer.DarkBckg+")"}}>
+            <div className="popMenuContainer" style={{right: toggle ? null : "-110vw", backgroundImage: theme === "Light" ? "url("+ImageServer.LightBckg+")" : "url("+ImageServer.DarkBckg+")"}}>
                 {/* <img className="popMenuLogo" src={logo} alt="logo" /> */}
                 <div className="popMenuProfile" style={{backgroundImage: "url("+ImageServer.ProfilePicture+")"}}></div>
                 {

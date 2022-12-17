@@ -86,21 +86,37 @@ html {
   .displayContent {
     width: 100vw;
     height: 100vh;
-    max-width: 1100px;
     overflow: hidden;
     background-size: cover;
     box-sizing: border-box;
     box-shadow: 0px 0px 8px 0 rgba(0,0,0,0.4);
     background-image: url(./assets/lightThemeBckg.png);
   }
+
+  .anim {
+    width: 300px;
+    height: 100vh;
+    transform: skewX(20deg);
+    background-color: blueviolet;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: backAnim infinite 1s;
+  }
+
+  @keyframes backAnim {
+    0% {left: calc(100vw + 600px)}
+    100% {left: -600px}
+  }
   
   
   @media screen and (min-width: 1125px) {
     .displayContent {
       background-size: contain;
+      width: 500px;
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 100px;
+      transform: translate(0px, -50%);
     }
   }

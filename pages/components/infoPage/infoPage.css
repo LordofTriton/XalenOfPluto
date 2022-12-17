@@ -66,13 +66,3 @@
     color: var(--dark-orange);
     text-decoration: none;
 }
-
-@media screen and (min-width: 1125px) {
-    .infoSideBar {
-        width: 20%;
-    }
-    .infoDisplayBox {
-        width: 80%;
-        padding: 5px 30px 30px 50px;
-    }
-}
