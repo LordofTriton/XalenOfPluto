@@ -150,7 +150,8 @@ export default async (req, response) => {
             }
 
             // Atheneum
-            matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
+            if (parent.split(" ") > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
+            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.7)
             if (matchIndex >= 0) {
                 keys = Object.keys(Atheneum)
                 let index = keys.indexOf(keys[matchIndex])
@@ -165,7 +166,7 @@ export default async (req, response) => {
             }
 
             // Yggdrasil
-            matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.7)
+            matchIndex = MatchService.GetMatch(Object.keys(Yggdrasil), parent, 0.7)
             if (matchIndex >= 0) {
                 keys = Object.keys(Yggdrasil)
                 let index = keys.indexOf(keys[matchIndex])
