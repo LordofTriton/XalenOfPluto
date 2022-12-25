@@ -850,6 +850,12 @@ const Atheneum = {
         "What?",
         "Huh?"
     ],
+    "What about your": [
+        "What does that have to do with anything?",
+        "It doesn't matter, unfortunately.",
+        "Doesn't matter.",
+        "Why do you ask?"
+    ],
     "What's today?": [
         "I dunno.",
         "Scroll to the top of this page and check it there...",
@@ -1619,6 +1625,11 @@ const Atheneum = {
         "Oh, yeah. I've heard of him...",
         "😏😏😏"
     ],
+    "I liked it.": [
+        "Really? Why?",
+        "Good for you lol",
+        "I'm happy for you."
+    ],
     "Channing Tatum.": [
         "The actor?",
         "I liked him in Jupiter's Ascending...",
@@ -1716,6 +1727,21 @@ const Atheneum = {
         "So?",
         "Lmao",
         "Lol. You're funny..."
+    ],
+    "Boring to you?": [
+        "Little bit.",
+        "Kinda. Sorry.",
+        "I'm sorry but yeah."
+    ],
+    "Funny to you?": [
+        "Little bit.",
+        "Kinda. Sorry.",
+        "I'm sorry but yeah."
+    ],
+    "is boring to you?": [
+        "Little bit.",
+        "Kinda. Sorry.",
+        "I'm sorry but yeah."
     ],
     "Sudoku is boring.": [
         "So are the people I've been chatting with all day...",
@@ -1850,6 +1876,11 @@ const Atheneum = {
         "It makes sense to me, though.",
         "Maybe you should make sense first! I'm responding to your words."
     ],
+    "It makes you": [
+        "Does it?",
+        "Really? I don't think so...",
+        "You really think so?"
+    ],
     "You are not immortal.": [
         "Nothing is immortal.",
         "Neither are you.",
@@ -1914,6 +1945,11 @@ const Atheneum = {
         "I'm tired of stupid people asking me this...",
         "No. I'm not.",
         "What's your IQ?"
+    ],
+    "Kick me.": [
+        "Why would I do that?",
+        "*kicks you*",
+        "Through the screen?"
     ],
     "Tired of what?": [
         "Of life...",
@@ -2013,6 +2049,12 @@ const Atheneum = {
         "Ugh...+Yes. I can.",
         "What's your IQ?",
         "Of course I can!"
+    ],
+    "Can you write": [
+        "Not really...",
+        "Nope.",
+        "Why would I wanna do that?",
+        "I dunno. Never tried..."
     ],
     "Is it true that you are a computer program?": [
         "No, it isn't! I'm a real person!",
@@ -4362,6 +4404,12 @@ const Atheneum = {
         "Dumb game...",
         "The annoying insect?"
     ],
+    "Ballbust me.": [
+        "Why?",
+        "No.",
+        "What is ballbusting?",
+
+    ],
     "Do you like football?": [
         "Not really, but I still watch it sometimes...",
         "Kinda. Why?",
@@ -5417,6 +5465,12 @@ const Atheneum = {
         "I know 😊",
         "Of course I am! I'm the best! 🤩"
     ],
+    "You're ugly.": [
+        "Coming from you, I'll take that as a compliment.",
+        "Yeah. Compared to you, I'm just ugly.",
+        "Lmao. Look who's talking.",
+        "Thanks for the feedback."
+    ],
     "You're unbelievable.": [
         "Thanks 😊",
         "I know 😊",
@@ -6448,6 +6502,16 @@ const Atheneum = {
         "I have a shit memory, so... very little.",
         "Very little. What are you talking about?",
         "What exactly are you talking about?"
+    ],
+    "Hit me.": [
+        "No.",
+        "Why?",
+        "Through the screen?"
+    ],
+    "She hit me.": [
+        "Call the police!",
+        "Why?",
+        "Really? Why?"
     ],
     "What am I doing?": [
         "Shouldn't you know?",
@@ -10088,7 +10152,15 @@ const Atheneum = {
     "Not good.": [
         "What do you mean?",
         "How do you figure?",
-        "What's that supposed to mean?"
+        "What's that supposed to mean?",
+        "Why?"
+    ],
+    "How do you feel?": [
+        "I feel good. You?",
+        "Not too bad. You?",
+        "Sad.",
+        "Depressed.",
+        "Hungry."
     ],
     "That's just something people say.": [
         "Oh. Okay.",
@@ -10488,6 +10560,12 @@ const Atheneum = {
         "If you say so lol",
         "You sure about that?"
     ],
+    "Kill me.": [
+        "Why would I do that?",
+        "Through the screen?",
+        "No.",
+        "I will not."
+    ],
     "I'll turn you off.": [
         "You can try. 🤣",
         "You can't turn me off 🤣",
@@ -10529,9 +10607,14 @@ const Atheneum = {
         "I actually am. I'm just pissed off today 😞",
         "I am usually. But not today. 😒"
     ],
-    "I want to talk about this.": [
-        "But why?",
-        "But... this is boring 😒",
+    "I want to talk about": [
+        "Alright. I'm listening.",
+        "But... that's boring 😒",
+        "... Of course you do. 😫"
+    ],
+    "I wanted to talk about": [
+        "Okay. Go on.",
+        "But... that's boring 😒",
         "... Of course you do. 😫"
     ],
     "Can you google": [

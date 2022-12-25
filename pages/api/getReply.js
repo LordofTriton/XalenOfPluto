@@ -18,7 +18,7 @@ export default async (req, response) => {
     let parentHistory = req.body.parentHistory;
     let ancestor = req.body.ancestor;
     let context = req.body.context;
-    let parent = req.body.parent;
+    let parent = parentHistory[parentHistory.length - 1];
 
     if (req.headers.origin === Auth.ClientURL) {
         if (chatHistory.length > 0) {

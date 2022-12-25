@@ -38,10 +38,10 @@ function EmojiDecoder(text) {
 function msgProcessor(msg) {
     const allEmoji = emojiTest(msg)
     if (allEmoji) {
-        return Corrector(StripPunctuation(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))).trim()
+        return Corrector(` ${StripPunctuation(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))} `).trim()
     }
     else {
-        return Corrector(StripSpecial(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))).trim()
+        return Corrector(` ${StripSpecial(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))} `).trim()
     }
 }
 
