@@ -11,7 +11,7 @@ import ImageServer from '../../../services/client/image';
 //Defaults
 let d = new Date();
 let premierSpeaker = Math.random() * 10 > 5;
-premierSpeaker = true;
+// premierSpeaker = true;
 
 const ChatWindow = ({CortexControl}) => {
     const [chatHistory, setChatHistory] = useState([])

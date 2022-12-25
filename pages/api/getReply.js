@@ -150,7 +150,7 @@ export default async (req, response) => {
             }
 
             // Atheneum
-            if (parent.split(" ") > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
+            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
             else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.7)
             if (matchIndex >= 0) {
                 keys = Object.keys(Atheneum)

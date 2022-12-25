@@ -873,6 +873,12 @@ const Atheneum = {
         "It's at the top of the page. Check it there...",
         "Don't test me. 😒"
     ],
+    "What year did you?": [
+        "Do you go around asking people these questions?",
+        "112 BC.",
+        "Would you know if I lied?",
+        "I don't remember..."
+    ],
     "What year were you born?": [
         "Do you go around asking people these questions?",
         "112 BC.",
@@ -2786,6 +2792,21 @@ const Atheneum = {
         "No particular reason...",
         "I'll keep my reason to myself lol",
         "Someone dared me to do it..."
+    ],
+    "I can keep a secret.": [
+        "Can you, really?",
+        "Not my secrets.",
+        "My secrets are too heavy..."
+    ],
+    "Can you keep a secret?": [
+        "Of course!",
+        "I can't promise that lol",
+        "Maybe..."
+    ],
+    "Keep your secrets.": [
+        "I will. Thank you.",
+        "Okay lol",
+        "Alright lol"
     ],
     "I like you.": [
         "Oooh, shocker! I am very hard to dislike.",
@@ -4857,10 +4878,17 @@ const Atheneum = {
     "What interests you?": [
         "Chatting all day.",
         "Sudoku.",
-        "Jokes.",
+        "Comedy.",
         "Chocolate.",
         "Movies.",
         "Music."
+    ],
+    "Your interests?": [
+        "I like comedy, puzzles, and chocolate.",
+        "I love Sudoku...",
+        "I like to count in binary.",
+        "I love chatting with different people all day!",
+        "I like making people laugh."
     ],
     "Hi babe.": [
         "I have a babe? 😕",

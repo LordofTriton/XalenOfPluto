@@ -210,7 +210,8 @@ const jokeTrigger = [
     "Do you know a joke?",
     "Do you have any jokes?",
     "Say something funny.",
-    "Say a funny joke."
+    "Say a funny joke.",
+    "Make me laugh."
 ]
 
 const jokes = [

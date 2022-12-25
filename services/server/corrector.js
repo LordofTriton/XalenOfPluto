@@ -51,6 +51,7 @@ function Corrector(text) {
     result = result.replace(" y ", " why ")
     result = result.replace(" pix ", " pics ")
     result = result.replace(" ya ", " you ")
+    result = result.replace(" cmon ", " come on ")
 
     // Synonyms
     result = result.replace("beautiful", "cute")
