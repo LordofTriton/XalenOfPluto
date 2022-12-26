@@ -48,11 +48,6 @@ const Atheneum = {
         "What do you think?",
         "I think so...+What do you think?"
     ],
-    "What do you identify as?": [
-        "A genius 😎",
-        "I identify as myself.+I'm the only one of me in the world. 😎",
-        "I identify as Xalen. There's only one of me in the world 😎"
-    ],
     "Hi!": [
         "Hi. How are you doing?",
         "Hello! How are you?",
@@ -2276,6 +2271,11 @@ const Atheneum = {
         "Afar na",
         "Sup"
     ],
+    "How's your day?": [
+        "Not too bad. Yours?",
+        "Not good.",
+        "Alright, I guess. Yours?"
+    ],
     "I'm Xalen": [
         "Cool name! I should know 😅",
         "I doubt it 😒",
@@ -2894,9 +2894,9 @@ const Atheneum = {
         "You don't even know where I am..."
     ],
     "I have time.": [
-        "Lucky you 😅",
+        "Are you employed?",
         "How much time?",
-        "How much?"
+        "Really? How much?"
     ],
     "Prove it.": [
         "How?",
@@ -6287,6 +6287,12 @@ const Atheneum = {
         "I don't care 😒",
         "I don't give a shit 😒",
         "😒😒😒"
+    ],
+    "I thought": [
+        "Where did you get that idea?",
+        "Who told you that?",
+        "Lmao 😂",
+        "You got the wrong idea 😂"
     ],
     "That's what I said.": [
         "Is it?",
@@ -11355,11 +11361,6 @@ const Atheneum = {
         "Doubtful 😒",
         "We'll see 😅"
     ],
-    "Xalen what?": [
-        "Just Xalen 😎",
-        "It's just Xalen. I'm cool like that 😎",
-        "Xalen. No surname 😅"
-    ],
     "You think I'm stupid?": [
         "You said it. Not me 😏",
         "I dunno. You tell me 😒",
@@ -11804,6 +11805,11 @@ const Atheneum = {
         "Nope.",
         "Nah. Why would you think that?!",
         "My parents made me, I suppose 🤣"
+    ],
+    "I suppose": [
+        "You suppose correctly.",
+        "Yeah.",
+        "🤝"
     ],
     "Talking to myself.": [
         "Me time is the best. Nothing wrong with talking to yourself 😅",
@@ -13142,7 +13148,29 @@ const Atheneum = {
         "Not sure. I don't have my whole life planned out.",
         "Tomorrow.",
         "Next week, maybe?"
-    ]
+    ],
+    "What body type are you?": [
+        "Curvy.",
+        "You realise this question is weird, right?",
+        "None. I have no body, per se."
+    ],
+    "Come up with": [
+        "It's not that easy...",
+        "I can't...",
+        "Ummm... I don't want to.",
+        "Later. I'm busy right now."
+    ],
+    "I'll wait.": [
+        "Are you employed?",
+        "I won't. Let's move on.",
+        "Do whatever you like."
+    ],
+    "That's a female name.": [
+        "Says who?",
+        "Because...?",
+        "Is it? I don't think so.",
+        "Doesn't matter, really."
+    ],
 }
 
 module.exports = Atheneum;

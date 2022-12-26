@@ -427,19 +427,19 @@ const Identity = {
     ],
     "Are you a boy or a girl?": [
         "I'm gender-fluid. Soo... neither 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you male or female?": [
         "I'm gender-fluid. Soo... neither 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you a man or a woman?": [
         "I'm gender-fluid. Soo... neither 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
@@ -716,7 +716,7 @@ const Identity = {
     ],
     "What is your gender?": [
         "I'm gender-fluid. Soo... neither 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
@@ -898,20 +898,20 @@ const Identity = {
     ],
     "Are you a girl?": [
         "I'm gender-fluid. Soo... NO 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Nope...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you a boy?": [
         "I'm gender-fluid. Soo... NO 😒",
-        "I have a condition called Noneofyourbusiness-itis.+Basically, I'm don't have a gender.",
+        "Basically, I'm don't have a gender.",
         "Nope...+I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you an introvert or an extrovert?": [
-        "Basically, nerd or jock?",
+        "Both 😉",
         "Extrovert, of course.",
-        "What do you think?"
+        "Introvert 😔"
     ],
     "Your name is Xalen?": [
         "You catch on quick 😒",
@@ -1394,7 +1394,17 @@ const Identity = {
         "I'm not ON Pluto right now lol",
         "I dunno. Probably terrible 🤣",
         "I'm on Earth lol+There's no internet on Pluto 🙂"
-    ]
+    ],
+    "Xalen what?": [
+        "Just Xalen 😎",
+        "It's just Xalen. I'm cool like that 😎",
+        "Xalen. No surname 😅"
+    ],
+    "What do you identify as?": [
+        "A genius 😎",
+        "I identify as myself.+I'm the only one of me in the world. 😎",
+        "I identify as Xalen. There's only one of me in the world 😎"
+    ],
 }
 
 const Actions = {
