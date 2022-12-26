@@ -2,6 +2,7 @@ import { connectToDatabase } from "../../util/mongodb";
 
 // Services
 import Auth from "../../services/auth";
+import Tree from "../../services/server/Yggdrasil";
 import MatchService from "../../services/server/matcher";
 import StoreService from "../../services/server/StoreService";
 import DateTime from "../../services/server/dateTime";
@@ -14,19 +15,19 @@ export default async (req, response) => {
     let newMessage = req.body.newMessage;
     let context = req.body.context;
     let subject = req.body.subject;
-    
-    let result = await StoreService.GetStore(db, "Yggdrasil")
-    let data = StoreService.StoreCompiler(result);
+
+    let storedTree = await StoreService.GetStore(db, "Yggdrasil")
+    let Yggdrasil = {...Tree, ...StoreService.StoreCompiler(storedTree)};
 
     if (req.headers.origin === Auth.ClientURL) {
         if (parentMessage) {
             if (ancestor) {parentMessage = ancestor}
-            context = data[parentMessage]
+            context = Yggdrasil[parentMessage]
             
             let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
             if (matchIndex >= 0) {
                 response.json({
-                    newContext: data[context[matchIndex]],
+                    newContext: Yggdrasil[context[matchIndex]],
                     newAncestor: "",
                     newParent: context[matchIndex]
                 })
@@ -47,11 +48,11 @@ export default async (req, response) => {
         }
         else {
             if (subject === "xalen") {
-                let context = data[""];
+                let context = Yggdrasil[""];
                 let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 if (matchIndex >= 0) {
                     response.json({
-                        newContext: data[context[matchIndex]],
+                        newContext: Yggdrasil[context[matchIndex]],
                         newAncestor: context[matchIndex],
                         newParent: context[matchIndex]
                     })
@@ -71,11 +72,11 @@ export default async (req, response) => {
                 }
             }
             else {
-                let context = data[""]
+                let context = Yggdrasil[""]
 
                 let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
                 response.json({
-                    newContext: data[context[matchIndex]],
+                    newContext: Yggdrasil[context[matchIndex]],
                     newAncestor: context[matchIndex],
                     newParent: context[matchIndex]
                 });

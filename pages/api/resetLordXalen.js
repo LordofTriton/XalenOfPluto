@@ -2,6 +2,7 @@ import { connectToDatabase } from "../../util/mongodb";
 
 // Services
 import Auth from "../../services/auth";
+import Tree from "../../services/server/Yggdrasil";
 import StoreService from "../../services/server/StoreService";
 
 const Yggdrasil = {
@@ -29,6 +30,14 @@ const Yggdrasil = {
 
 export default async (req, response) => {
     const { db } = await connectToDatabase();
+
+    let Yggdrasil = {
+        "": Tree[""]
+    }
+
+    for (let i = 0; i < Tree[""].length; i++) {
+        Yggdrasil = {...Yggdrasil, [Tree[""][i]]: Tree[Tree[""][i]]}
+    }
 
     db.collection("Yggdrasil").remove({})
     let keys = Object.keys(Yggdrasil)

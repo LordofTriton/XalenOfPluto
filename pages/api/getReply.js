@@ -3,6 +3,7 @@ import { connectToDatabase } from "../../util/mongodb";
 //Services
 import Auth from "../../services/auth";
 import Atheneum from "../../services/server/Atheneum";
+import Tree from "../../services/server/Yggdrasil";
 import StoreService from "../../services/server/StoreService";
 import MatchService from "../../services/server/matcher";
 import DateTime from "../../services/server/dateTime";
@@ -23,16 +24,16 @@ export default async (req, response) => {
     if (req.headers.origin === Auth.ClientURL) {
         if (chatHistory.length > 0) {
 
-            let Yggdrasil = await StoreService.GetStore(db, "Yggdrasil")
-            Yggdrasil = StoreService.StoreCompiler(Yggdrasil);
+            let storedTree = await StoreService.GetStore(db, "Yggdrasil")
+            let Yggdrasil = {...Tree, ...StoreService.StoreCompiler(storedTree)};
 
             let xalenMsg = chatHistory.filter(msg => msg.parent === "xalen")
             let userMsg = chatHistory.filter(msg => msg.parent === "user")
 
             // Copycat
             if (xalenMsg.length >= 2) {
-                if (MatchService.PureCompare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.7)
-                    && MatchService.PureCompare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7)) {
+                if (MatchService.PureCompare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.8)
+                    && MatchService.PureCompare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.8)) {
                     response.json({
                         replies: Override.copycat
                     })
@@ -42,8 +43,8 @@ export default async (req, response) => {
             
             // Tautology
             if ((userMsg.length >= 3)
-                && (MatchService.Compare(userMsg[userMsg.length - 1].fullContent, userMsg[userMsg.length - 2].fullContent, 0.7))
-                && (MatchService.Compare(userMsg[userMsg.length - 2].fullContent, userMsg[userMsg.length - 3].fullContent, 0.7))) {
+                && (MatchService.Compare(userMsg[userMsg.length - 1].fullContent, userMsg[userMsg.length - 2].fullContent, 0.8))
+                && (MatchService.Compare(userMsg[userMsg.length - 2].fullContent, userMsg[userMsg.length - 3].fullContent, 0.8))) {
                     response.json({
                         replies: Override.tautology
                     })
@@ -76,7 +77,7 @@ export default async (req, response) => {
             }
 
             // Gibberish
-            if (asdfjkl(parent) && MatchService.GetMatch(Override.allowedGibberish, parent, 0.7) < 0) {
+            if (asdfjkl(parent) && MatchService.GetMatch(Override.allowedGibberish, parent, 0.8) < 0) {
                 response.json({
                     replies: Override.gibberish
                 })
@@ -84,7 +85,7 @@ export default async (req, response) => {
             }
 
             // Conversation Starter
-            matchIndex = MatchService.PureMatch(Override.convoTrigger, parent, 0.7)
+            matchIndex = MatchService.PureMatch(Override.convoTrigger, parent, 0.8)
             if (matchIndex >= 0) {
                 response.json({
                     replies: Override.convoStarter
@@ -93,7 +94,7 @@ export default async (req, response) => {
             }
 
             // Joker
-            matchIndex = MatchService.PureMatch(Override.jokeTrigger, parent, 0.7)
+            matchIndex = MatchService.PureMatch(Override.jokeTrigger, parent, 0.8)
             if (matchIndex >= 0) {
                 response.json({
                     replies: Override.jokes
@@ -150,8 +151,8 @@ export default async (req, response) => {
             }
 
             // Atheneum
-            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.7)
-            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.7)
+            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.8)
+            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.8)
             if (matchIndex >= 0) {
                 keys = Object.keys(Atheneum)
                 let index = keys.indexOf(keys[matchIndex])
@@ -166,7 +167,7 @@ export default async (req, response) => {
             }
 
             // Yggdrasil
-            matchIndex = MatchService.GetMatch(Object.keys(Yggdrasil), parent, 0.7)
+            matchIndex = MatchService.GetMatch(Object.keys(Yggdrasil), parent, 0.8)
             if (matchIndex >= 0) {
                 keys = Object.keys(Yggdrasil)
                 let index = keys.indexOf(keys[matchIndex])
