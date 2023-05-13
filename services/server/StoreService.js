@@ -2,7 +2,11 @@
 function StoreCompiler(array) {
     let store = {}
     for (let i = 0; i < array.length; i++) {
-        store = {...store, [array[i].label]: [...array[i].records]}
+        try {
+            store = {...store, [array[i].label]: [...array[i].records]}
+        } catch (error) {
+            console.log(array[i])
+        }
     }
     return store;
 }

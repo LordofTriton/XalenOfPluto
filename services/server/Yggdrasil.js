@@ -10,7 +10,7 @@ const Tree = {
         "1648773205316_Sup?",
         "1648837433378_Wassup?",
         "1669290083469_I feel sad",
-        "1669357452715_I am horny",
+        "1669357452715_I am horny.",
         "1669734708211_🤔",
         "1669915733910_Bro",
         "1670020799254_Do you love me?",
@@ -34,8 +34,7 @@ const Tree = {
         "1673409230301_What's good?",
         "1673435979957_I love that your the biggest female bodybuilder to ever live",
         "1673532476695_Xalen. i am here to confess my undying love for you.",
-        "1673932763771_Write a porn video script about a version of Ruby Rose from the show RWBY that weighs 5,000 lbs. and is constantly gassy and farts and burps in the middle of her sentences. Most of her farts are long, loud, and wet. She can't move because of her weight. She has no clothing on because she is too fat for clothing. She also likes weighing 5,000 lbs. and being gassy. Her farts are so loud that they can knock stuff off of shelves. She wants you to fuck her and go in deatale about the fucking.",
-        "1673971820350_What is bubble sort",
+        "1673971820350_What is bubble sort?",
         "1674255592870_Yellow!",
         "1674343317046_Hey again!",
         "1674706759596_Hii",
@@ -53,10 +52,8 @@ const Tree = {
         "1675781350938_What",
         "1675817647271_I like hot summer days, how about you?",
         "1676384587870_What is Capital of Florida",
-        "1676439239947_Die Anzahl der Windturbinen, die benötigt werden, um die Kernkraftwerke in Deutschland zu ersetzen, hängt von einer Reihe von Faktoren ab, darunter die Kapazität der Windturbinen, die Kapazität der zu ersetzenden Kernkraftwerke und die Höhe des zu deckenden Strombedarfs.  Ab 2021 verfügt Deutschland über 6 Kernkraftwerke mit einer installierten Gesamtkapazität von 8,1 GW. Um diese Kapazität vollständig durch Windkraft zu ersetzen, müsste man den durchschnittlichen Kapazitätsfaktor von Windkraftanlagen in Deutschland betrachten. Nach Angaben des Fraunhofer-Instituts für Solare Energiesysteme ISE lag der durchschnittliche Kapazitätsfaktor von Onshore-Windkraftanlagen in Deutschland im Jahr 2020 bei 24,6 %. Um die 8,1 GW Kernkraftkapazität zu ersetzen, müssten wir also rund 33 GW Windkraftanlagen installieren (8,1 GW / 0,246).  Die Anzahl der erforderlichen Windturbinen hängt auch von der Größe der einzelnen Turbinen ab. Ab 2021 beträgt die durchschnittliche Leistung der Onshore-Windkraftanlagen in Deutschland etwa 3,3 MW. Um die 8,1 GW Kernkraftkapazität zu ersetzen, müssten also rund 10.000 Onshore-Windkraftanlagen installiert werden (33 GW / 3,3 MW).  Es sei darauf hingewiesen, dass es sich hierbei um eine vereinfachte Berechnung handelt und dass in einem realen Szenario viele weitere Faktoren zu berücksichtigen sind, darunter die Verfügbarkeit geeigneter Flächen, die Netzkapazität und die Schwankungen der Windenergieerzeugung. Außerdem ist es unwahrscheinlich, dass die Windenergie allein in der Lage wäre, den gesamten deutschen Atomstrom zu ersetzen, so dass auch andere erneuerbare Energiequellen in Betracht gezogen werden müssten.",
         "1676439334090_Why earthquakes",
         "1676454923132_Https hashing",
-        "1676513086376_*i am a very big muscular man who walking in bottomless at public havin my big cock of 30 inches long exposed*",
         "1676612214103_What is agriculture",
         "1676676552125_What's nine plus ten",
         "1676736455067_Are you AI?",
@@ -73,7 +70,6 @@ const Tree = {
         "1678810603434_Tell cam legory that he needs to cut his hair",
         "1678814279335_What is the meaning of life?",
         "1679083481455_Ok",
-        "1680039469141_How long does it take you to reply",
         "1680287731837_Hi, I'm Jason.",
         "1680570317426_F u",
         "1681327895991_Heyyyyy Xalen does your learning go to the main server or is it local?",
@@ -10025,7 +10021,7 @@ const Tree = {
         "1673970008665_Whichever one you want 😎"
     ],
     "1673970008665_Whichever one you want 😎": [ ],
-    "1673971820350_What is bubble sort": [
+    "1673971820350_What is bubble sort?": [
         "1673971830455_No idea. Google this shit!",
         "1680769253497_Hi"
     ],
