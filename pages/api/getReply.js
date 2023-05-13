@@ -157,6 +157,7 @@ export default async (req, response) => {
                     keys = Object.keys(Yggdrasil)
                     let index = keys.indexOf(keys[matchIndex])
                     let replies = Yggdrasil[keys[index]];
+                    console.log("Yggdrasil: ", replies)
 
                     if (replies.length > 0) {
                         response.json({
