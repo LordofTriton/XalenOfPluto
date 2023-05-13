@@ -62,7 +62,7 @@ function PureMatch(store, message, matchThreshold) {
     let indexes = [];
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
-        if (store[i] === message.content) continue;
+        if (message.content.includes("_") && store[i] === message.content) continue;
 
         let storeMessage = msgProcessor(store[i])
         if (storeMessage.length > 0) {
@@ -100,7 +100,7 @@ function GetMatch(store, message, matchThreshold) {
     let indexes = [];
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
-        if (store[i] === message.content) continue;
+        if (message.content.includes("_") && store[i] === message.content) continue;
 
         let storeMessage = msgProcessor(store[i])
         
@@ -119,7 +119,7 @@ function GetMatch(store, message, matchThreshold) {
         let phraseIndex = 0;
         for (let i = 0; i < store.length; i++) {
             if (store[i].length > 3 && !emojiTest(store[i])) {
-                if (store[i] === message.content) continue;
+                if (message.content.includes("_") && store[i] === message.content) continue;
 
                 let storeMessage = msgProcessor(store[i])
                 let processedStore = ` ${storeMessage} `
@@ -143,7 +143,7 @@ function GetMatch(store, message, matchThreshold) {
         let phraseIndex = 0;
         for (let i = 0; i < store.length; i++) {
             if (store[i].length > 3 && !emojiTest(store[i])) {
-                if (store[i] === message.content) continue;
+                if (message.content.includes("_") && store[i] === message.content) continue;
                 
                 let userMessage = msgProcessor(message.content)
                 let storeMessage = msgProcessor(store[i])
