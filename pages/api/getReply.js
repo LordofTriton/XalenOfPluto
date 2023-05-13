@@ -155,9 +155,12 @@ export default async (req, response) => {
                 matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
                 if (matchIndex >= 0) {
                     keys = Object.keys(Yggdrasil)
-                    let index = keys.indexOf(keys[matchIndex])
-                    let replies = Yggdrasil[keys[index]];
+                    let index = keys[matchIndex]
+                    let replies = Yggdrasil[index];
+
                     console.log("Yggdrasil: ", replies)
+                    console.log("Match: ", matchIndex)
+                    console.log("Index: ", index)
 
                     if (replies.length > 0) {
                         response.json({

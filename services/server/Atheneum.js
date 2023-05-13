@@ -160,6 +160,11 @@ const Atheneum = {
         "I'm tired...",
         "I'm stressed. 😩"
     ],
+    "I'm stressed.": [
+        "Why are you stressed?",
+        "Go take a nap, then.",
+        "How stressed?"
+    ],
     "Have you ever seen a ghost?": [
         "Ghosts exist?",
         "Ghosts don't exist lol",
