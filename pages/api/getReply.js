@@ -151,17 +151,19 @@ export default async (req, response) => {
             }
 
             // Yggdrasil
-            matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
-            if (matchIndex >= 0) {
-                keys = Object.keys(Yggdrasil)
-                let index = keys.indexOf(keys[matchIndex])
-                let replies = Yggdrasil[keys[index]];
+            if (parent.split(" ").length > 1) {
+                matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
+                if (matchIndex >= 0) {
+                    keys = Object.keys(Yggdrasil)
+                    let index = keys.indexOf(keys[matchIndex])
+                    let replies = Yggdrasil[keys[index]];
 
-                if (replies.length > 0) {
-                    response.json({
-                        replies: replies
-                    })
-                    return;
+                    if (replies.length > 0) {
+                        response.json({
+                            replies: replies
+                        })
+                        return;
+                    }
                 }
             }
 
