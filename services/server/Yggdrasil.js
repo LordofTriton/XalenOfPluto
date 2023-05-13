@@ -17952,3 +17952,5 @@ const Tree = {
     ],
     "1683877128240_No. I don't want to kill myself.": [ ]
 }
+
+export default Tree;
