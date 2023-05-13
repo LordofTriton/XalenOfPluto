@@ -150,13 +150,12 @@ export default async (req, response) => {
                 return;
             }
 
-            // Atheneum
-            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.8)
-            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.8)
+            // Yggdrasil
+            matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
             if (matchIndex >= 0) {
-                keys = Object.keys(Atheneum)
+                keys = Object.keys(Yggdrasil)
                 let index = keys.indexOf(keys[matchIndex])
-                let replies = Atheneum[keys[index]];
+                let replies = Yggdrasil[keys[index]];
 
                 if (replies.length > 0) {
                     response.json({
@@ -166,12 +165,13 @@ export default async (req, response) => {
                 }
             }
 
-            // Yggdrasil
-            matchIndex = MatchService.GetMatch(Object.keys(Yggdrasil), parent, 0.8)
+            // Atheneum
+            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.8)
+            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.8)
             if (matchIndex >= 0) {
-                keys = Object.keys(Yggdrasil)
+                keys = Object.keys(Atheneum)
                 let index = keys.indexOf(keys[matchIndex])
-                let replies = Yggdrasil[keys[index]];
+                let replies = Atheneum[keys[index]];
 
                 if (replies.length > 0) {
                     response.json({
