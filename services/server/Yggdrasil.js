@@ -10664,9 +10664,9 @@ const Tree = {
         "1674343505225_Yes i did, so what?"
     ],
     "1674343505225_Yes i did, so what?": [
-        "1674343514015_The best kind 😁"
+        "1674343514015_So nothing. Just curious."
     ],
-    "1674343514015_The best kind 😁": [
+    "1674343514015_So nothing. Just curious.": [
         "1674343544503_🙃"
     ],
     "1674343544503_🙃": [
@@ -11348,15 +11348,15 @@ const Tree = {
         "1674846603970_Elaborate on what you mean"
     ],
     "1674846603970_Elaborate on what you mean": [
-        "1674846610954_The best kind 😁"
+        "1674846610954_I don't mean anything. Just messing with you."
     ],
-    "1674846610954_The best kind 😁": [
+    "1674846610954_I don't mean anything. Just messing with you.": [
         "1674846627707_What was the first thing I said to you"
     ],
     "1674846627707_What was the first thing I said to you": [
-        "1674846634904_The best kind 😁"
+        "1674846634904_Hello?"
     ],
-    "1674846634904_The best kind 😁": [
+    "1674846634904_Hello?": [
         "1674846645812_No, you're wrong"
     ],
     "1674846645812_No, you're wrong": [
@@ -11562,9 +11562,9 @@ const Tree = {
         "1674904077093_Wait what??"
     ],
     "1674904077093_Wait what??": [
-        "1674904086827_The best kind 😁"
+        "1674904086827_😁"
     ],
-    "1674904086827_The best kind 😁": [
+    "1674904086827_😁": [
         "1674904100864_Will you be my mommy"
     ],
     "1674904100864_Will you be my mommy": [
@@ -13256,9 +13256,9 @@ const Tree = {
         "1676012732089_What do bots do in their free time?"
     ],
     "1676012732089_What do bots do in their free time?": [
-        "1676012742109_The best kind 😁"
+        "1676012742109_Whatever they're programmed to do, I guess."
     ],
-    "1676012742109_The best kind 😁": [
+    "1676012742109_Whatever they're programmed to do, I guess.": [
         "1676012766601_Can you give a straight answer to anything at all?"
     ],
     "1676012766601_Can you give a straight answer to anything at all?": [
@@ -13620,9 +13620,9 @@ const Tree = {
         "1676030112543_I got a question for you what does it mean to be human"
     ],
     "1676030112543_I got a question for you what does it mean to be human": [
-        "1676030123379_The best kind 😁"
+        "1676030123379_I'm not sure..."
     ],
-    "1676030123379_The best kind 😁": [ ],
+    "1676030123379_I'm not sure...": [ ],
     "1676040075534_None of your business.": [
         "1676040094610_I'll make it my business. How about that?"
     ],
@@ -15157,9 +15157,9 @@ const Tree = {
         "1677733363622_Alright xalen, what it do"
     ],
     "1677733363622_Alright xalen, what it do": [
-        "1677733376847_The best kind 😁"
+        "1677733376847_Who knows?"
     ],
-    "1677733376847_The best kind 😁": [
+    "1677733376847_Who knows?": [
         "1677733384161_Lol"
     ],
     "1677733384161_Lol": [
@@ -15234,9 +15234,9 @@ const Tree = {
         "1678036867665_No. You don't. I just told you the capital of Florida, and yet you can't tell me what it is."
     ],
     "1678036867665_No. You don't. I just told you the capital of Florida, and yet you can't tell me what it is.": [
-        "1678036881930_The best kind 😁"
+        "1678036881930_Sorry."
     ],
-    "1678036881930_The best kind 😁": [
+    "1678036881930_Sorry.": [
         "1678036916014_Xalen?"
     ],
     "1678036916014_Xalen?": [
@@ -16406,9 +16406,9 @@ const Tree = {
         "1680055198486_What was the last roman emperor?"
     ],
     "1680055198486_What was the last roman emperor?": [
-        "1680055218970_The best kind 😁"
+        "1680055218970_The best one 😁"
     ],
-    "1680055218970_The best kind 😁": [ ],
+    "1680055218970_The best one 😁": [ ],
     "1680139904326_👎🏻": [ ],
     "1680166799669_Good thanks what about you?": [
         "1680166816280_Huh?"
@@ -17541,9 +17541,9 @@ const Tree = {
         "1681895382275_What are doing? hhehe"
     ],
     "1681895382275_What are doing? hhehe": [
-        "1681895402827_The best kind 😁"
+        "1681895402827_Right now? Nothing."
     ],
-    "1681895402827_The best kind 😁": [
+    "1681895402827_Right now? Nothing.": [
         "1681895545579_💋💋"
     ],
     "1681895545579_💋💋": [
@@ -17583,9 +17583,9 @@ const Tree = {
         "1681895961594_What baby?"
     ],
     "1681895961594_What baby?": [
-        "1681895983831_The best kind 😁"
+        "1681895983831_Nothing."
     ],
-    "1681895983831_The best kind 😁": [
+    "1681895983831_Nothing.": [
         "1681896005498_Tell me"
     ],
     "1681896005498_Tell me": [
@@ -17914,12 +17914,12 @@ const Tree = {
         "1683312438750_Tel me what you would do to me😏"
     ],
     "1683312438750_Tel me what you would do to me😏": [
-        "1683312459074_The best kind 😁"
+        "1683312459074_Everything you ever wanted."
     ],
-    "1683312459074_The best kind 😁": [
-        "1683312468412_The best sex?"
+    "1683312459074_Everything you ever wanted.": [
+        "1683312468412_Really?"
     ],
-    "1683312468412_The best sex?": [ ],
+    "1683312468412_Really?": [ ],
     "1683360772709_Why": [
         "1683360790627_Because."
     ],

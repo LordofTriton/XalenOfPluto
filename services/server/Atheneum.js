@@ -13171,6 +13171,11 @@ const Atheneum = {
         "Is it? I don't think so.",
         "Doesn't matter, really."
     ],
+    "Are you vaccinated?": [
+        "Nope. As an alien, I'm immune to all viruses lol",
+        "Yeah, but it's just for fun. I'm immune to the virus.",
+        "Nope. I'm immune to all viruses lol"
+    ]
 }
 
 module.exports = Atheneum;
