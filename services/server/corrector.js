@@ -162,7 +162,6 @@ function Corrector(text) {
     result = result.replace(" usually ", " ")
     result = result.replace(" totally ", " ")
     result = result.replace(" so ", " ")
-    result = result.replace(" kind of ", " ")
     result = result.replace(" just ", " ")
     result = result.replace(" literally ", " ")
     result = result.replace(" simply ", " ")
