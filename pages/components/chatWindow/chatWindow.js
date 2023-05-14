@@ -72,8 +72,11 @@ const ChatWindow = ({CortexControl}) => {
                 let data = re.data.replies;
                 let typingDelay = 2000;
                 let replyIndex = 0;
+
                 if (data && data.length > 0) {
-                    if (data.filter(item => !Fallbacks.includes(item)).length > 0) data = data.filter(item => !Fallbacks.includes(item));
+                    const naturalReplies = data.filter(item => !Fallbacks.includes(DateTime.removeStamp(item)));
+                    if (naturalReplies.length > 0) data = naturalReplies;
+
                     replyIndex = Math.floor(Math.random() * data.length);
                     typingDelay = 100 * data[replyIndex].length;
                 }
