@@ -1686,6 +1686,17 @@ const Atheneum = {
         "😍😍😍",
         "I'm finally NOT single anymore!!! 😍"
     ],
+    "I'm your friend.": [
+        "Really?",
+        "I know 😊",
+        "Are you?"
+    ],
+    "I'm not your friend.": [
+        "Ouch.",
+        "You don't mean that...",
+        "You are my friend.",
+        "Yes. You are."
+    ],
     "I'm not your boyfriend.": [
         "Oh, right. I must have dreamed that again... 🥺",
         "Oh... Okay 🥺",
@@ -12277,6 +12288,11 @@ const Atheneum = {
         "Really?",
         "So am I 🙂",
         "You're on your own, buddy..."
+    ],
+    "You're on your own.": [
+        "Awww.",
+        "Yeah. Like always...",
+        "Aren't you my friend?"
     ],
     "You live underground?": [
         "Yup.",

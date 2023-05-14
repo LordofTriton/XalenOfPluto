@@ -54,7 +54,7 @@ function storeProcessor(store) {
     return result;
 }
 
-function PureMatch(store, message, matchThreshold) {
+function PureMatch(store, message, matchThreshold, matchDuplicate = false) {
     if (!message.content) message = {label: "Useless label.", content: message}
     let userMessage = msgProcessor(message.content)
     if (userMessage.trim().length < 1) return -1;
@@ -62,7 +62,7 @@ function PureMatch(store, message, matchThreshold) {
     let indexes = [];
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
-        if (message.content.includes("_") && store[i] === message.content) continue;
+        if (!matchDuplicate && message.content.includes("_") && store[i] === message.content) continue;
 
         let storeMessage = msgProcessor(store[i])
         if (storeMessage.length > 0) {
@@ -91,7 +91,7 @@ function PureCompare(store, message, matchThreshold) {
     return difference >= matchThreshold;
 }
 
-function GetMatch(store, message, matchThreshold) {
+function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
     if (!message.content) message = {label: "Useless label.", content: message}
     let userMessage = msgProcessor(message.content)
 
@@ -100,7 +100,7 @@ function GetMatch(store, message, matchThreshold) {
     let indexes = [];
     let match = matchThreshold;
     for (let i = 0; i < store.length; i++) {
-        if (message.content.includes("_") && store[i] === message.content) continue;
+        if (!matchDuplicate && message.content.includes("_") && store[i] === message.content) continue;
 
         let storeMessage = msgProcessor(store[i])
         
