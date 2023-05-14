@@ -151,7 +151,7 @@ export default async (req, response) => {
             }
 
             // Yggdrasil
-            if (parent.split(" ").length > 2) {
+            if (parent.split(" ").length > 2 && MatchService.PureMatch(Object.keys(Atheneum), parent, 0.9) < 0) {
                 matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
                 if (matchIndex >= 0) {
                     keys = Object.keys(Yggdrasil)
