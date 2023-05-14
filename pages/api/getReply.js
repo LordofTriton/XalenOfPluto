@@ -112,16 +112,12 @@ export default async (req, response) => {
                     let references = []
                     
                     let firstGen = keys.filter(record => MatchService.Compare(record, greatGrandParent, 0.8))
-                    console.log("FirstGen: ", Yggdrasil[firstGen[0]])
-                    console.log(grandParent)
                     for (let i = 0; i < firstGen.length; i++) {
                         let matchOne = MatchService.GetMatch(Yggdrasil[firstGen[i]], grandParent, 0.8, true)
                         if (matchOne >= 0) {
                             let secondGen = Yggdrasil[firstGen[i]][matchOne]
-                            console.log("SecondGen: ", secondGen)
                             let matchTwo = MatchService.GetMatch(Yggdrasil[secondGen], parent, 0.8, true)
                             if (matchTwo >= 0) {
-                                console.log("ThirdGen: ", Yggdrasil[secondGen][matchTwo])
                                 references.push(Yggdrasil[secondGen][matchTwo])
                             }
                         }
@@ -129,11 +125,9 @@ export default async (req, response) => {
                                         
                     if (references.length > 0) {
                         let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
-                        replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
-                        replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
+                        replies = replies.filter(reply => !reply.toLowerCase().includes("xalen") && !reply.toLowerCase().includes("pluto") && !reply.toLowerCase().includes("alien"))
 
                         if (replies.length > 0) {
-                            console.log("Replies: ", replies)
                             response.json({
                                 replies: replies
                             })
