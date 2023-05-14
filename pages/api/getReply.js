@@ -113,10 +113,10 @@ export default async (req, response) => {
                     
                     let firstGen = keys.filter(record => MatchService.Compare(record, greatGrandParent, 0.8))
                     for (let i = 0; i < firstGen.length; i++) {
-                        let matchOne = MatchService.GetMatch(Yggdrasil[firstGen[i]], grandParent, 0.8, true)
+                        let matchOne = MatchService.PureMatch(Yggdrasil[firstGen[i]], grandParent, 0.8, true)
                         if (matchOne >= 0) {
                             let secondGen = Yggdrasil[firstGen[i]][matchOne]
-                            let matchTwo = MatchService.GetMatch(Yggdrasil[secondGen], parent, 0.8, true)
+                            let matchTwo = MatchService.PureMatch(Yggdrasil[secondGen], parent, 0.8, true)
                             if (matchTwo >= 0) {
                                 references.push(Yggdrasil[secondGen][matchTwo])
                             }

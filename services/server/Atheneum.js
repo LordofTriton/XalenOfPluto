@@ -11296,11 +11296,6 @@ const Atheneum = {
         "😢",
         "🙄"
     ],
-    "That's your name?": [
-        "Why? What's wrong with it?",
-        "Something wrong with it?",
-        "You got a problem with it?"
-    ],
     "I'm calling you a": [
         "And you're wrong. So what?",
         "I don't care lol",
