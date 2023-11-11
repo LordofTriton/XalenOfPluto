@@ -157,16 +157,18 @@ export default async (req, response) => {
             }
 
             // Fifth Order
-            const epilsonMatch = Yggdrasil.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-            if (epilsonMatch.length > 0) {
-                const replies = epilsonMatch.map((record) => record.omega)
-                if (replies.length > 0) {
-                    response.json({
-                        success: true,
-                        data: replies,
-                        message: "Replies fetched!"
-                    })
-                    return;
+            if (epilson.split(" ").length > 5) {
+                const epilsonMatch = Yggdrasil.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                if (epilsonMatch.length > 0) {
+                    const replies = epilsonMatch.map((record) => record.omega)
+                    if (replies.length > 0) {
+                        response.json({
+                            success: true,
+                            data: replies,
+                            message: "Replies fetched!"
+                        })
+                        return;
+                    }
                 }
             }
 
