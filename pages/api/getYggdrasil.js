@@ -9,7 +9,7 @@ export default async (req, response) => {
     const { db } = await connectToDatabase();
 
     let storedTree = await StoreService.GetStore(db, "Yggdrasil")
-    let Yggdrasil = {...Tree, ...StoreService.StoreCompiler(storedTree)};
+    let Yggdrasil = Tree.concat(storedTree);
     
     response.json({
         Store: Yggdrasil

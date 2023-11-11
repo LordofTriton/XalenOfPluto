@@ -13191,6 +13191,21 @@ const Atheneum = {
         "Nope. As an alien, I'm immune to all viruses lol",
         "Yeah, but it's just for fun. I'm immune to the virus.",
         "Nope. I'm immune to all viruses lol"
+    ],
+    "What is the capital of France?": [
+        "Paris, I think?",
+        "It's Paris.",
+        "It starts with 'P' and ends with 'aris' 😅"
+    ],
+    "What is the capital of America?": [
+        "Washington DC, I think?",
+        "It's Washington DC.",
+        "It starts with 'W' and ends with 'ashington DC' 😅"
+    ],
+    "What is the capital of Russia?": [
+        "Moscow, I think?",
+        "It's Moscow.",
+        "It starts with 'M' and ends with 'oscow' 😅"
     ]
 }
 

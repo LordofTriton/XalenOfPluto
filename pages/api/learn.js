@@ -5,84 +5,97 @@ import Auth from "../../services/auth";
 import Tree from "../../services/server/Yggdrasil";
 import MatchService from "../../services/server/matcher";
 import StoreService from "../../services/server/StoreService";
-import DateTime from "../../services/server/dateTime";
 
 export default async (req, response) => {
     const { db } = await connectToDatabase();
 
-    let parentMessage = req.body.parentMessage;
-    let ancestor = req.body.ancestor;
-    let newMessage = req.body.newMessage;
-    let context = req.body.context;
-    let subject = req.body.subject;
+    let alpha = req.body.alpha;
+    let beta = req.body.beta;
+    let gamma = req.body.gamma;
+    let delta = req.body.delta;
+    let epilson = req.body.epilson;
+    let omega = req.body.omega;
 
     let storedTree = await StoreService.GetStore(db, "Yggdrasil")
-    let Yggdrasil = {...Tree, ...StoreService.StoreCompiler(storedTree)};
+    let Yggdrasil = Tree.concat(storedTree);
+
+    const addRecord = async () => {
+        await StoreService.InsertOne(db, {
+            alpha, 
+            beta, 
+            gamma, 
+            delta,
+            epilson,
+            omega
+        }, "Yggdrasil")
+    }
 
     if (req.headers.origin === Auth.ClientURL) {
-        if (parentMessage) {
-            if (ancestor) {parentMessage = ancestor}
-            context = Yggdrasil[parentMessage]
-            
-            let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
-            if (matchIndex >= 0) {
-                response.json({
-                    newContext: Yggdrasil[context[matchIndex]],
-                    newAncestor: "",
-                    newParent: context[matchIndex]
-                })
-
-                return;
-            }
-            else {
-                await StoreService.UpdateYggdrasil(db, parentMessage, [...context, newMessage])
-
-                await StoreService.InsertOne(db, {label: newMessage, records: []}, "Yggdrasil")
-                
-                response.json({
-                    newContext: [],
-                    newAncestor: "",
-                    newParent: newMessage      
-                });
-            }
-        }
-        else {
-            if (subject === "xalen") {
-                let context = Yggdrasil[""];
-                let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
-                if (matchIndex >= 0) {
+        const alphaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.alpha, alpha, 0.8))
+        if (alphaMatch.length > 0) {
+            const betaMatch = alphaMatch.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
+            if (betaMatch.length > 0) {
+                const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
+                if (gammaMatch.length > 0) {
+                    const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
+                    if (deltaMatch.length > 0) {
+                        const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                        if (epilsonMatch.length > 0) {
+                            const omegaMatch = epilsonMatch.filter((record) => MatchService.Compare(record.omega, omega, 0.8))
+                            if (omegaMatch.length > 0) {
+                                response.json({
+                                    success: true,
+                                    data: null,
+                                    message: "Already learned :("     
+                                });
+                            }
+                            else {
+                                await addRecord()
+                                response.json({
+                                    success: true,
+                                    data: null,
+                                    message: "Learned successfully :)"     
+                                });
+                            }
+                        } else {
+                            await addRecord()
+                            response.json({
+                                success: true,
+                                data: null,
+                                message: "Learned successfully :)"     
+                            });
+                        }
+                    } else {
+                        await addRecord()
+                        response.json({
+                            success: true,
+                            data: null,
+                            message: "Learned successfully :)"     
+                        });
+                    }
+                } else {
+                    await addRecord()
                     response.json({
-                        newContext: Yggdrasil[context[matchIndex]],
-                        newAncestor: context[matchIndex],
-                        newParent: context[matchIndex]
-                    })
-
-                    return;
-                }
-                else {
-                    await StoreService.UpdateYggdrasil(db, parentMessage, [...context, newMessage])
-
-                    await StoreService.InsertOne(db, {label: newMessage, records: []}, "Yggdrasil")
-                    
-                    response.json({
-                        newContext: [],
-                        newAncestor: "",
-                        newParent: newMessage      
+                        success: true,
+                        data: null,
+                        message: "Learned successfully :)"     
                     });
                 }
-            }
-            else {
-                let context = Yggdrasil[""]
-
-                let matchIndex = MatchService.GetMatch(DateTime.removeArrayStamp(context), DateTime.removeStamp(newMessage), 0.7)
+            } else {
+                await addRecord()
                 response.json({
-                    newContext: Yggdrasil[context[matchIndex]],
-                    newAncestor: context[matchIndex],
-                    newParent: context[matchIndex]
+                    success: true,
+                    data: null,
+                    message: "Learned successfully :)"     
                 });
-
-                return;
             }
+        } else {
+            await addRecord()
+            response.json({
+                success: true,
+                data: null,
+                message: "Learned successfully :)"     
+            });
         }
     }
     else {

@@ -16,26 +16,29 @@ export default async (req, response) => {
     const { db } = await connectToDatabase();
 
     let chatHistory = req.body.chatHistory;
-    let parentHistory = req.body.parentHistory;
-    let ancestor = req.body.ancestor;
-    let context = req.body.context;
-    let parent = parentHistory[parentHistory.length - 1];
 
     if (req.headers.origin === Auth.ClientURL) {
         if (chatHistory.length > 0) {
-
             let storedTree = await StoreService.GetStore(db, "Yggdrasil")
-            let Yggdrasil = {...Tree, ...StoreService.StoreCompiler(storedTree)};
+            let Yggdrasil = Tree.concat(storedTree);
 
             let xalenMsg = chatHistory.filter(msg => msg.parent === "xalen")
             let userMsg = chatHistory.filter(msg => msg.parent === "user")
 
+            let alpha = chatHistory.length > 4 ? (chatHistory[chatHistory.length - 5])?.content : null;
+            let beta = chatHistory.length > 3 ? (chatHistory[chatHistory.length - 4])?.content : null;
+            let gamma = chatHistory.length > 2 ? (chatHistory[chatHistory.length - 3])?.content : null;
+            let delta = chatHistory.length > 1 ? (chatHistory[chatHistory.length - 2])?.content : null;
+            let epilson = chatHistory.length > 0 ? (chatHistory[chatHistory.length - 1])?.content : null;
+
             // Copycat
             if (xalenMsg.length >= 2) {
-                if (MatchService.PureCompare(xalenMsg[xalenMsg.length - 1].fullContent, userMsg[userMsg.length - 1].fullContent, 0.8)
-                    && MatchService.PureCompare(xalenMsg[xalenMsg.length - 2].fullContent, userMsg[userMsg.length - 2].fullContent, 0.8)) {
+                if (MatchService.PureCompare(xalenMsg[xalenMsg.length - 1].content, userMsg[userMsg.length - 1].content, 0.8)
+                    && MatchService.PureCompare(xalenMsg[xalenMsg.length - 2].content, userMsg[userMsg.length - 2].content, 0.8)) {
                     response.json({
-                        replies: Override.copycat
+                        success: true,
+                        data: Override.copycat,
+                        message: "Replies fetched!"
                     })
                     return;
                 }
@@ -43,93 +46,92 @@ export default async (req, response) => {
             
             // Tautology
             if ((userMsg.length >= 3)
-                && (MatchService.Compare(userMsg[userMsg.length - 1].fullContent, userMsg[userMsg.length - 2].fullContent, 0.8))
-                && (MatchService.Compare(userMsg[userMsg.length - 2].fullContent, userMsg[userMsg.length - 3].fullContent, 0.8))) {
+                && (MatchService.Compare(userMsg[userMsg.length - 1].content, userMsg[userMsg.length - 2].content, 0.8))
+                && (MatchService.Compare(userMsg[userMsg.length - 2].content, userMsg[userMsg.length - 3].content, 0.8))) {
                     response.json({
-                        replies: Override.tautology
+                        success: true,
+                        data: Override.tautology,
+                        message: "Replies fetched!"
                     })
                     return;
             }
             
             // Identity
-            let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), parent, 0.9)
+            let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), epilson, 0.9)
             if (matchIndex >= 0) {
                 let keys = Object.keys(Override.Identity)
                 let index = keys.indexOf(keys[matchIndex])
 
                 response.json({
-                    replies: Override.Identity[keys[index]]
+                    success: true,
+                    data: Override.Identity[keys[index]],
+                    message: "Replies fetched!"
                 })
                 return;
             }
             
-            // Ancestor
-            if (parentHistory.length < 3) {
-                let replies = Yggdrasil[parent]
-                replies = replies.filter(reply => !reply.toLowerCase().includes("xalen"))
-                replies = replies.filter(reply => !reply.toLowerCase().includes("pluto"))
-                if (replies.length > 0) {
-                    response.json({
-                        replies: replies
-                    })
-                    return;
-                }
-            }
-
-            // Gibberish
-            if (asdfjkl(parent) && MatchService.GetMatch(Override.allowedGibberish, parent, 0.8) < 0) {
-                response.json({
-                    replies: Override.gibberish
-                })
-                return;
-            }
-
-            // Conversation Starter
-            matchIndex = MatchService.PureMatch(Override.convoTrigger, parent, 0.8)
-            if (matchIndex >= 0) {
-                response.json({
-                    replies: Override.convoStarter
-                })
-                return;
-            }
-
-            // Joker
-            matchIndex = MatchService.PureMatch(Override.jokeTrigger, parent, 0.8)
-            if (matchIndex >= 0) {
-                response.json({
-                    replies: Override.jokes
-                })
-                return;
-            }
-
-            // Cross Reference
-            let keys = Object.keys(Yggdrasil)
-            if (parentHistory.length > 2) {
-                let greatGrandParent = parentHistory[parentHistory.length - 3]
-                let grandParent = parentHistory[parentHistory.length - 2]
-
-                if (Yggdrasil[grandParent] && Yggdrasil[greatGrandParent]) {
-                    let references = []
-                    
-                    let firstGen = keys.filter(record => MatchService.Compare(record, greatGrandParent, 0.8))
-                    for (let i = 0; i < firstGen.length; i++) {
-                        let matchOne = MatchService.PureMatch(Yggdrasil[firstGen[i]], grandParent, 0.8, true)
-                        if (matchOne >= 0) {
-                            let secondGen = Yggdrasil[firstGen[i]][matchOne]
-                            let matchTwo = MatchService.PureMatch(Yggdrasil[secondGen], parent, 0.8, true)
-                            if (matchTwo >= 0) {
-                                references.push(Yggdrasil[secondGen][matchTwo])
+            // First Order
+            const alphaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.alpha, alpha, 0.8))
+            if (alphaMatch.length > 0) {
+                const betaMatch = alphaMatch.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
+                if (betaMatch.length > 0) {
+                    const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
+                    if (gammaMatch.length > 0) {
+                        const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
+                        if (deltaMatch.length > 0) {
+                            const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                            if (epilsonMatch.length > 0) {
+                                const replies = epilsonMatch.map((record) => record.omega)
+                                if (replies.length > 0) {
+                                    response.json({
+                                        success: true,
+                                        data: replies,
+                                        message: "Replies fetched!"
+                                    })
+                                    return;
+                                }
                             }
                         }
                     }
-                                        
-                    if (references.length > 0) {
-                        let replies = Yggdrasil[references[Math.floor(Math.random() * references.length)]]
-                        replies = replies.filter(reply => !reply.toLowerCase().includes("xalen") && !reply.toLowerCase().includes("pluto") && !reply.toLowerCase().includes("alien"))
+                }
+            }
 
+            // Second Order
+            const betaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
+            if (betaMatch.length > 0) {
+                const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
+                if (gammaMatch.length > 0) {
+                    const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
+                    if (deltaMatch.length > 0) {
+                        const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                        if (epilsonMatch.length > 0) {
+                            const replies = epilsonMatch.map((record) => record.omega)
+                            if (replies.length > 0) {
+                                response.json({
+                                    success: true,
+                                    data: replies,
+                                    message: "Replies fetched!"
+                                })
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Third Order
+            const gammaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
+            if (gammaMatch.length > 0) {
+                const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
+                if (deltaMatch.length > 0) {
+                    const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                    if (epilsonMatch.length > 0) {
+                        const replies = epilsonMatch.map((record) => record.omega)
                         if (replies.length > 0) {
                             response.json({
-                                replies: replies
+                                success: true,
+                                data: replies,
+                                message: "Replies fetched!"
                             })
                             return;
                         }
@@ -137,46 +139,96 @@ export default async (req, response) => {
                 }
             }
 
-            // Actions
-            matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), parent.replaceAll("*", ""), 0.9)
-            if (matchIndex >= 0 && parent.includes("*")) {
-                let keys = Object.keys(Override.Actions)
-                let index = keys.indexOf(keys[matchIndex])
-
-                response.json({
-                    replies: Override.Actions[keys[index]]
-                })
-                return;
-            }
-
-            // Yggdrasil
-            if (parent.split(" ").length > 1) {
-                matchIndex = MatchService.PureMatch(Object.keys(Yggdrasil), parent, 0.8)
-                if (matchIndex >= 0) {
-                    keys = Object.keys(Yggdrasil)
-                    let index = keys[matchIndex]
-                    let replies = Yggdrasil[index];
-
+            // Fourth Order
+            const deltaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
+            if (deltaMatch.length > 0) {
+                const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+                if (epilsonMatch.length > 0) {
+                    const replies = epilsonMatch.map((record) => record.omega)
                     if (replies.length > 0) {
                         response.json({
-                            replies: replies
+                            success: true,
+                            data: replies,
+                            message: "Replies fetched!"
                         })
                         return;
                     }
                 }
             }
 
-            // Atheneum
-            if (parent.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), parent, 0.8)
-            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), parent, 0.8)
+            // Fifth Order
+            const epilsonMatch = Yggdrasil.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
+            if (epilsonMatch.length > 0) {
+                const replies = epilsonMatch.map((record) => record.omega)
+                if (replies.length > 0) {
+                    response.json({
+                        success: true,
+                        data: replies,
+                        message: "Replies fetched!"
+                    })
+                    return;
+                }
+            }
+
+            // Gibberish
+            if (asdfjkl(epilson) && MatchService.GetMatch(Override.allowedGibberish, epilson, 0.8) < 0) {
+                response.json({
+                    success: true,
+                    data: Override.gibberish,
+                    message: "Replies fetched!"
+                })
+                return;
+            }
+
+            // Conversation Starter
+            matchIndex = MatchService.PureMatch(Override.convoTrigger, epilson, 0.8)
             if (matchIndex >= 0) {
-                keys = Object.keys(Atheneum)
+                response.json({
+                    success: true,
+                    data: Override.convoStarter,
+                    message: "Replies fetched!"
+                })
+                return;
+            }
+
+            // Joker
+            matchIndex = MatchService.PureMatch(Override.jokeTrigger, epilson, 0.8)
+            if (matchIndex >= 0) {
+                response.json({
+                    success: true,
+                    data: Override.jokes,
+                    message: "Replies fetched!"
+                })
+                return;
+            }
+
+            // Actions
+            matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), epilson.replaceAll("*", ""), 0.9)
+            if (matchIndex >= 0 && epilson.includes("*")) {
+                let keys = Object.keys(Override.Actions)
+                let index = keys.indexOf(keys[matchIndex])
+
+                response.json({
+                    success: true,
+                    data: Override.Actions[keys[index]],
+                    message: "Replies fetched!"
+                })
+                return;
+            }
+
+            // Atheneum
+            if (epilson.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), epilson, 0.8)
+            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), epilson, 0.8)
+            if (matchIndex >= 0) {
+                let keys = Object.keys(Atheneum)
                 let index = keys.indexOf(keys[matchIndex])
                 let replies = Atheneum[keys[index]];
 
                 if (replies.length > 0) {
                     response.json({
-                        replies: replies
+                        success: true,
+                        data: replies,
+                        message: "Replies fetched!"
                     })
                     return;
                 }
@@ -186,11 +238,13 @@ export default async (req, response) => {
             for (let i = 0; i < EmojiSense.length; i++) {
                 let range = EmojiSense[i].target;
                 for (let x = 0; x < range.length; x++) {
-                    if (parent.includes(range[x])) {
+                    if (epilson.includes(range[x])) {
                         let replies = EmojiSense[i].result;
 
                         response.json({
-                            replies: replies
+                            success: true,
+                            data: replies,
+                            message: "Replies fetched!"
                         })
                         return;
                     }
@@ -199,14 +253,18 @@ export default async (req, response) => {
 
             // Fallback
             response.json({
-                replies: []
+                success: true,
+                data: [],
+                message: "Replies fetched!"
             })
             return;
         }
     }
     else {
         response.json({
-            error: "Failed Authentication."
+            success: false,
+            data: null,
+            message: "Failed Authentication :|"
         });
     }
 };

@@ -17,18 +17,8 @@ const ChatWindow = ({CortexControl}) => {
     const [chatHistory, setChatHistory] = useState([])
     const [typing, setTyping] = useState(false)
     const [newMsg, setNewMsg] = useState("")
-    const [currentMessage, setCurrentMessage] = useState({
-        parent: "",
-        content: "",
-        fullContent: "",
-        time: d
-    })
-    const [context, setContext] = useState([])
-    const [ancestor, setAncestor] = useState("")
-    const [parent, setParent] = useState("")
-    const [parentHistory, setParentHistory] = useState([])
-    const [xalenTurn, setXalenTurn] = useState(premierSpeaker)
     const [emojiBox, setEmojiBox] = useState(false)
+    const [turn, setTurn] = useState(premierSpeaker ? "xalen" : "user")
 
     let botState = CortexControl.botState;
     let setBotState = CortexControl.setBotState;
@@ -44,92 +34,81 @@ const ChatWindow = ({CortexControl}) => {
         if (premierSpeaker) {
             axios.post(`api/start`).then(re => {
                 if (chatHistory.length < 1) {
-                    let data = re.data;
-                    setXalenTurn(true)
-                    replyMessage(re.data, Math.floor(Math.random() * data.length))
+                    let data = re.data.data;
+                    setTurn("xalen")
+                    replyMessage(data)
                 }
-                setContext(re.data)
             })
         }
     }, [])
 
     useEffect(() => {
-        if (chatHistory.length > 0) {
-            window.navigator.onLine ? setBotState("Online") : setBotState("Offline");
+        window.navigator.onLine ? setBotState("Online") : setBotState("Offline");
+    }, [chatHistory])
 
-            let messageData = {
-                chatHistory: chatHistory,
-                parentHistory: parentHistory,
-                ancestor: ancestor,
-                context: context,
-                botState: botState,
-                parent: parent
-            }
-
-            axios.post(`api/getReply/`, messageData).then(re => {
-                setTyping(true)
-
-                let data = re.data.replies;
-                let typingDelay = 2000;
-                let replyIndex = 0;
-
-                if (data && data.length > 0) {
-                    const naturalReplies = data.filter(item => !Fallbacks.includes(DateTime.removeStamp(item)));
-                    if (naturalReplies.length > 0) data = naturalReplies;
-
-                    replyIndex = Math.floor(Math.random() * data.length);
-                    typingDelay = 100 * data[replyIndex].length;
-                }
-                scrollDown();
-                setTimeout(() => replyMessage(data, replyIndex), typingDelay)
-            })
-        }
-
-    }, [currentMessage])
-
-    async function learnStuff(subject, learningMaterial, childMessage) {
-        let parentMessage = learningMaterial.filter(msg => msg.parent === subject)
-        parentMessage = parentMessage[parentMessage.length - 1]
-        let newMessage = childMessage.fullContent
-
+    async function learnStuff(subject, history, newMessage) {
         let learnData = {
-            parentMessage: parent,
-            ancestor: ancestor,
-            newMessage: newMessage,
-            context: context,
-            subject: subject
+            alpha: history.length >= 5 ? (history[history.length - 6])?.content : null,
+            beta: history.length > 4 ? (history[history.length - 5])?.content : null,
+            gamma: history.length > 3 ? (history[history.length - 4])?.content : null,
+            delta: history.length > 2 ? (history[history.length - 3])?.content : null,
+            epilson: history.length > 1 ? (history[history.length - 2])?.content : null,
+            omega: history.length > 0 ? newMessage : null
         }
 
-        await axios.post(`api/learn/`, learnData).then(re => {
-            setContext(re.data.newContext);
-            setAncestor(re.data.newAncestor);
-            setParent(re.data.newParent);
-            setParentHistory(parentHistory.concat(re.data.newParent));
-            if (subject === "xalen") setCurrentMessage(childMessage);
-            
-            if (subject === "user") setXalenTurn(false);
+        await axios.post(`api/learn/`, learnData)
+
+        if (subject === "xalen") {
+            setTurn("user")
+        } else {
+            await getReply(history)
+        }
+    }
+
+    async function getReply(history) {
+        axios.post(`api/getReply/`, { chatHistory: history }).then(re => {
+            setTyping(true)
+
+            let data = re.data.data;
+            let typingDelay = 2000;
+            let replyIndex = 0;
+
+            if (data && data.length > 0) {
+                const naturalReplies = data.filter(item => !Fallbacks.includes(item));
+                if (naturalReplies.length > 0) data = naturalReplies;
+
+                replyIndex = Math.floor(Math.random() * data.length);
+                typingDelay = 100 * data[replyIndex].length;
+            }
+            scrollDown();
+            setTimeout(() => replyMessage(data, replyIndex), typingDelay)
         })
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         setEmojiBox(false)
-        if (!xalenTurn) {
+
+        if (turn !== "xalen") {
             if (newMsg.trim().length > 0) {
                 CortexControl.setAlert(null)
-                setXalenTurn(true)
+                setTurn("xalen")
+
                 let d = new Date()
                 let msg = newMsg.charAt(0).toUpperCase() + newMsg.slice(1);
                 msg = msg.replaceAll("_", " ")
                 msg = msg.replaceAll("+", " ")
                 const newMessage = {
                     parent: "user",
-                    content: DateTime.addStamp(msg.trim()),
-                    fullContent: DateTime.addStamp(msg.trim()),
+                    content: msg.trim(),
                     time: d
                 }
 
-                setChatHistory(chatHistory.concat(newMessage), learnStuff("xalen", chatHistory, newMessage))
+                setChatHistory((history) => {
+                    const updatedHistory = history.concat(newMessage);
+                    learnStuff("user", updatedHistory, newMessage.content);
+                    return updatedHistory;
+                })
                 setNewMsg("")
                 scrollDown()
             }
@@ -151,7 +130,8 @@ const ChatWindow = ({CortexControl}) => {
     }
 
     function fallbackMessage() {
-        axios.post(`api/addResearch/`, {researchTopic: currentMessage.fullContent})
+        // const currentMessage = chatHistory[chatHistory.length - 1].content;
+        // axios.post(`api/addResearch/`, {researchTopic: currentMessage})
 
         let ignorance = Fallbacks[Math.floor(Math.random() * Fallbacks.length)]
         const ignoranceList = ignorance.split("+")
@@ -159,34 +139,42 @@ const ChatWindow = ({CortexControl}) => {
         for (let i = 0; i < ignoranceList.length; i++) {
             const newXalenMessage = {
                 parent: "xalen",
-                content: DateTime.addStamp(ignoranceList[i].trim()),
-                fullContent: DateTime.addStamp(ignorance),
+                content: ignoranceList[i].trim(),
                 time: d
             }
             fallbackMessages.push(newXalenMessage)
         }
-        
-        setChatHistory(chatHistory.concat(fallbackMessages), learnStuff("user", chatHistory, fallbackMessages[fallbackMessages.length - 1]))
+
+        setChatHistory((history) => {
+            const updatedHistory = history.concat(fallbackMessages);
+            learnStuff("xalen", updatedHistory, ignorance);
+            return updatedHistory;
+        })
         setTyping(false)
     }
 
-    function replyMessage(reply, replyIndex) {
-        if (reply && reply.length > 0) {
-            reply = reply[replyIndex]
+    function replyMessage(replies) {
+        if (replies && replies.length > 0) {
+            let replyIndex = Math.floor(Math.random() * replies.length)
+            let reply = replies[replyIndex]
+
             let replyMessages = reply.split("+")
             let replyList = []
             let d = new Date()
             for (let i = 0; i < replyMessages.length; i++) {
                 const newXalenMessage = {
                     parent: "xalen",
-                    content: DateTime.addStamp(replyMessages[i].trim()),
-                    fullContent: DateTime.addStamp(reply),
+                    content: replyMessages[i].trim(),
                     time: d
                 }
                 replyList.push(newXalenMessage)
             }
 
-            setChatHistory(chatHistory.concat(replyList), learnStuff("user", chatHistory, replyList[replyList.length - 1]))
+            setChatHistory((history) => {
+                const updatedHistory = history.concat(replyList);
+                learnStuff("xalen", updatedHistory, reply);
+                return updatedHistory;
+            })
             setTyping(false)
         }
         else fallbackMessage()
@@ -200,7 +188,7 @@ const ChatWindow = ({CortexControl}) => {
                     chatHistory.map((message) =>
                         <div className="chatMessage" key={message.time}>
                             <h3 className="chatContent" style={{float: message.parent === "xalen" ? "left" : "right", backgroundImage: message.parent === "user" ? "none" : null, color: message.parent === "user" ? "var(--blue)" : "var(--white)"}}>
-                                {Censor.CensorText(DateTime.removeStamp(message.content), censor)}
+                                {Censor.CensorText(message.content, censor)}
                             </h3>
                             <h4 className="chatMessageTime" style={{
                                 textAlign: message.parent === "xalen" ? "left" : "right",

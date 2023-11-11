@@ -38,10 +38,10 @@ function EmojiDecoder(text) {
 function msgProcessor(msg) {
     const allEmoji = emojiTest(msg)
     if (allEmoji) {
-        return Corrector(` ${StripPunctuation(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))} `).trim()
+        return Corrector(` ${StripPunctuation(EmojiDecoder(msg.toLowerCase()))} `).trim()
     }
     else {
-        return Corrector(` ${StripSpecial(EmojiDecoder(DateTime.removeStamp(msg).toLowerCase()))} `).trim()
+        return Corrector(` ${StripSpecial(EmojiDecoder(msg.toLowerCase()))} `).trim()
     }
 }
 
@@ -171,6 +171,9 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
 }
 
 function Compare(store, message, matchThreshold) {
+    if (!store && !message) return true;
+    if ((!store && message) || (!message && store)) return false;
+
     let userMessage = msgProcessor(message)
     let storeMessage = msgProcessor(store)
 
@@ -225,12 +228,12 @@ function GetArrayMatch(store, parent, message) {
     let parentIndex = -1;
     let messageIndex = -1;
     for (let i = 0; i < store.length; i++) {
-        if (DateTime.removeStamp(store[i]) === DateTime.removeStamp(parent)) parentIndex = i;
+        if (store[i] === parent) parentIndex = i;
     }
     if (parentIndex < 0) return parentIndex;
     else {
         for (let i = 0; i < store[parent].length; i++) {
-            if (DateTime.removeStamp(store[parent][i]) === DateTime.removeStamp(message)) messageIndex = i;
+            if (store[parent][i] === message) messageIndex = i;
         }
     }
 
@@ -238,7 +241,7 @@ function GetArrayMatch(store, parent, message) {
 }
 
 function GetParentIndex(store, parent) {
-    let parentIndex = DateTime.removeArrayStamp(store).indexOf(DateTime.removeStamp(parent))
+    let parentIndex = DateTime.removeArrayStamp(store).indexOf(parent)
     return parentIndex;
 }
 

@@ -30,6 +30,15 @@ var GetStore = (db_connect, storeName) => (
     })
 );
 
+var UpdateStore = (db_connect, filters, data) => (
+    new Promise((resolve, reject) => {
+        db_connect.collection("Yggdrasil").update(filters, data, function (err, res) {
+            var somethingWentWrong = (res == null);
+            (somethingWentWrong) ? reject('Something messed up :)') : resolve(res);
+        })
+    })
+);
+
 var InsertOne = (db_connect, item, storeName) => (
     new Promise((resolve, reject) => {
         db_connect.collection(storeName).insertOne(item, function (err, res) {
@@ -48,6 +57,6 @@ var UpdateYggdrasil = (db_connect, label, records) => (
     })
 );
 
-const StoreService = {StoreCompiler, ResearchCompiler, GetStore, InsertOne, UpdateYggdrasil};
+const StoreService = {StoreCompiler, ResearchCompiler, GetStore, UpdateStore, InsertOne, UpdateYggdrasil};
 
 export default StoreService;
