@@ -19,7 +19,7 @@ html {
     --white: #FFFFFF;
     --light-orange: #FFCB37;
     --dark-orange: #FCAC1F;
-    --blue: #5E73DD;
+    --blue: #81AA80;
     
     --black: #000000;
     --platinum: #E5E5E5;
@@ -45,7 +45,7 @@ html {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    background-image: linear-gradient(to bottom, var(--blue), #044BA7);
     border-radius: 10px;
   }
   
@@ -97,26 +97,46 @@ html {
     width: 300px;
     height: 100vh;
     transform: skewX(20deg);
-    background-color: blueviolet;
+    background-color: #307062;
     position: absolute;
     top: 0px;
     left: 0px;
     animation: backAnim infinite 1s;
   }
 
-  .titleLarge {
-    font-size: 400px;
+  .titleLargeRight {
+    display: none;
+    font-size: 250px;
     font-family: Title;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50% -50%);
-    color: blueviolet;
+    bottom: 50px;
+    right: -450px;
+    transform: rotate(-90deg);
+    text-align: center;
+    color: var(--blue);
+  }
+
+  .titleLargeLeft {
+    display: none;
+    font-size: 250px;
+    font-family: Title;
+    position: fixed;
+    bottom: 50px;
+    left: -450px;
+    transform: rotate(90deg);
+    text-align: center;
+    color: var(--blue);
   }
 
   @keyframes backAnim {
     0% {left: calc(100vw + 600px)}
     100% {left: -600px}
+  }
+
+  @keyframes titleAnim {
+    0% {bottom: 200vh}
+    50% {bottom: -200vh}
+    100% {bottom: 200vh}
   }
   
   
@@ -126,7 +146,19 @@ html {
       width: 500px;
       position: absolute;
       top: 50%;
-      left: 100px;
+      left: 150px;
       transform: translate(0px, -50%);
+    }
+    .titleLargeRight {
+      font-size: 300px;
+      bottom: 50px;
+      right: -550px;
+      display: block;
+    }
+    .titleLargeLeft {
+      font-size: 300px;
+      bottom: 50px;
+      left: -550px;
+      display: block;
     }
   }

@@ -18,7 +18,7 @@ function OrderMatch(phaseIndex, yggdrasil, orders) {
     let match = []
     for (let phase of phases) {
         if (phaseIndex === 9) {
-            if (orders[phase].split(" ").length > 5) match = yggdrasil.filter((record) => MatchService.PureCompare(record[phase], orders[phase], 0.8))
+            if (orders[phase].split(" ").length > 3) match = yggdrasil.filter((record) => MatchService.PureCompare(record[phase], orders[phase], 0.8))
             else match = [];
         }
         else if (phase === phases[0]) match = yggdrasil.filter((record) => MatchService.Compare(record[phase], orders[phase], 0.8))

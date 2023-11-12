@@ -130,7 +130,9 @@ const Cortex = () => {
                 ready ?
                 <div className="backDrop" style={{backgroundColor: theme === "Light" ? "#E5E5E5" : "hsla(0, 0%, 7%, 0.952)"}}>
                     <Title CortexControl={CortexControl} />
-                    <span className="titleLarge">Xalen</span>
+                    <span className="titleLargeRight">Xalen</span>
+                    <span className="titleLargeLeft">Xalen</span>
+
                     <div className="displayContent" style={{backgroundImage: theme === "Light" ? "url("+lightBckg+")" : "url("+darkBckg+")"}}>
                         <TopNav CortexControl={CortexControl} />
                         <ChatWindow CortexControl={CortexControl} />

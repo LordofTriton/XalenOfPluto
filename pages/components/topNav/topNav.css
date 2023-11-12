@@ -36,7 +36,7 @@
     margin: 13px 0px 0px 20px;
     /* text-shadow: 2px 2px 0px var(--dark-orange); */
     text-transform: uppercase;
-    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    background-image: linear-gradient(to bottom, var(--blue), #307062);
     background-size: 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent; 

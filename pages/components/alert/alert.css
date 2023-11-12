@@ -44,7 +44,7 @@
     width: 90%;
     height: 50px;
     border-radius: 50px;
-    background-image: linear-gradient(to bottom, var(--blue), blueviolet);
+    background-image: linear-gradient(to bottom, var(--blue), #307062);
     border: 0px;
     outline: 0px;
     color: white;
