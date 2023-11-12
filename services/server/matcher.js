@@ -81,6 +81,9 @@ function PureMatch(store, message, matchThreshold, matchDuplicate = false) {
 }
 
 function PureCompare(store, message, matchThreshold) {
+    if (!store && !message) return true;
+    if ((!store && message) || (!message && store)) return false;
+    
     let userMessage = msgProcessor(message)
     let storeMessage = msgProcessor(store)
 
