@@ -48,11 +48,16 @@ const ChatWindow = ({CortexControl}) => {
 
     async function learnStuff(subject, history, newMessage) {
         let learnData = {
-            alpha: history.length >= 5 ? (history[history.length - 6])?.content : null,
-            beta: history.length > 4 ? (history[history.length - 5])?.content : null,
-            gamma: history.length > 3 ? (history[history.length - 4])?.content : null,
-            delta: history.length > 2 ? (history[history.length - 3])?.content : null,
-            epilson: history.length > 1 ? (history[history.length - 2])?.content : null,
+            alpha: history.length >= 10 ? (history[history.length - 11])?.content : null,
+            beta: history.length > 9 ? (history[history.length - 10])?.content : null,
+            gamma: history.length > 8 ? (history[history.length - 9])?.content : null,
+            delta: history.length > 7 ? (history[history.length - 8])?.content : null,
+            epilson: history.length > 6 ? (history[history.length - 7])?.content : null,
+            zeta: history.length > 5 ? (history[history.length - 6])?.content : null,
+            eta: history.length > 4 ? (history[history.length - 5])?.content : null,
+            theta: history.length > 3 ? (history[history.length - 4])?.content : null,
+            iota: history.length > 2 ? (history[history.length - 3])?.content : null,
+            kappa: history.length > 1 ? (history[history.length - 2])?.content : null,
             omega: history.length > 0 ? newMessage : null
         }
 

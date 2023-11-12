@@ -12,7 +12,18 @@ export default async (req, response) => {
     if (req.headers.origin === Auth.ClientURL) {
         let storedTree = await StoreService.GetStore(db, "Yggdrasil")
         let Yggdrasil = Tree.concat(storedTree);
-        let messages = Yggdrasil.filter((record) => !record.alpha && !record.beta && !record.gamma && !record.delta && !record.epilson)
+        let messages = Yggdrasil.filter((record) => 
+            !record.alpha && 
+            !record.beta && 
+            !record.gamma && 
+            !record.delta && 
+            !record.epilson && 
+            !record.zeta && 
+            !record.eta && 
+            !record.theta && 
+            !record.iota && 
+            !record.kappa
+        )
 
         messages = messages.filter((message) => !message.omega.toLowerCase().includes("xalen")).map((msg) => msg.omega)
 

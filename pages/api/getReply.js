@@ -12,6 +12,27 @@ import EmojiSense from "../../services/server/emojiSense";
 
 const asdfjkl = require("asdfjkl").default;
 
+function OrderMatch(phaseIndex, yggdrasil, orders) {
+    let phases = ["alpha", "beta", "gamma", "delta", "epilson", "zeta", "eta", "theta", "iota", "kappa"]
+    phases = phases.slice(phaseIndex, phases.length)
+    let match = []
+    for (let phase of phases) {
+        if (phaseIndex === 9) {
+            if (orders[phase].split(" ").length > 5) match = yggdrasil.filter((record) => MatchService.PureCompare(record[phase], orders[phase], 0.8))
+            else match = [];
+        }
+        else if (phase === phases[0]) match = yggdrasil.filter((record) => MatchService.Compare(record[phase], orders[phase], 0.8))
+        else {
+            if (match.length < 1) break;
+            match = match.filter((record) => MatchService.Compare(record[phase], orders[phase], 0.8))
+        }
+    }
+    if (match.length > 0) {
+        const replies = match.map((record) => record.omega)
+        return replies;
+    } else return match;
+}
+
 export default async (req, response) => {
     const { db } = await connectToDatabase();
 
@@ -25,11 +46,16 @@ export default async (req, response) => {
             let xalenMsg = chatHistory.filter(msg => msg.parent === "xalen")
             let userMsg = chatHistory.filter(msg => msg.parent === "user")
 
-            let alpha = chatHistory.length > 4 ? (chatHistory[chatHistory.length - 5])?.content : null;
-            let beta = chatHistory.length > 3 ? (chatHistory[chatHistory.length - 4])?.content : null;
-            let gamma = chatHistory.length > 2 ? (chatHistory[chatHistory.length - 3])?.content : null;
-            let delta = chatHistory.length > 1 ? (chatHistory[chatHistory.length - 2])?.content : null;
-            let epilson = chatHistory.length > 0 ? (chatHistory[chatHistory.length - 1])?.content : null;
+            let alpha = chatHistory.length > 9 ? (chatHistory[chatHistory.length - 10])?.content : null;
+            let beta = chatHistory.length > 8 ? (chatHistory[chatHistory.length - 9])?.content : null;
+            let gamma = chatHistory.length > 7 ? (chatHistory[chatHistory.length - 8])?.content : null;
+            let delta = chatHistory.length > 6 ? (chatHistory[chatHistory.length - 7])?.content : null;
+            let epilson = chatHistory.length > 5 ? (chatHistory[chatHistory.length - 6])?.content : null;
+            let zeta = chatHistory.length > 4 ? (chatHistory[chatHistory.length - 5])?.content : null;
+            let eta = chatHistory.length > 3 ? (chatHistory[chatHistory.length - 4])?.content : null;
+            let theta = chatHistory.length > 2 ? (chatHistory[chatHistory.length - 3])?.content : null;
+            let iota = chatHistory.length > 1 ? (chatHistory[chatHistory.length - 2])?.content : null;
+            let kappa = chatHistory.length > 0 ? (chatHistory[chatHistory.length - 1])?.content : null;
 
             // Copycat
             if (xalenMsg.length >= 2) {
@@ -57,7 +83,7 @@ export default async (req, response) => {
             }
             
             // Identity
-            let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), epilson, 0.9)
+            let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), kappa, 0.9)
             if (matchIndex >= 0) {
                 let keys = Object.keys(Override.Identity)
                 let index = keys.indexOf(keys[matchIndex])
@@ -70,110 +96,21 @@ export default async (req, response) => {
                 return;
             }
             
-            // First Order
-            const alphaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.alpha, alpha, 0.8))
-            if (alphaMatch.length > 0) {
-                const betaMatch = alphaMatch.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
-                if (betaMatch.length > 0) {
-                    const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
-                    if (gammaMatch.length > 0) {
-                        const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
-                        if (deltaMatch.length > 0) {
-                            const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-                            if (epilsonMatch.length > 0) {
-                                const replies = epilsonMatch.map((record) => record.omega)
-                                if (replies.length > 0) {
-                                    response.json({
-                                        success: true,
-                                        data: replies,
-                                        message: "Replies fetched!"
-                                    })
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Second Order
-            const betaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
-            if (betaMatch.length > 0) {
-                const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
-                if (gammaMatch.length > 0) {
-                    const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
-                    if (deltaMatch.length > 0) {
-                        const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-                        if (epilsonMatch.length > 0) {
-                            const replies = epilsonMatch.map((record) => record.omega)
-                            if (replies.length > 0) {
-                                response.json({
-                                    success: true,
-                                    data: replies,
-                                    message: "Replies fetched!"
-                                })
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Third Order
-            const gammaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
-            if (gammaMatch.length > 0) {
-                const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
-                if (deltaMatch.length > 0) {
-                    const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-                    if (epilsonMatch.length > 0) {
-                        const replies = epilsonMatch.map((record) => record.omega)
-                        if (replies.length > 0) {
-                            response.json({
-                                success: true,
-                                data: replies,
-                                message: "Replies fetched!"
-                            })
-                            return;
-                        }
-                    }
-                }
-            }
-
-            // Fourth Order
-            const deltaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
-            if (deltaMatch.length > 0) {
-                const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-                if (epilsonMatch.length > 0) {
-                    const replies = epilsonMatch.map((record) => record.omega)
-                    if (replies.length > 0) {
-                        response.json({
-                            success: true,
-                            data: replies,
-                            message: "Replies fetched!"
-                        })
-                        return;
-                    }
-                }
-            }
-
-            // Fifth Order
-            if (epilson.split(" ").length > 5) {
-                const epilsonMatch = Yggdrasil.filter((record) => MatchService.PureCompare(record.epilson, epilson, 0.8))
-                if (epilsonMatch.length > 0) {
-                    const replies = epilsonMatch.map((record) => record.omega)
-                    if (replies.length > 0) {
-                        response.json({
-                            success: true,
-                            data: replies,
-                            message: "Replies fetched!"
-                        })
-                        return;
-                    }
+            // OrderMatching
+            for (let i = 0; i < 10; i++) {
+                const match = OrderMatch(i, Yggdrasil, {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa})
+                if (match.length > 0) {
+                    response.json({
+                        success: true,
+                        data: match,
+                        message: "Replies fetched!"
+                    })
+                    return;
                 }
             }
 
             // Gibberish
-            if (asdfjkl(epilson) && MatchService.GetMatch(Override.allowedGibberish, epilson, 0.8) < 0) {
+            if (asdfjkl(kappa) && MatchService.GetMatch(Override.allowedGibberish, kappa, 0.8) < 0) {
                 response.json({
                     success: true,
                     data: Override.gibberish,
@@ -183,7 +120,7 @@ export default async (req, response) => {
             }
 
             // Conversation Starter
-            matchIndex = MatchService.PureMatch(Override.convoTrigger, epilson, 0.8)
+            matchIndex = MatchService.PureMatch(Override.convoTrigger, kappa, 0.8)
             if (matchIndex >= 0) {
                 response.json({
                     success: true,
@@ -194,7 +131,7 @@ export default async (req, response) => {
             }
 
             // Joker
-            matchIndex = MatchService.PureMatch(Override.jokeTrigger, epilson, 0.8)
+            matchIndex = MatchService.PureMatch(Override.jokeTrigger, kappa, 0.8)
             if (matchIndex >= 0) {
                 response.json({
                     success: true,
@@ -205,8 +142,8 @@ export default async (req, response) => {
             }
 
             // Actions
-            matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), epilson.replaceAll("*", ""), 0.9)
-            if (matchIndex >= 0 && epilson.includes("*")) {
+            matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), kappa.replaceAll("*", ""), 0.9)
+            if (matchIndex >= 0 && kappa.includes("*")) {
                 let keys = Object.keys(Override.Actions)
                 let index = keys.indexOf(keys[matchIndex])
 
@@ -219,8 +156,8 @@ export default async (req, response) => {
             }
 
             // Atheneum
-            if (epilson.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), epilson, 0.8)
-            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), epilson, 0.8)
+            if (kappa.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), kappa, 0.8)
+            else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), kappa, 0.8)
             if (matchIndex >= 0) {
                 let keys = Object.keys(Atheneum)
                 let index = keys.indexOf(keys[matchIndex])
@@ -240,7 +177,7 @@ export default async (req, response) => {
             for (let i = 0; i < EmojiSense.length; i++) {
                 let range = EmojiSense[i].target;
                 for (let x = 0; x < range.length; x++) {
-                    if (epilson.includes(range[x])) {
+                    if (kappa.includes(range[x])) {
                         let replies = EmojiSense[i].result;
 
                         response.json({

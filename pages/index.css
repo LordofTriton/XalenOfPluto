@@ -104,6 +104,16 @@ html {
     animation: backAnim infinite 1s;
   }
 
+  .titleLarge {
+    font-size: 400px;
+    font-family: Title;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50% -50%);
+    color: blueviolet;
+  }
+
   @keyframes backAnim {
     0% {left: calc(100vw + 600px)}
     100% {left: -600px}

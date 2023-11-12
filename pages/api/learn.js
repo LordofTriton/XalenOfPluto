@@ -14,10 +14,18 @@ export default async (req, response) => {
     let gamma = req.body.gamma;
     let delta = req.body.delta;
     let epilson = req.body.epilson;
+    let zeta = req.body.zeta;
+    let eta = req.body.eta;
+    let theta = req.body.theta;
+    let iota = req.body.iota;
+    let kappa = req.body.kappa;
     let omega = req.body.omega;
 
     let storedTree = await StoreService.GetStore(db, "Yggdrasil")
     let Yggdrasil = Tree.concat(storedTree);
+    
+    let phases = ["alpha", "beta", "gamma", "delta", "epilson", "zeta", "eta", "theta", "iota", "kappa"]
+    let orders = {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa}
 
     const addRecord = async () => {
         await StoreService.InsertOne(db, {
@@ -26,75 +34,37 @@ export default async (req, response) => {
             gamma, 
             delta,
             epilson,
+            zeta, 
+            eta, 
+            theta, 
+            iota, 
+            kappa,
             omega
         }, "Yggdrasil")
     }
 
     if (req.headers.origin === Auth.ClientURL) {
-        const alphaMatch = Yggdrasil.filter((record) => MatchService.Compare(record.alpha, alpha, 0.8))
-        if (alphaMatch.length > 0) {
-            const betaMatch = alphaMatch.filter((record) => MatchService.Compare(record.beta, beta, 0.8))
-            if (betaMatch.length > 0) {
-                const gammaMatch = betaMatch.filter((record) => MatchService.Compare(record.gamma, gamma, 0.8))
-                if (gammaMatch.length > 0) {
-                    const deltaMatch = gammaMatch.filter((record) => MatchService.Compare(record.delta, delta, 0.8))
-                    if (deltaMatch.length > 0) {
-                        const epilsonMatch = deltaMatch.filter((record) => MatchService.Compare(record.epilson, epilson, 0.8))
-                        if (epilsonMatch.length > 0) {
-                            const omegaMatch = epilsonMatch.filter((record) => MatchService.Compare(record.omega, omega, 0.8))
-                            if (omegaMatch.length > 0) {
-                                response.json({
-                                    success: true,
-                                    data: null,
-                                    message: "Already learned :("     
-                                });
-                            }
-                            else {
-                                await addRecord()
-                                response.json({
-                                    success: true,
-                                    data: null,
-                                    message: "Learned successfully :)"     
-                                });
-                            }
-                        } else {
-                            await addRecord()
-                            response.json({
-                                success: true,
-                                data: null,
-                                message: "Learned successfully :)"     
-                            });
-                        }
-                    } else {
-                        await addRecord()
-                        response.json({
-                            success: true,
-                            data: null,
-                            message: "Learned successfully :)"     
-                        });
-                    }
-                } else {
-                    await addRecord()
-                    response.json({
-                        success: true,
-                        data: null,
-                        message: "Learned successfully :)"     
-                    });
-                }
-            } else {
+        let match = []
+        for (let phase of phases) {
+            if (phase === phases[0]) match = Yggdrasil.filter((record) => MatchService.Compare(record[phase], orders[phase], 0.8))
+            else match = match.filter((record) => MatchService.Compare(record[phase], orders[phase], 0.8))
+
+            if (match.length > 0) continue;
+            else {
                 await addRecord()
                 response.json({
                     success: true,
                     data: null,
                     message: "Learned successfully :)"     
                 });
+                break;
             }
-        } else {
-            await addRecord()
+        }
+        if (match.length > 0) {
             response.json({
                 success: true,
                 data: null,
-                message: "Learned successfully :)"     
+                message: "Already learned :)"     
             });
         }
     }
