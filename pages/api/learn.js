@@ -24,8 +24,8 @@ export default async (req, response) => {
     let storedTree = await StoreService.GetStore(db, "Yggdrasil")
     let Yggdrasil = Tree.concat(storedTree);
     
-    let phases = ["alpha", "beta", "gamma", "delta", "epilson", "zeta", "eta", "theta", "iota", "kappa"]
-    let orders = {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa}
+    let phases = ["alpha", "beta", "gamma", "delta", "epilson", "zeta", "eta", "theta", "iota", "kappa", "omega"]
+    let orders = {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa, omega}
 
     const addRecord = async () => {
         await StoreService.InsertOne(db, {

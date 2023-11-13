@@ -12,6 +12,7 @@ export default async (req, response) => {
     if (req.headers.origin === Auth.ClientURL) {
         let storedTree = await StoreService.GetStore(db, "Yggdrasil")
         let Yggdrasil = Tree.concat(storedTree);
+        
         let messages = Yggdrasil.filter((record) => 
             !record.alpha && 
             !record.beta && 

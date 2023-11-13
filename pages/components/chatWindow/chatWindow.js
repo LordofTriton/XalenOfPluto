@@ -27,7 +27,9 @@ const ChatWindow = ({CortexControl}) => {
 
     const scrollDown = () => {
         let chatWindowEl = document.getElementById("chatWindow")
-        if (chatWindowEl) chatWindowEl.scrollTo({top: chatWindowEl.scrollHeight, left: 0, behavior: 'smooth'})
+        if (chatWindowEl) {
+            setTimeout(() => chatWindowEl.scrollTo({top: chatWindowEl.scrollHeight, left: 0, behavior: 'smooth'}), 1000)
+        }
     }
 
     useEffect(() => {

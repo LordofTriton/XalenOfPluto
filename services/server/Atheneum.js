@@ -1384,7 +1384,7 @@ const Atheneum = {
     "I'm depressed": [
         "Snap out of it!!!",
         "Why are you depressed?",
-        "Why tf are you depressed",
+        "Why tf are you depressed?",
         "Oh, really?"
     ],
     "My day was okay.": [
@@ -7594,6 +7594,11 @@ const Atheneum = {
         "Prove it.",
         "So?",
         "So what?"
+    ],
+    "Be serious.": [
+        "Never!",
+        "No. I refuse.",
+        "Make me!"
     ],
     "You did it first.": [
         "No, I didn't!",
