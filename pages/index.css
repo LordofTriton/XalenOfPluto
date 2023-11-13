@@ -45,7 +45,7 @@ html {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to bottom, var(--blue), #044BA7);
+    background-image: linear-gradient(to bottom, var(--blue), #307062);
     border-radius: 10px;
   }
   
@@ -113,7 +113,11 @@ html {
     right: -450px;
     transform: rotate(-90deg);
     text-align: center;
-    color: var(--blue);
+    background-image: linear-gradient(to bottom, var(--blue), #307062);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
   }
 
   .titleLargeLeft {
@@ -125,7 +129,11 @@ html {
     left: -450px;
     transform: rotate(90deg);
     text-align: center;
-    color: var(--blue);
+    background-image: linear-gradient(to bottom, var(--blue), #307062);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
   }
 
   @keyframes backAnim {
