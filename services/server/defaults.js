@@ -1395,11 +1395,6 @@ const Identity = {
         "I dunno. Probably terrible 🤣",
         "I'm on Earth lol+There's no internet on Pluto 🙂"
     ],
-    "Xalen what?": [
-        "Just Xalen 😎",
-        "It's just Xalen. I'm cool like that 😎",
-        "Xalen. No surname 😅"
-    ],
     "What do you identify as?": [
         "A genius 😎",
         "I identify as myself.+I'm the only one of me in the world. 😎",

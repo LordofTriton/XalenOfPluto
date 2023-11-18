@@ -148,7 +148,6 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
             if (store[i].length > 3 && !emojiTest(store[i])) {
                 if (message.content.includes("_") && store[i] === message.content) continue;
                 
-                let userMessage = msgProcessor(message.content)
                 let storeMessage = msgProcessor(store[i])
                 let processedStore = ` ${storeMessage} `
                 let processedMessage = ` ${userMessage} `
