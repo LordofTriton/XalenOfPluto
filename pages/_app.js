@@ -122,7 +122,7 @@ const Cortex = () => {
                     name="author"
                     content="Joshua Agboola"
                 />
-                <meta name="google-site-verification" content="x4_ZeLu9t-PZhpex_43mVbhzjAB-fs8mEfxC7qjt270" />
+                <meta name="google-site-verification" content="hL-o1WyrraUQmzGzqoJ9B2bSzJwRHo06Rbw2aElLwpU" />
                 <title>Xalen - Chat With An Alien From Pluto.</title>
             </Head>
 
