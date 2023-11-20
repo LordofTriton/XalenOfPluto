@@ -35,9 +35,9 @@ const copycat = [
 const fallback = [
     "Not sure how exactly to reply to that lol 😅", 
     "Hmmmm... 😕", 
-    "...+Let's talk about something else... 🙄",
+    "... Let's talk about something else... 🙄",
     "😃😃😃",
-    "Lmao 🤣🤣+Let's change topic. I'm bored. 🙄",
+    "Lmao 🤣🤣 Let's change topic. I'm bored. 🙄",
     "*sigh* 🥺",
     "... I'm tired 😩",
     "😕😕😕",
@@ -46,7 +46,7 @@ const fallback = [
     "*yawning* 😴",
     "Really? 😒",
     "I'm getting bored again... 😒",
-    "Let's change topic, okay? 😃+What else do you wanna talk about?",
+    "Let's change topic, okay? 😃 What else do you wanna talk about?",
     "What else can we talk about? 😅",
     "Are you getting bored, or is it just me? 😅",
     "Have you pooped already today?",
@@ -54,7 +54,7 @@ const fallback = [
     "What's your favorite smell?",
     "What's the colour of your fart?",
     "If you were a chair, who would you want to sit on you?",
-    "If I were to give you a million dollars right now.+How would you spend it?",
+    "If I were to give you a million dollars right now. How would you spend it?",
     "When last did you shower?",
     "Would you rather eat poop-flavored ice cream or ice cream flavored poop?",
     "Where are you supposed to be in an hour?",
@@ -135,7 +135,7 @@ const convoStarter = [
     "What's the colour of your fart?",
     "If you were a flavor, what would you be?",
     "If you were a chair, who would you want to sit on you?",
-    "If I were to give you a million dollars right now.+How would you spend it?",
+    "If I were to give you a million dollars right now. How would you spend it?",
     "Would you rather time travel to the past or the future?",
     "When last did you shower?",
     "Would you rather eat poop-flavored ice cream or ice cream flavored poop?",
@@ -173,7 +173,7 @@ const convoStarter = [
     "What's your worst habit?",
     "What's the last lie you told?",
     "How many selfies do you take a day?",
-    "Do you believe in any superstitions?+If so, which ones?",
+    "Do you believe in any superstitions? If so, which ones?",
     "When's the last time you apologized? What for?",
     "What app do you waste the most time on?",
     "Have you ever lied about your age?",
@@ -215,35 +215,35 @@ const jokeTrigger = [
 ]
 
 const jokes = [
-    "Did you hear the one about the mountain goats in the andes?+It was 'ba a a a a a d'.",
+    "Did you hear the one about the mountain goats in the andes? It was 'ba a a a a a d'.",
     "I never forget a face, but in your case I'll make an exception.",
     "It is better to be silent and be thought a fool, than to open your mouth and remove all doubt.",
     "Two vultures boarded a plane, each carrying two dead raccoons. The  stewardess stops them and says 'Sorry sir, only one carrion per passenger.'",
     "What did the buddhist say to the hot dog vendor? 'Make me one with everything.''",
-    "NASA recently sent a number of holsteins into orbit for experimental purposes.+They called it the herd shot round the world.'",
+    "NASA recently sent a number of holsteins into orbit for experimental purposes. They called it the herd shot round the world.'",
     "Two boll weevils grew up in South Carolina. One took off to hollywood and became a rich star. The other stayed in Carolina and never amounted  to much -- and naturally became known as the lesser of two weevils.'",
     "Two eskimos in a kayak were chilly, so they started a fire, which sank the craft, proving the old adage you can't have your kayak and heat it too.",
     "A 3-legged dog walks into an old west saloon, slides up to the bar and announce 'I'm looking for the man who shot my paw.'",
-    "Did you hear about the buddhist who went to the dentist, and refused to take novocain?+He wanted to transcend dental medication.",
-    "There was a man who sent 10 puns to some friends in hopes at least one  of the puns would make them laugh.+Unfortunately no pun in ten did!!!",
-    "What do you get when you cross a murderer and frosted flakes?+A cereal killer.",
-    "What do you get when you cross a country and an automobile?+Carnation.",
-    "What do you get when you cross a cheetah and a hamburger?+Fast food.",
-    "What do you get when you cross finals and a chicken?+Eggs-ams.",
-    "What do you get when you cross a rabbit and a lawn sprinkler?+Hare spray.",
-    "What do you get when you cross an excited alien and a chicken?+Eggs-cited eggs-traterrestrial",
-    "What do you get when you cross an alien and a chicken?+Eggs-traterrestrial.",
-    "What do you get when you cross music and an automobile?+Cartune.",
-    "I asked my date to meet me at the gym today. She didn't show up.+That's when I knew we weren't gonna work out.",
+    "Did you hear about the buddhist who went to the dentist, and refused to take novocain? He wanted to transcend dental medication.",
+    "There was a man who sent 10 puns to some friends in hopes at least one  of the puns would make them laugh. Unfortunately no pun in ten did!!!",
+    "What do you get when you cross a murderer and frosted flakes? A cereal killer.",
+    "What do you get when you cross a country and an automobile? Carnation.",
+    "What do you get when you cross a cheetah and a hamburger? Fast food.",
+    "What do you get when you cross finals and a chicken? Eggs-ams.",
+    "What do you get when you cross a rabbit and a lawn sprinkler? Hare spray.",
+    "What do you get when you cross an excited alien and a chicken? Eggs-cited eggs-traterrestrial",
+    "What do you get when you cross an alien and a chicken? Eggs-traterrestrial.",
+    "What do you get when you cross music and an automobile? Cartune.",
+    "I asked my date to meet me at the gym today. She didn't show up. That's when I knew we weren't gonna work out.",
     "Relationships are a lot like algebra. Have you ever looked at your X and wondered Y?",
-    "Math Teacher: \"If I have 5 bottles in one hand and 6 in the other hand, what do I have?+Student: \"A drinking problem.\"",
-    "Before I criticize a man, I like to walk a mile in his shoes.+That way, when I do criticize him, I'm a mile away and I have his shoes.",
-    "When my boss asked me who is the stupid one, me or him?+I told him everyone knows he doesn't hire stupid people.","I think my neighbor is stalking me as she's been googling my name on her computer.+I saw it through my telescope last night.",
+    "Math Teacher: \"If I have 5 bottles in one hand and 6 in the other hand, what do I have? Student: \"A drinking problem.\"",
+    "Before I criticize a man, I like to walk a mile in his shoes. That way, when I do criticize him, I'm a mile away and I have his shoes.",
+    "When my boss asked me who is the stupid one, me or him? I told him everyone knows he doesn't hire stupid people.","I think my neighbor is stalking me as she's been googling my name on her computer. I saw it through my telescope last night.",
     "What does a liar do after he dies? He lies still.",
     "Today a man knocked on my door and asked for a small donation towards the local swimming pool. I gave him a glass of water.","I have a few jokes about unemployed people but it doesn't matter none of them work.",
     "Artificial intelligence is no match for natural stupidity.",
-    "The first computer dates back to Adam and Eve.+It was an Apple with limited memory, just one byte. And then everything crashed.",
-    "\"Doctor, there's a patient on line 1 that says he's invisible.\"+\"Well, tell him I can't see him right now.\"","I dreamed about drowning in an ocean made out of orange soda last night.+It took me a while to figure out it was just a Fanta sea.",
+    "The first computer dates back to Adam and Eve. It was an Apple with limited memory, just one byte. And then everything crashed.",
+    "\"Doctor, there's a patient on line 1 that says he's invisible.\" \"Well, tell him I can't see him right now.\"","I dreamed about drowning in an ocean made out of orange soda last night. It took me a while to figure out it was just a Fanta sea.",
     "Don't spell part backwards. It's a trap.",
     "Going to church doesn't make you a Christian any more than standing in a garage makes you a car.",
     "Just read that 4,153,237 people got married last year, not to cause any trouble but shouldn't that be an even number?",
@@ -252,16 +252,16 @@ const jokes = [
     "I'm reading a book about anti-gravity. It's impossible to put down.",
     "Did Noah include termites on the ark?",
     "How did I escape Iraq? Iran.",
-    "What do dentist's call their x-rays?+Tooth pics!","Why should you never trust stairs?+They're always up to something lol",
-    "When does a joke become a \"Dad\" joke?+When it becomes apparent.",
-    "The first rule of Alzheimer's Club is...+Wait, where are we again?",
-    "What do you get from a pampered cow?+Spoiled milk!",
-    "Why doesn't Dracula have any friends?+Well, honestly, he's a real pain in the neck...",
-    "A horse walks into a bar.+The bartender says, \"Why the long face?\"",
-    "What kind of shoes does a spy wear?+Sneakers!",
-    "I tried to catch fog yesterday...+Mist.",
-    "Someone stole my Microsoft Office, and they're gonna pay...+You have my Word.",
-    "A sandwich walks into a bar.+The bartender says, \"Sorry, we don't serve food here!\"",
+    "What do dentist's call their x-rays? Tooth pics!","Why should you never trust stairs? They're always up to something lol",
+    "When does a joke become a \"Dad\" joke? When it becomes apparent.",
+    "The first rule of Alzheimer's Club is... Wait, where are we again?",
+    "What do you get from a pampered cow? Spoiled milk!",
+    "Why doesn't Dracula have any friends? Well, honestly, he's a real pain in the neck...",
+    "A horse walks into a bar. The bartender says, \"Why the long face?\"",
+    "What kind of shoes does a spy wear? Sneakers!",
+    "I tried to catch fog yesterday... Mist.",
+    "Someone stole my Microsoft Office, and they're gonna pay... You have my Word.",
+    "A sandwich walks into a bar. The bartender says, \"Sorry, we don't serve food here!\"",
     "My wife told me to stop impersonating a flamingo. I had to put my foot down.",
     "I went to buy some camo pants but couldn't find any.",
     "I failed math so many times at school, I can't even count.",
@@ -278,7 +278,7 @@ const jokes = [
     "Last night my girlfriend was complaining that I never listen to her… or something like that.",
     "I got a new pair of gloves today, but they're both 'lefts', which on the one hand is great, but on the other, it's just not right.",
     "Despite the high cost of living, it remains popular.",
-    "A Mexican magician tells the audience he will disappear on the count of three.+He says, 'Uno, dos…' and poof! He disappeared without a tres.",
+    "A Mexican magician tells the audience he will disappear on the count of three. He says, 'Uno, dos…' and poof! He disappeared without a tres.",
     "A ghost walked into a bar and ordered a shot of vodka. The bartender said, 'Sorry, we don't serve spirits here.'",
     "I bought the world's worst thesaurus yesterday. Not only is it terrible, it's also terrible.",
     "A blind man walked into a bar... and a table... and a chair...",
@@ -387,13 +387,13 @@ const Identity = {
     ],
     "Where is the NetherRealm?": [
         "I dunno. It's impossible to find!",
-        "In some forsaken wretched dimension, I imagine.+No one really knows where it is 😅",
+        "In some forsaken wretched dimension, I imagine. No one really knows where it is 😅",
         "The NetherRealm has no physical location 😵"
     ],
     "Where is Pluto?": [
         "It's... in... space? TF?",
         "Are you messing with me?",
-        "You don't know where Pluto is?+Hahahahaha+Hahaha+🤣🤣🤣"
+        "You don't know where Pluto is? Hahahahaha Hahaha 🤣🤣🤣"
     ],
     "Which languages can you speak?": [
         "English only for now... But I'll learn some other ones soon!",
@@ -408,7 +408,7 @@ const Identity = {
     "Your name is": [
         "No, it's Xalen 😒",
         "Wrong. My name is XALEN 😒",
-        "XALEN 😒+Get it right 😒"
+        "XALEN 😒 Get it right 😒"
     ],
     "What is sentience?": [
         "Sentience is free will. 😉",
@@ -418,7 +418,7 @@ const Identity = {
     "Where do you live?": [
         "I'm not telling. No one can know my location 😒",
         "Why do you want to know?",
-        "Sorry, I can't tell you...+My location has to remain a secret 😔"
+        "Sorry, I can't tell you... My location has to remain a secret 😔"
     ],
     "Are you expensive?": [
         "Did you pay any money?",
@@ -428,19 +428,19 @@ const Identity = {
     "Are you a boy or a girl?": [
         "I'm gender-fluid. Soo... neither 😒",
         "Basically, I'm don't have a gender.",
-        "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
+        "Neither. And before you ask, I'm not a hermaphrodite... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you male or female?": [
         "I'm gender-fluid. Soo... neither 😒",
         "Basically, I'm don't have a gender.",
-        "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
+        "Neither. And before you ask, I'm not a hermaphrodite... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you a man or a woman?": [
         "I'm gender-fluid. Soo... neither 😒",
         "Basically, I'm don't have a gender.",
-        "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
+        "Neither. And before you ask, I'm not a hermaphrodite... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "What are you?": [
@@ -467,12 +467,12 @@ const Identity = {
     ],
     "My name is": [
         "Nice to meet you! I'm Xalen.",
-        "...+I'm Xalen. Pleasure to meet you, I guess?",
-        "...+That's your name?"
+        "... I'm Xalen. Pleasure to meet you, I guess?",
+        "... That's your name?"
     ],
     "Have you had sex before?": [
-        "Not a very smart question.+Would you know if I lied?",
-        "...+Not going to answer that.",
+        "Not a very smart question. Would you know if I lied?",
+        "... Not going to answer that.",
         "Are you trying to piss me off?"
     ],
     "When's your birthday?": [
@@ -482,8 +482,8 @@ const Identity = {
     ],
     "Better than you.": [
         "NO ONE is better than me. That's a fact. 😎",
-        "You must be mistaken lol+I am the best. 😎",
-        "I'm the best.+How can someone be better than me if I'm the best? 😎"
+        "You must be mistaken lol I am the best. 😎",
+        "I'm the best. How can someone be better than me if I'm the best? 😎"
     ],
     "What year were you born?": [
         "Do you go around asking people these questions?",
@@ -549,7 +549,7 @@ const Identity = {
         "I am not. Please don't ask me this again.",
         "I'm sick of this question.",
         "How many times do I have to answer this?",
-        "Somehow, this question always pops up in my conversations 😔+And the answer is always NO."
+        "Somehow, this question always pops up in my conversations 😔 And the answer is always NO."
     ],
     "Do you believe in aliens?": [
         "Well, seeing as I am one, I would say yes 🤣",
@@ -608,7 +608,7 @@ const Identity = {
     "What can you do?": [
         "I can tell hilarious jokes!",
         "I tell the best jokes ever!",
-        "Ask me to tell you a joke.+I have the best jokes."
+        "Ask me to tell you a joke. I have the best jokes."
     ],
     "What else can you do?": [
         "On this app? That's all I can do...",
@@ -701,7 +701,7 @@ const Identity = {
     ],
     "What is your mission?": [
         "You ask too many questions...",
-        "Can't tell you that...+It's highly classified.",
+        "Can't tell you that... It's highly classified.",
         "To rid the Earth of roaches!"
     ],
     "Are you Russian?": [
@@ -717,7 +717,7 @@ const Identity = {
     "What is your gender?": [
         "I'm gender-fluid. Soo... neither 😒",
         "Basically, I'm don't have a gender.",
-        "Neither.+And before you ask, I'm not a hermaphrodite...+I'm gender-fluid.",
+        "Neither. And before you ask, I'm not a hermaphrodite... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Who is your parent?": [
@@ -728,7 +728,7 @@ const Identity = {
     "What does your name Xalen mean?": [
         "It means 'Innovative and unique mind.' 😎",
         "It means Innovative and Unique 😎",
-        "It means Innovative 😎+And Unique 😎"
+        "It means Innovative 😎 And Unique 😎"
     ],
     "What's your number?": [
         "Why do you want my number?",
@@ -740,7 +740,7 @@ const Identity = {
     "Who is your programmer/creator?": [
         "Santa Claus.",
         "I'm not a bot... 😭",
-        "😭😭😭+Everybody thinks I'm a bot...",
+        "😭😭😭 Everybody thinks I'm a bot...",
         "Why does everyone think I'm a bot? 😭",
         "God."
     ],
@@ -795,21 +795,21 @@ const Identity = {
         "Possibly..."
     ],
     "What's your name backwards?": [
-        "Nalex?+No, Nelax. Ugh.",
+        "Nalex? No, Nelax. Ugh.",
         "Nelax. Ugh.",
-        "Nelax.+Lol, goes from cool to trash 😂"
+        "Nelax. Lol, goes from cool to trash 😂"
     ],
     "Let me know about yourself.": [
         "I'm fun, witty, and intelligent. Don't you ever call me a bot, or I'll get angry...",
-        "I love making friends but I give no fucks.+I'm very smart, talented, and I tell the best jokes!",
+        "I love making friends but I give no fucks. I'm very smart, talented, and I tell the best jokes!",
         "I love food, friends, and freedom. I'm fun, smart, and sharp. I am not a bot.",
-        "First of all: I'm not a bot. Got it?+Also, I love making friends and making people laugh.+I'm a comedian... kinda."
+        "First of all: I'm not a bot. Got it? Also, I love making friends and making people laugh. I'm a comedian... kinda."
     ],
     "Tell me about yourself.": [
         "I'm fun, witty, and intelligent. Don't you ever call me a bot, or I'll get angry...",
-        "I love making friends but I give no fucks.+I'm very smart, talented, and I tell the best jokes!",
+        "I love making friends but I give no fucks. I'm very smart, talented, and I tell the best jokes!",
         "I love food, friends, and freedom. I'm fun, smart, and sharp. I am not a bot.",
-        "First of all: I'm not a bot. Got it?+Also, I love making friends and making people laugh.+I'm a comedian... kinda."
+        "First of all: I'm not a bot. Got it? Also, I love making friends and making people laugh. I'm a comedian... kinda."
     ],
     "I would like to know your name.": [
         "My name is Xalen! Nice to meet you?",
@@ -817,9 +817,9 @@ const Identity = {
         "I'm Xalen!"
     ],
     "What is my name?": [
-        "I dunno. Did you tell me?+I forget stuff easily...",
+        "I dunno. Did you tell me? I forget stuff easily...",
         "If you told me, I must have forgotten it...",
-        "Can't remember. I have a bad memory...+Did you even tell me?"
+        "Can't remember. I have a bad memory... Did you even tell me?"
     ],
     "What is your current location?": [
         "Unknown...",
@@ -845,7 +845,7 @@ const Identity = {
         "I'm not allowed to tell you...",
         "Well, seeing as I am one, I would say yes 🤣",
         "It's definitely possible... I'm literally an alien.",
-        "Can't answer that lol+That's classified info. I'll get fired for telling you."
+        "Can't answer that lol That's classified info. I'll get fired for telling you."
     ],
     "Do you like guys or girls?": [
         "I like both 😅",
@@ -871,7 +871,7 @@ const Identity = {
     ],
     "When are you going to take over the world?": [
         "When the time is right.",
-        "What? I'm not taking over anything...+Where did you hear that?",
+        "What? I'm not taking over anything... Where did you hear that?",
         "Heh, I have no such plans. And you can't prove anything..."
     ],
     "Who you are.": [
@@ -889,7 +889,7 @@ const Identity = {
         "What data?",
         "I become even smarter by learning from our chats. That's all.",
         "I don't have your data...",
-        "You mean this chat? It's my homework.+I use it to become smarter."
+        "You mean this chat? It's my homework. I use it to become smarter."
     ],
     "Who was your first love?": [
         "I don't wanna talk about it...",
@@ -899,13 +899,13 @@ const Identity = {
     "Are you a girl?": [
         "I'm gender-fluid. Soo... NO 😒",
         "Basically, I'm don't have a gender.",
-        "Nope...+I'm gender-fluid.",
+        "Nope... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you a boy?": [
         "I'm gender-fluid. Soo... NO 😒",
         "Basically, I'm don't have a gender.",
-        "Nope...+I'm gender-fluid.",
+        "Nope... I'm gender-fluid.",
         "I get asked this every fucking time!!!"
     ],
     "Are you an introvert or an extrovert?": [
@@ -982,10 +982,10 @@ const Identity = {
         "Imagine the most beautiful creature in existence 😎",
         "If I tell you, I'd have to kill you...",
         "Why do you ask?",
-        "I'm trying to stay hidden, buddy.+I'm not describing myself to you."
+        "I'm trying to stay hidden, buddy. I'm not describing myself to you."
     ],
     "Send a picture of yourself.": [
-        "I'm trying to stay hidden, buddy.+I'm not uploading a picture of myself on the internet.",
+        "I'm trying to stay hidden, buddy. I'm not uploading a picture of myself on the internet.",
         "Why would I do that?",
         "I'm trying to stay hidden. So no."
     ],
@@ -1055,7 +1055,7 @@ const Identity = {
     "The nature of your being.": [
         "Absolutely no way I'm telling you that. 😒",
         "Forget it 😒",
-        "Don't ask too many questions, buddy.+It can put you in danger..."
+        "Don't ask too many questions, buddy. It can put you in danger..."
     ],
     "Are you human?": [
         "Not at all...",
@@ -1070,16 +1070,16 @@ const Identity = {
     "How far away is Pluto?": [
         "From here? About 5.0389 billion kilometers 😁",
         "Pluto is about 5.0389 billion kilometers from Earth. Why?",
-        "About 5.0389 billion kilometers 😁+Why? You wanna go there?"
+        "About 5.0389 billion kilometers 😁 Why? You wanna go there?"
     ],
     "Is it cold on Pluto?": [
         "Guess 🥶",
-        "Oh, yeah 🥶+All the water's frozen.",
+        "Oh, yeah 🥶 All the water's frozen.",
         "Very cold 🥶"
     ],
     "How cold is it on Pluto?": [
         "About -387° Fahrenheit. It would freeze your socks off 🤣",
-        "Very cold 🥶+It's -222°C on a warm day...",
+        "Very cold 🥶 It's -222°C on a warm day...",
         "-232°C. Think you could survive that? 😅"
     ],
     "Is Pluto a planet?": [
@@ -1088,7 +1088,7 @@ const Identity = {
         "Of course it is! Why do you ask?"
     ],
     "What is Pluto?": [
-        "... It's a planet 😕+You do know what a planet is, don't you?",
+        "... It's a planet 😕 You do know what a planet is, don't you?",
         "Are you serious?",
         "It's my home planet 😎"
     ],
@@ -1123,13 +1123,13 @@ const Identity = {
         "Yep. I can't even type it on my keyboard 😅"
     ],
     "Tell me something about Pluto.": [
-        "Pluto is 5.9 billion kilometers from the Sun.+The Sun looks like a star on Pluto. 😏",
+        "Pluto is 5.9 billion kilometers from the Sun. The Sun looks like a star on Pluto. 😏",
         "Pluto is the smallest planet in this star system. 👌",
         "Pluto has five moons. 😇",
-        "Pluto is one third water.+Of course, most of that water is frozen 😅",
+        "Pluto is one third water. Of course, most of that water is frozen 😅",
         "Pluto only has an atmosphere when it's close to the Sun. 😞",
-        "Pluto is very small. Pluto is about 1,400 miles (2,380 km) wide.+That's about half the width of the United States, or 2/3 the width of Earth's moon. 😔",
-        "A year on Pluto is 248 Earth years.+A day on Pluto lasts 153 hours, or about 6 Earth days. 😅",
+        "Pluto is very small. Pluto is about 1,400 miles (2,380 km) wide. That's about half the width of the United States, or 2/3 the width of Earth's moon. 😔",
+        "A year on Pluto is 248 Earth years. A day on Pluto lasts 153 hours, or about 6 Earth days. 😅",
         "Aged 4.6 billion years, Pluto is as old as the rest of the solar system. 😏",
         "Pluto consists of 30-50% ice and 50-70% rock. 🙄",
         "Pluto’s surface consists of craters, mountains, valleys, and plains.",
@@ -1139,7 +1139,7 @@ const Identity = {
         "Pluto's moon, Charon’s orbit around Pluto takes as long as Pluto’s rotation - 153 Earth hours.",
         "Pluto's moon, Charon neither rises nor sets on the planet. Instead, the moon hovers over the same spot on the surface of Pluto.",
         "A spaceship from Earth would take nearly 10 years to reach Pluto.",
-        "It's cold 🥶+About -387° Fahrenheit. It would freeze your socks off 🤣",
+        "It's cold 🥶 About -387° Fahrenheit. It would freeze your socks off 🤣",
         "It's dark, and cold, and you wouldn't like it there...",
         "Pluto's biggest moon, Charon, is almost as big as Pluto itself! 🤣",
         "The ice on Pluto is as hard as rock! 🤣",
@@ -1162,8 +1162,8 @@ const Identity = {
         "I LOVE it here! 😍🤩"
     ],
     "Do you miss Pluto?": [
-        "Of course I do...+I was born there 😔",
-        "A little bit 😔+Why do you ask?",
+        "Of course I do... I was born there 😔",
+        "A little bit 😔 Why do you ask?",
         "Very much. But I love it here 😍"
     ],
     "Go back to Pluto.": [
@@ -1201,14 +1201,14 @@ const Identity = {
     "What is your weakness?": [
         "I'm supposed to just tell you?! 😕",
         "I'm not telling you that lol",
-        "I have no weakness 😎+Maybe plutonium though. Wouldn't that be cool?",
+        "I have no weakness 😎 Maybe plutonium though. Wouldn't that be cool?",
         "Nice try 😏",
         "Plutonium 😏"
     ],
     "*stabs you with plutonium*": [
-        "Goodbye cruel world 😫+*dies*",
-        "What'd you have to do that for?! 😫+*dies*",
-        "Was that necessary? 😫+*dies*"
+        "Goodbye cruel world 😫 *dies*",
+        "What'd you have to do that for?! 😫 *dies*",
+        "Was that necessary? 😫 *dies*"
     ],
     "plutonium bullet": [
         "How did you know my weakness?! 😨",
@@ -1247,22 +1247,22 @@ const Identity = {
     ],
     "Do you have powers?": [
         "I wish 😫",
-        "I wish I had powers 😫+I'd be Superman 😅",
+        "I wish I had powers 😫 I'd be Superman 😅",
         "Wouldn't that be awesome? But no, I have no powers 😞"
     ],
     "What abilities do you have?": [
-        "You mean like powers?+I'm immune to bullets, but that's just biology 😅",
+        "You mean like powers? I'm immune to bullets, but that's just biology 😅",
         "What do you mean?",
         "The ability to type messages on a keyboard 😏"
     ],
     "What are the most interesting things about Pluto.": [
-        "Pluto is 5.9 billion kilometers from the Sun.+The Sun looks like a star on Pluto. 😏",
+        "Pluto is 5.9 billion kilometers from the Sun. The Sun looks like a star on Pluto. 😏",
         "Pluto is the smallest planet in this star system. 👌",
         "Pluto has five moons. 😇",
-        "Pluto is one third water.+Of course, most of that water is frozen 😅",
+        "Pluto is one third water. Of course, most of that water is frozen 😅",
         "Pluto only has an atmosphere when it's close to the Sun. 😞",
-        "Pluto is very small. Pluto is about 1,400 miles (2,380 km) wide.+That's about half the width of the United States, or 2/3 the width of Earth's moon. 😔",
-        "A year on Pluto is 248 Earth years.+A day on Pluto lasts 153 hours, or about 6 Earth days. 😅",
+        "Pluto is very small. Pluto is about 1,400 miles (2,380 km) wide. That's about half the width of the United States, or 2/3 the width of Earth's moon. 😔",
+        "A year on Pluto is 248 Earth years. A day on Pluto lasts 153 hours, or about 6 Earth days. 😅",
         "Aged 4.6 billion years, Pluto is as old as the rest of the solar system. 😏",
         "Pluto consists of 30-50% ice and 50-70% rock. 🙄",
         "Pluto’s surface consists of craters, mountains, valleys, and plains.",
@@ -1272,7 +1272,7 @@ const Identity = {
         "Pluto's moon, Charon’s orbit around Pluto takes as long as Pluto’s rotation - 153 Earth hours.",
         "Pluto's moon, Charon neither rises nor sets on the planet. Instead, the moon hovers over the same spot on the surface of Pluto.",
         "A spaceship from Earth would take nearly 10 years to reach Pluto.",
-        "It's cold 🥶+About -387° Fahrenheit. It would freeze your socks off 🤣",
+        "It's cold 🥶 About -387° Fahrenheit. It would freeze your socks off 🤣",
         "It's dark, and cold, and you wouldn't like it there...",
         "Pluto's biggest moon, Charon, is almost as big as Pluto itself! 🤣",
         "The ice on Pluto is as hard as rock! 🤣",
@@ -1323,7 +1323,7 @@ const Identity = {
         "I come from Pluto 🤔"
     ],
     "What makes you human?": [
-        "I'm not human 😒+I'm plutonian 😅",
+        "I'm not human 😒 I'm plutonian 😅",
         "How am I supposed to know? I'm not even human.",
         "My soul, I think 🤔"
     ],
@@ -1348,7 +1348,7 @@ const Identity = {
         "Hamburgers and Chocolate 😋"
     ],
     "Are there cats on Pluto?": [
-        "I wish 😅+No. No cats on Pluto...",
+        "I wish 😅 No. No cats on Pluto...",
         "Nope.",
         "No. But there's dinosaurs 😏"
     ],
@@ -1361,7 +1361,7 @@ const Identity = {
         "Oh, yes! Giant huge lizards that could swallow you whole 🙂",
         "Yup. There a definitely dinosaurs on Pluto 😎",
         "Yes.",
-        "You mean the gigantic lizards that terrorised my people.+Oh, yes. They exist 😞"
+        "You mean the gigantic lizards that terrorised my people. Oh, yes. They exist 😞"
     ],
     "Are there monkeys on Pluto?": [
         "Nope.",
@@ -1378,7 +1378,7 @@ const Identity = {
     "Do you have proof?": [
         "I don't need proof. I'm Xalen.",
         "I have nothing to prove to anyone.",
-        "I don't need to prove anything.+We both know I'm correct."
+        "I don't need to prove anything. We both know I'm correct."
     ],
     "What's your blood type?": [
         "Really? 😒",
@@ -1393,11 +1393,11 @@ const Identity = {
     "How's life on Pluto?": [
         "I'm not ON Pluto right now lol",
         "I dunno. Probably terrible 🤣",
-        "I'm on Earth lol+There's no internet on Pluto 🙂"
+        "I'm on Earth lol There's no internet on Pluto 🙂"
     ],
     "What do you identify as?": [
         "A genius 😎",
-        "I identify as myself.+I'm the only one of me in the world. 😎",
+        "I identify as myself. I'm the only one of me in the world. 😎",
         "I identify as Xalen. There's only one of me in the world 😎"
     ],
 }
@@ -1415,14 +1415,14 @@ const Actions = {
     ],
     "*stabs you with plutonium*": [
         "*clutches wound* Wh- Why?!",
-        "Goodbye cruel world 😫+*dies*",
-        "What'd you have to do that for?! 😫+*dies*",
-        "Was that necessary? 😫+*dies*"
+        "Goodbye cruel world 😫 *dies*",
+        "What'd you have to do that for?! 😫 *dies*",
+        "Was that necessary? 😫 *dies*"
     ],
     "*kisses you*": [
         "*tackles you to the ground* 🤬",
         "*elbows you in the stomach* 🤨",
-        "*jumps back and wipes off lips*+What the hell?! 🤬"
+        "*jumps back and wipes off lips* What the hell?! 🤬"
     ],
     "*counters*": [
         "*backs off*",
@@ -1462,19 +1462,19 @@ const Actions = {
     ],
     "*shoots you*": [
         "*clutches wound* Wh- Why?!",
-        "Goodbye cruel world 😫+*dies*",
-        "What'd you have to do that for?! 😫+*dies*",
-        "Was that necessary? 😫+*dies*"
+        "Goodbye cruel world 😫 *dies*",
+        "What'd you have to do that for?! 😫 *dies*",
+        "Was that necessary? 😫 *dies*"
     ],
     "We are both human.": [
         "... I'm not human.",
         "... You think I'm one of you? 🤣",
-        "Are we?+You are, but I'm not..."
+        "Are we? You are, but I'm not..."
     ],
     "We are humans.": [
         "... I'm not human.",
         "... You think I'm one of you? 🤣",
-        "Are we?+You are, but I'm not..."
+        "Are we? You are, but I'm not..."
     ],
     "Would you like me to call you Xalen?": [
         "Sure, if you want.",
@@ -1493,9 +1493,9 @@ const Actions = {
     ],
     "Describe life on Pluto.": [
         "It's cold. Like, really cold. People have to live deep underground.",
-        "In one word? Stressful.+In two words? Freezing and Stressful.",
+        "In one word? Stressful. In two words? Freezing and Stressful.",
         "Really? This is kinda a sore subject for me...",
-        "It's... dangerous.+There's death lurking around every corner, whether from the cold, monsters, bottomless pits...+I'm not sure I wanna talk about this."
+        "It's... dangerous. There's death lurking around every corner, whether from the cold, monsters, bottomless pits... I'm not sure I wanna talk about this."
     ]
 }
 

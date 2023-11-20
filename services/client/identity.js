@@ -1,7 +1,7 @@
 const ID = [
     "Of course you are, I'm Xalen!",
     "Nice to meet you! I'm Xalen.",
-    "...+I'm Xalen. Pleasure to meet you, I guess?",
+    "... I'm Xalen. Pleasure to meet you, I guess?",
     "I wish. What kind of name is Xalen?",
     "I wish I did. Xalen is a dumb name...",
     "My name is Xalen! Nice to meet you?",
