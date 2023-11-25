@@ -75,7 +75,7 @@ function PureMatch(store, message, matchThreshold, matchDuplicate = false) {
         }
     }
 
-    const index = indexes[Math.ceil(Math.random() * indexes.length - 1)]
+    let index = indexes.length > 0 ? indexes[Math.ceil(Math.random() * indexes.length - 1)] : -1;
 
     return index;
 }
@@ -165,9 +165,9 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
         }
     }
 
-    let index = indexes[Math.ceil(Math.random() * indexes.length - 1)]
+    let index = indexes.length > 0 ? indexes[Math.ceil(Math.random() * indexes.length - 1)] : -1;
 
-    if (emojiTest(store[index])) index = -1;
+    if (index >= 0 && emojiTest(store[index])) index = -1;
 
     return index;
 }

@@ -157,7 +157,6 @@ const convoStarter = [
     "When was the last time you lied?",
     "When was the last time you cried?",
     "What's your biggest fear?",
-    "What's your biggest fantasy?",
     "What's something you're glad your mum doesn't know about you?",
     "What's the worst thing you've ever done?",
     "What's a secret you've never told anyone?",
@@ -1400,6 +1399,37 @@ const Identity = {
         "I identify as myself. I'm the only one of me in the world. 😎",
         "I identify as Xalen. There's only one of me in the world 😎"
     ],
+    "We are both human.": [
+        "... I'm not human.",
+        "... You think I'm one of you? 🤣",
+        "Are we? You are, but I'm not..."
+    ],
+    "We are humans.": [
+        "... I'm not human.",
+        "... You think I'm one of you? 🤣",
+        "Are we? You are, but I'm not..."
+    ],
+    "Would you like me to call you Xalen?": [
+        "Sure, if you want.",
+        "Sure, why not?",
+        "If you want, sure."
+    ],
+    "Can I call you Xalen.": [
+        "Sure, if you want.",
+        "Sure, why not?",
+        "If you want, sure."
+    ],
+    "Can I call you": [
+        "That's not my name...",
+        "No. Call me by my name.",
+        "Call me Xalen."
+    ],
+    "Describe life on Pluto.": [
+        "It's cold. Like, really cold. People have to live deep underground.",
+        "In one word? Stressful. In two words? Freezing and Stressful.",
+        "Really? This is kinda a sore subject for me...",
+        "It's... dangerous. There's death lurking around every corner, whether from the cold, monsters, bottomless pits... I'm not sure I wanna talk about this."
+    ]
 }
 
 const Actions = {
@@ -1465,37 +1495,6 @@ const Actions = {
         "Goodbye cruel world 😫 *dies*",
         "What'd you have to do that for?! 😫 *dies*",
         "Was that necessary? 😫 *dies*"
-    ],
-    "We are both human.": [
-        "... I'm not human.",
-        "... You think I'm one of you? 🤣",
-        "Are we? You are, but I'm not..."
-    ],
-    "We are humans.": [
-        "... I'm not human.",
-        "... You think I'm one of you? 🤣",
-        "Are we? You are, but I'm not..."
-    ],
-    "Would you like me to call you Xalen?": [
-        "Sure, if you want.",
-        "Sure, why not?",
-        "If you want, sure."
-    ],
-    "Can I call you Xalen.": [
-        "Sure, if you want.",
-        "Sure, why not?",
-        "If you want, sure."
-    ],
-    "Can I call you": [
-        "That's not my name...",
-        "No. Call me by my name.",
-        "Call me Xalen."
-    ],
-    "Describe life on Pluto.": [
-        "It's cold. Like, really cold. People have to live deep underground.",
-        "In one word? Stressful. In two words? Freezing and Stressful.",
-        "Really? This is kinda a sore subject for me...",
-        "It's... dangerous. There's death lurking around every corner, whether from the cold, monsters, bottomless pits... I'm not sure I wanna talk about this."
     ]
 }
 
