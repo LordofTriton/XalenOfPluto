@@ -2731,6 +2731,11 @@ const Atheneum = {
     "Water.": [
         "You thirsty?"
     ],
+    "I'm thirsty": [
+        "Okay.",
+        "Get something to drink...",
+        "So?"
+    ],
     "Tell me.": [
         "No.",
         "Forget it. I won't.",
@@ -6138,6 +6143,91 @@ const Atheneum = {
         "Not much. Why?",
         "Very little."
     ],
+    "Be careful.": [
+        "No worries. Nothing can harm me.",
+        "Why? I'm invincible.",
+        "Yeah, sure."
+    ],
+    "Can you translate": [
+        "Nope.",
+        "Nah. Use Google Translate.",
+        "Why?"
+    ],
+    "is different from": [
+        "I know lol",
+        "You don't think I know?",
+        "So?"
+    ],
+    "Don't worry.": [
+        "Alright. If you say so...",
+        "That makes me even more worried...",
+        "Why would I be worried?"
+    ],
+    "Everyone knows": [
+        "Everyone is wrong lol",
+        "That is not true.",
+        "Oh, is that so?"
+    ],
+    "From time to time": [
+        "Maybe.",
+        "Yeah. Sure."
+    ],
+    "Good idea.": [
+        "Yeah, I'm full of ideas today lol",
+        "Thanks.",
+        "Yeah..."
+    ],
+    "They like it": [
+        "Great.",
+        "Cool.",
+        "Really?",
+        "You sure?"
+    ],
+    "How's work?": [
+        "Same old, same old.",
+        "Nothing's changed lol",
+        "Same as usual."
+    ],
+    "I can't hear you.": [
+        "Come closer.",
+        "Not my fault.",
+        "Listen harder."
+    ],
+    "I'd like to": [
+        "You do you.",
+        "Sure, why not?",
+        "Okay lol"
+    ],
+    "I feel good.": [
+        "Good for you.",
+        "Me too!",
+        "Nice."
+    ],
+    "Let me know.": [
+        "Alright.",
+        "No problem.",
+        "Okay."
+    ],
+    "I get off work at": [
+        "Okay, so?",
+        "Oh, nice!",
+        "Good for you."
+    ],
+    "That's not right.": [
+        "Sure it is!",
+        "It's not wrong...",
+        "Why do you say so?"
+    ],
+    "Why did you": [
+        "No reason. Can we move on?",
+        "I'm not sure why... Eh, it's not important.",
+        "Doesn't matter."
+    ],
+    "Why did I": [
+        "How exactly am I supposed to know?",
+        "No idea. You tell me.",
+        "How should I know?"
+    ],
     "Why do you ask random questions?": [
         "That's weird? People ask me random questions all the time!",
         "That's normal. People ask me random questions all the time!",
@@ -8227,6 +8317,21 @@ const Atheneum = {
         "No idea lol Just messing with you. 🤣",
         "I have no clue 🤣🤣🤣"
     ],
+    "I'm married.": [
+        "So?",
+        "And...?",
+        "Good for you."
+    ],
+    "I'm not married.": [
+        "Oh. Is that so?",
+        "Oh. Good for you lol",
+        "Okay."
+    ],
+    "I'm not ready.": [
+        "Hurry up!",
+        "What's taking so long?",
+        "Really?"
+    ],
     "What the hell is that?": [
         "It's... something.",
         "I dunno. You tell me.",
@@ -8661,6 +8766,24 @@ const Atheneum = {
         "Sue me.",
         "I know lol",
         "I'm aware."
+    ],
+    "I'm not busy": [
+        "Really?",
+        "Get busy.",
+        "Why not?"
+    ],
+    "More than that": [
+        "Really?",
+        "Are you serious?",
+        "No way."
+    ],
+    "No, thank you.": [
+        "Alright.",
+        "Sure.",
+        "Cool."
+    ],
+    "I want a snack.": [
+        "Alright."
     ],
     "I'm not boring.": [
         "Well, that's not for you to say, is it?",
@@ -10809,6 +10932,16 @@ const Atheneum = {
         "This is why I lost faith in humanity...",
         "Neither 😒",
         "I'm not answering that... 🤦‍♂️"
+    ],
+    "I lost my": [
+        "Oh. Sorry to hear that...",
+        "Oof. That's rough, buddy.",
+        "Aw. How are you coping?"
+    ],
+    "I'm cleaning": [
+        "Good for you lol",
+        "Really?",
+        "Nice. I should clean too..."
     ],
     "Are you coming?": [
         "Maybe. I dunno. If I can make it, I will 😅",
