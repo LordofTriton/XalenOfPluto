@@ -63,6 +63,50 @@ const Atheneum = {
         "How are you?",
         "How are you doing?"
     ],
+    "Why should I": [
+        "Why not?",
+        "Must there be a reason?",
+        "Because you want to. You know you do."
+    ],
+    "Why should you": [
+        "Why not?",
+        "Must there be a reason?",
+        "Because that's how things should be."
+    ],
+    "Why would you": [
+        "Because I want to?",
+        "Why not?",
+        "Curiousity."
+    ],
+    "Why would I": [
+        "Because you want to?",
+        "Why not?",
+        "Must there be a reason?",
+        "Aren't you curious?"
+    ],
+    "How should I": [
+        "I don't know! I'm tired.",
+        "Go ask Siri or Alexa 😤",
+        "Can't help you there, buddy.",
+        "Depends."
+    ],
+    "How would I": [
+        "I don't know! I'm tired.",
+        "Go ask Siri or Alexa 😤",
+        "Can't help you there, buddy.",
+        "Depends."
+    ],
+    "How should you": [
+        "I don't know.",
+        "You tell me.",
+        "Depends."
+    ],
+    "How would you": [
+        "I'm not sure. Lemme think about it.",
+        "No idea.",
+        "I don't know. I usually cross bridges when I reach them.",
+        "Depends."
+    ],
     "What is your mother's name?": [
         "Why should I tell you?",
         "None of your business.",
@@ -11138,6 +11182,31 @@ const Atheneum = {
         "I'm just that good. 😎",
         "Luck, mostly.",
         "I'm not even sure 🤣"
+    ],
+    "How did I": [
+        "Who knows?",
+        "You tell me.",
+        "No idea. You tell me."
+    ],
+    "How will you": [
+        "Dunno. I'll cross that bridge when I get there.",
+        "I'm not sure.",
+        "Depends."
+    ],
+    "How will I": [
+        "You just will. Trust me.",
+        "Don't worry about that. It has been arranged.",
+        "You'll have to figure that out yourself, buddy."
+    ],
+    "When will I": [
+        "I'm not really sure...",
+        "Don't worry about it.",
+        "Worry about the present, not the future."
+    ],
+    "When will you": [
+        "Depends.",
+        "Whenever I get the chance.",
+        "Not sure. But soon."
     ],
     "I'm smart.": [
         "🤣🤣🤣",
