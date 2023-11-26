@@ -21,6 +21,7 @@
     padding: 0px;
     pointer-events: none;
     border-radius: 50%;
+    background-color: var(--blue);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
