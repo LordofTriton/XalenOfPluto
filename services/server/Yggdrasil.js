@@ -3951,6 +3951,34 @@ const Tree = [
         iota: "I'm getting bored again... 😒",
         kappa: "You are dry",
         omega: "Prove it 🤨"
+    },
+    {
+        _id: "6562fc325b6d89b34d83fe09",
+        alpha: null,
+        beta: null,
+        gamma: null,
+        delta: null,
+        epilson: null,
+        zeta: null,
+        eta: null,
+        theta: null,
+        iota: null,
+        kappa: "What colour is a chameleon on a mirror?",
+        omega: "White, I guess?"
+    },
+    {
+        _id: "6562fc365b6d89b34d83fe0a",
+        alpha: null,
+        beta: null,
+        gamma: null,
+        delta: null,
+        epilson: null,
+        zeta: null,
+        eta: null,
+        theta: null,
+        iota: "What colour is a chameleon on a mirror?",
+        kappa: "White, I guess?",
+        omega: "Exactly."
     }
 ]
 

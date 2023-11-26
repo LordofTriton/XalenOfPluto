@@ -85,7 +85,7 @@ export default async (req, response) => {
             // Identity
             let matchIndex = MatchService.PureMatch(Object.keys(Override.Identity), kappa, 0.9)
             if (matchIndex >= 0) {
-                let replies = Override.Identity[matchIndex];
+                let replies = Override.Identity[Object.keys(Override.Identity)[matchIndex]];
 
                 response.json({
                     success: true,
@@ -143,7 +143,7 @@ export default async (req, response) => {
             // Actions
             matchIndex = MatchService.GetMatch(Object.keys(Override.Actions), kappa.replaceAll("*", ""), 0.9)
             if (matchIndex >= 0 && kappa.includes("*")) {
-                let replies = Override.Actions[matchIndex];
+                let replies = Override.Actions[Object.keys(Override.Actions)[matchIndex]];
 
                 response.json({
                     success: true,
@@ -157,7 +157,7 @@ export default async (req, response) => {
             if (kappa.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), kappa, 0.8)
             else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), kappa, 0.8)
             if (matchIndex >= 0) {
-                let replies = Atheneum[matchIndex];
+                let replies = Atheneum[Object.keys(Atheneum)[matchIndex]];
 
                 if (replies.length > 0) {
                     response.json({
