@@ -6124,8 +6124,8 @@ const Atheneum = {
     ],
     "How do I": [
         "I dunno. Google this...",
-        "Google this shit!",
-        "Can't be bothered to look that up..."
+        "Depends.",
+        "I'm not sure, really..."
     ],
     "Will you answer me?": [
         "I already did...",
@@ -6135,7 +6135,7 @@ const Atheneum = {
     "What do you know about": [
         "Zilch.",
         "Nothing lol",
-        "Not much.",
+        "Not much. Why?",
         "Very little."
     ],
     "Why do you ask random questions?": [
@@ -11207,6 +11207,22 @@ const Atheneum = {
         "Depends.",
         "Whenever I get the chance.",
         "Not sure. But soon."
+    ],
+    "Why do you": [
+        "Because I want to.",
+        "Because I need to.",
+        "You wouldn't understand...",
+        "No reason."
+    ],
+    "Why do I": [
+        "How should I know?",
+        "You tell me.",
+        "Who knows? Not me."
+    ],
+    "How do you": [
+        "I just do. Nothing to explain.",
+        "Why do you ask?",
+        "Same as everybody else. Why?"
     ],
     "I'm smart.": [
         "🤣🤣🤣",
