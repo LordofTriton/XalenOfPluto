@@ -5966,11 +5966,6 @@ const Atheneum = {
         "Hey, gorgeous! How u doin'?",
         "Hey, gorgeous!"
     ],
-    "Bro.": [
-        "Sup?",
-        "Wassup?",
-        "Sup, bro!"
-    ],
     "Wazzap?": [
         "Not much. You?",
         "Nothing much. You?",
@@ -12670,16 +12665,6 @@ const Atheneum = {
         "Never!",
         "Over my dead body 😐",
         "Not in a million years..."
-    ],
-    "Dad.": [
-        "I ain't your dad 😒",
-        "I disown you 😒",
-        "Don't call me that."
-    ],
-    "Mum.": [
-        "I ain't your mom 😒",
-        "I disown you 😒",
-        "Don't call me that."
     ],
     "Leave me alone.": [
         "No. We're meant to be 🥺",
