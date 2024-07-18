@@ -98,7 +98,7 @@ export default async (req, response) => {
             
             // OrderMatching
             for (let i = 0; i < 10; i++) {
-                const match = OrderMatch(i, Yggdrasil, {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa})
+                let match = OrderMatch(i, Yggdrasil, {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa})
                 match = match.filter((record) => !Fallbacks.includes(record))
 
                 if (match.length > 0) {
