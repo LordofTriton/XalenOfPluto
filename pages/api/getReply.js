@@ -157,7 +157,7 @@ export default async (req, response) => {
             }
 
             // Atheneum
-            if (kappa.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), kappa, 0.8)
+            if (kappa.split(" ").length > 1) matchIndex = MatchService.GetMatch(Object.keys(Atheneum), kappa, 0.8, false, true)
             else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), kappa, 0.8)
             if (matchIndex >= 0) {
                 let replies = Atheneum[Object.keys(Atheneum)[matchIndex]];

@@ -94,7 +94,7 @@ function PureCompare(store, message, matchThreshold) {
     return difference >= matchThreshold;
 }
 
-function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
+function GetMatch(store, message, matchThreshold, matchDuplicate = false, blockSingleWord = false) {
     if (!message.content) message = {label: "Useless label.", content: message}
     let userMessage = msgProcessor(message.content)
 
@@ -128,6 +128,8 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
                 let processedStore = ` ${storeMessage} `
                 let processedMessage = ` ${userMessage} `
 
+                if (blockSingleWord && processedStore.split(" ").length < 2) continue;
+
                 if (processedMessage.includes(processedStore) && !overlook.includes(processedStore.trim())) {
                     if (processedStore.split(" ").length >= phrase.split(" ").length) {
                         if ((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
@@ -151,6 +153,8 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false) {
                 let storeMessage = msgProcessor(store[i])
                 let processedStore = ` ${storeMessage} `
                 let processedMessage = ` ${userMessage} `
+
+                if (blockSingleWord && processedMessage.split(" ").length < 2) continue;
 
                 if (processedStore.includes(processedMessage)) {
                     if (processedStore.split(" ").length >= phrase.split(" ").length) {
