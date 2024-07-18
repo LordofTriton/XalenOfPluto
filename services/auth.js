@@ -1,4 +1,4 @@
-const ClientURL = "https://xalen.netlify.app"
+const ClientURL = "https://xalen.vercel.app"
 // const ClientURL = "http://localhost:3001"
 
 const AdminPass = "foreverandeverandever"

@@ -9,6 +9,7 @@ import MatchService from "../../services/server/matcher";
 import DateTime from "../../services/server/dateTime";
 import Override from "../../services/server/defaults";
 import EmojiSense from "../../services/server/emojiSense";
+import Fallbacks from "../../services/client/defaults";
 
 const asdfjkl = require("asdfjkl").default;
 
@@ -98,6 +99,8 @@ export default async (req, response) => {
             // OrderMatching
             for (let i = 0; i < 10; i++) {
                 const match = OrderMatch(i, Yggdrasil, {alpha, beta, gamma, delta, epilson, zeta, eta, theta, iota, kappa})
+                match = match.filter((record) => !Fallbacks.includes(record))
+
                 if (match.length > 0) {
                     response.json({
                         success: true,
@@ -158,6 +161,7 @@ export default async (req, response) => {
             else matchIndex = MatchService.PureMatch(Object.keys(Atheneum), kappa, 0.8)
             if (matchIndex >= 0) {
                 let replies = Atheneum[Object.keys(Atheneum)[matchIndex]];
+                replies = match.filter((record) => !Fallbacks.includes(record))
 
                 if (replies.length > 0) {
                     response.json({
