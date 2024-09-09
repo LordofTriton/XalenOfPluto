@@ -3,13 +3,13 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 
 //Components
-import Title from './components/title/title';
-import TopNav from './components/topNav/topNav';
-import ChatWindow from './components/chatWindow/chatWindow';
-import Offline from './components/offline/offline';
-import Alert from './components/alert/alert';
-import PopMenu from './components/popMenu/popMenu';
-import InfoPage from './components/infoPage/infoPage';
+import Title from '../components/title/title';
+import TopNav from '../components/topNav/topNav';
+import ChatWindow from '../components/chatWindow/chatWindow';
+import Offline from '../components/offline/offline';
+import Alert from '../components/alert/alert';
+import PopMenu from '../components/popMenu/popMenu';
+import InfoPage from '../components/infoPage/infoPage';
 
 //Images
 let lightBckg = '/images/lightThemeBckg.png';

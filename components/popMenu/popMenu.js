@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 // Services
-import ImageServer from '../../../services/client/image';
+import ImageServer from '../../services/client/image';
 
 const PopMenu = ({CortexControl}) => {
     const [menuPage, setMenuPage] = useState("Buttons");

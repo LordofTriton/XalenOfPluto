@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
-import trainingData from '../../../services/client/training';
+import trainingData from '../../services/client/training';
 
 //Services
-import DateTime from '../../../services/client/dateTime';
-import Censor from '../../../services/client/censor';
+import DateTime from '../../services/client/dateTime';
+import Censor from '../../services/client/censor';
 
 const TrainingWindow = ({CortexControl}) => {
     const [trainingHistory, setTrainingHistory] = useState([])

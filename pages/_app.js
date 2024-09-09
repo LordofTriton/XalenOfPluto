@@ -1,6 +1,5 @@
 
-import Head from 'next/head'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import "./components/alert/alert.css"
 import "./components/chatWindow/chatWindow.css"

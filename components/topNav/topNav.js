@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Services
-import ImageServer from '../../../services/client/image';
+import ImageServer from '../../services/client/image';
 
 const TopNav = ({CortexControl}) => {
     let theme = CortexControl.theme;

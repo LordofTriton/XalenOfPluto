@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
 //Services
-import DateTime from '../../../services/client/dateTime';
-import Fallbacks from '../../../services/client/defaults';
-import Censor from '../../../services/client/censor';
-import Emoji from '../../../services/client/emoji';
-import ImageServer from '../../../services/client/image';
+import DateTime from '../../services/client/dateTime';
+import Fallbacks from '../../services/client/defaults';
+import Censor from '../../services/client/censor';
+import ImageServer from '../../services/client/image';
 
 //Defaults
 let d = new Date();
