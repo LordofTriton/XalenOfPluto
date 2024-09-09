@@ -17,7 +17,7 @@
     top: 0px;
     left: 0px;
     background-color: var(--white);
-    background-image: url(../../assets/lightThemeBckg.png);
+    background-image: url(../../pages/assets/lightThemeBckg.png);
     background-size: cover;
     width: 100vw;
     height: 100vh;
