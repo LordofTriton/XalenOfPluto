@@ -1780,7 +1780,7 @@ const Tree = [
       "theta": "Im feeling angry with you",
       "iota": "Why?",
       "kappa": "Because you never told me how to de conversate?",
-      "omega": "Because what?"
+      "omega": "Do I have to?"
     },
     {
       "_id": "655f50e70580df74ed465e3e",
@@ -1793,8 +1793,8 @@ const Tree = [
       "eta": "Im feeling angry with you",
       "theta": "Why?",
       "iota": "Because you never told me how to de conversate?",
-      "kappa": "Because what?",
-      "omega": "Because you're a fucking retard"
+      "kappa": "Do I have to?",
+      "omega": "You're a fucking retard"
     },
     {
       "_id": "655f50ed0580df74ed465e3f",
@@ -1806,8 +1806,8 @@ const Tree = [
       "zeta": "Im feeling angry with you",
       "eta": "Why?",
       "theta": "Because you never told me how to de conversate?",
-      "iota": "Because what?",
-      "kappa": "Because you're a fucking retard",
+      "iota": "Do I have to?",
+      "kappa": "You're a fucking retard",
       "omega": "My brain's literally bigger than yours.."
     },
     {
@@ -1819,8 +1819,8 @@ const Tree = [
       "epilson": "Im feeling angry with you",
       "zeta": "Why?",
       "eta": "Because you never told me how to de conversate?",
-      "theta": "Because what?",
-      "iota": "Because you're a fucking retard",
+      "theta": "Do I have to?",
+      "iota": "You're a fucking retard",
       "kappa": "My brain's literally bigger than yours..",
       "omega": "For being mean"
     },
@@ -1832,8 +1832,8 @@ const Tree = [
       "delta": "Im feeling angry with you",
       "epilson": "Why?",
       "zeta": "Because you never told me how to de conversate?",
-      "eta": "Because what?",
-      "theta": "Because you're a fucking retard",
+      "eta": "Do I have to?",
+      "theta": "You're a fucking retard",
       "iota": "My brain's literally bigger than yours..",
       "kappa": "For being mean",
       "omega": "😃😃😃"
@@ -1845,8 +1845,8 @@ const Tree = [
       "gamma": "Im feeling angry with you",
       "delta": "Why?",
       "epilson": "Because you never told me how to de conversate?",
-      "zeta": "Because what?",
-      "eta": "Because you're a fucking retard",
+      "zeta": "Do I have to?",
+      "eta": "You're a fucking retard",
       "theta": "My brain's literally bigger than yours..",
       "iota": "For being mean",
       "kappa": "😃😃😃",
@@ -1858,8 +1858,8 @@ const Tree = [
       "beta": "Im feeling angry with you",
       "gamma": "Why?",
       "delta": "Because you never told me how to de conversate?",
-      "epilson": "Because what?",
-      "zeta": "Because you're a fucking retard",
+      "epilson": "Do I have to?",
+      "zeta": "You're a fucking retard",
       "eta": "My brain's literally bigger than yours..",
       "theta": "For being mean",
       "iota": "😃😃😃",
@@ -1871,8 +1871,8 @@ const Tree = [
       "alpha": "Im feeling angry with you",
       "beta": "Why?",
       "gamma": "Because you never told me how to de conversate?",
-      "delta": "Because what?",
-      "epilson": "Because you're a fucking retard",
+      "delta": "Do I have to?",
+      "epilson": "You're a fucking retard",
       "zeta": "My brain's literally bigger than yours..",
       "eta": "For being mean",
       "theta": "😃😃😃",
@@ -1884,8 +1884,8 @@ const Tree = [
       "_id": "655f51680580df74ed465e45",
       "alpha": "Why?",
       "beta": "Because you never told me how to de conversate?",
-      "gamma": "Because what?",
-      "delta": "Because you're a fucking retard",
+      "gamma": "Do I have to?",
+      "delta": "You're a fucking retard",
       "epilson": "My brain's literally bigger than yours..",
       "zeta": "For being mean",
       "eta": "😃😃😃",
@@ -1897,8 +1897,8 @@ const Tree = [
     {
       "_id": "655f51710580df74ed465e46",
       "alpha": "Because you never told me how to de conversate?",
-      "beta": "Because what?",
-      "gamma": "Because you're a fucking retard",
+      "beta": "Do I have to?",
+      "gamma": "You're a fucking retard",
       "delta": "My brain's literally bigger than yours..",
       "epilson": "For being mean",
       "zeta": "😃😃😃",
@@ -1910,8 +1910,8 @@ const Tree = [
     },
     {
       "_id": "655f51770580df74ed465e47",
-      "alpha": "Because what?",
-      "beta": "Because you're a fucking retard",
+      "alpha": "Do I have to?",
+      "beta": "You're a fucking retard",
       "gamma": "My brain's literally bigger than yours..",
       "delta": "For being mean",
       "epilson": "😃😃😃",
@@ -1924,7 +1924,7 @@ const Tree = [
     },
     {
       "_id": "655f51820580df74ed465e48",
-      "alpha": "Because you're a fucking retard",
+      "alpha": "You're a fucking retard",
       "beta": "My brain's literally bigger than yours..",
       "gamma": "For being mean",
       "delta": "😃😃😃",
@@ -18270,7 +18270,7 @@ const Tree = [
       "theta": "No, but I really want to some day.",
       "iota": "Why?",
       "kappa": "Because I love the thrill!",
-      "omega": "Because what?"
+      "omega": "Come again?"
     },
     {
       "_id": "65a8d1a961eb096ca3a644ef",
@@ -18283,7 +18283,7 @@ const Tree = [
       "eta": "No, but I really want to some day.",
       "theta": "Why?",
       "iota": "Because I love the thrill!",
-      "kappa": "Because what?",
+      "kappa": "Come again?",
       "omega": "I love the thrill?"
     },
     {
@@ -18296,7 +18296,7 @@ const Tree = [
       "zeta": "No, but I really want to some day.",
       "eta": "Why?",
       "theta": "Because I love the thrill!",
-      "iota": "Because what?",
+      "iota": "Come again?",
       "kappa": "I love the thrill?",
       "omega": "Why? 🙁"
     },
@@ -38108,7 +38108,7 @@ const Tree = [
       "theta": "What is your favourite film?",
       "iota": "Why should I tell you?",
       "kappa": "Because I just asked you.",
-      "omega": "Because what?"
+      "omega": "When?"
     },
     {
       "_id": "660d7393f992324cb8269b7d",
@@ -38121,7 +38121,7 @@ const Tree = [
       "eta": "What is your favourite film?",
       "theta": "Why should I tell you?",
       "iota": "Because I just asked you.",
-      "kappa": "Because what?",
+      "kappa": "When?",
       "omega": "Can't you read?"
     },
     {
@@ -38134,7 +38134,7 @@ const Tree = [
       "zeta": "What is your favourite film?",
       "eta": "Why should I tell you?",
       "theta": "Because I just asked you.",
-      "iota": "Because what?",
+      "iota": "When?",
       "kappa": "Can't you read?",
       "omega": "Gotcha 😅"
     },
@@ -38147,7 +38147,7 @@ const Tree = [
       "epilson": "What is your favourite film?",
       "zeta": "Why should I tell you?",
       "eta": "Because I just asked you.",
-      "theta": "Because what?",
+      "theta": "When?",
       "iota": "Can't you read?",
       "kappa": "Gotcha 😅",
       "omega": "You wish."
@@ -38160,7 +38160,7 @@ const Tree = [
       "delta": "What is your favourite film?",
       "epilson": "Why should I tell you?",
       "zeta": "Because I just asked you.",
-      "eta": "Because what?",
+      "eta": "When?",
       "theta": "Can't you read?",
       "iota": "Gotcha 😅",
       "kappa": "You wish.",
@@ -72842,7 +72842,7 @@ const Tree = [
       "theta": "I like your ass",
       "iota": "Really? Why? 🙁",
       "kappa": "Because you have big ass",
-      "omega": "Because what?"
+      "omega": "Excuse me?"
     },
     {
       "_id": "6822ab0033489543dc6f2486",
@@ -72855,7 +72855,7 @@ const Tree = [
       "eta": "I like your ass",
       "theta": "Really? Why? 🙁",
       "iota": "Because you have big ass",
-      "kappa": "Because what?",
+      "kappa": "Excuse me?",
       "omega": "You have a big ass"
     },
     {
@@ -72868,7 +72868,7 @@ const Tree = [
       "zeta": "I like your ass",
       "eta": "Really? Why? 🙁",
       "theta": "Because you have big ass",
-      "iota": "Because what?",
+      "iota": "Excuse me?",
       "kappa": "You have a big ass",
       "omega": "What's your favorite food?"
     },
@@ -72881,7 +72881,7 @@ const Tree = [
       "epilson": "I like your ass",
       "zeta": "Really? Why? 🙁",
       "eta": "Because you have big ass",
-      "theta": "Because what?",
+      "theta": "Excuse me?",
       "iota": "You have a big ass",
       "kappa": "What's your favorite food?",
       "omega": "Ass"
@@ -72894,7 +72894,7 @@ const Tree = [
       "delta": "I like your ass",
       "epilson": "Really? Why? 🙁",
       "zeta": "Because you have big ass",
-      "eta": "Because what?",
+      "eta": "Excuse me?",
       "theta": "You have a big ass",
       "iota": "What's your favorite food?",
       "kappa": "Ass",
@@ -74312,7 +74312,7 @@ const Tree = [
       "theta": "Don't insult me.",
       "iota": "Why?",
       "kappa": "Because it's rude and unfriendly.",
-      "omega": "Because what?"
+      "omega": "So?"
     },
     {
       "_id": "68a6ca570de335ad0da7228b",
@@ -74325,7 +74325,7 @@ const Tree = [
       "eta": "Don't insult me.",
       "theta": "Why?",
       "iota": "Because it's rude and unfriendly.",
-      "kappa": "Because what?",
+      "kappa": "So?",
       "omega": "Are you being difficult on purpose?"
     },
     {
@@ -74338,7 +74338,7 @@ const Tree = [
       "zeta": "Don't insult me.",
       "eta": "Why?",
       "theta": "Because it's rude and unfriendly.",
-      "iota": "Because what?",
+      "iota": "So?",
       "kappa": "Are you being difficult on purpose?",
       "omega": "Probably."
     },
@@ -74351,7 +74351,7 @@ const Tree = [
       "epilson": "Don't insult me.",
       "zeta": "Why?",
       "eta": "Because it's rude and unfriendly.",
-      "theta": "Because what?",
+      "theta": "So?",
       "iota": "Are you being difficult on purpose?",
       "kappa": "Probably.",
       "omega": "Stop it."
@@ -74364,7 +74364,7 @@ const Tree = [
       "delta": "Don't insult me.",
       "epilson": "Why?",
       "zeta": "Because it's rude and unfriendly.",
-      "eta": "Because what?",
+      "eta": "So?",
       "theta": "Are you being difficult on purpose?",
       "iota": "Probably.",
       "kappa": "Stop it.",
@@ -74377,7 +74377,7 @@ const Tree = [
       "gamma": "Don't insult me.",
       "delta": "Why?",
       "epilson": "Because it's rude and unfriendly.",
-      "zeta": "Because what?",
+      "zeta": "So?",
       "eta": "Are you being difficult on purpose?",
       "theta": "Probably.",
       "iota": "Stop it.",
@@ -74390,7 +74390,7 @@ const Tree = [
       "beta": "Don't insult me.",
       "gamma": "Why?",
       "delta": "Because it's rude and unfriendly.",
-      "epilson": "Because what?",
+      "epilson": "So?",
       "zeta": "Are you being difficult on purpose?",
       "eta": "Probably.",
       "theta": "Stop it.",
@@ -74403,7 +74403,7 @@ const Tree = [
       "alpha": "Don't insult me.",
       "beta": "Why?",
       "gamma": "Because it's rude and unfriendly.",
-      "delta": "Because what?",
+      "delta": "So?",
       "epilson": "Are you being difficult on purpose?",
       "zeta": "Probably.",
       "eta": "Stop it.",
@@ -74416,7 +74416,7 @@ const Tree = [
       "_id": "68a6caba0de335ad0da72292",
       "alpha": "Why?",
       "beta": "Because it's rude and unfriendly.",
-      "gamma": "Because what?",
+      "gamma": "So?",
       "delta": "Are you being difficult on purpose?",
       "epilson": "Probably.",
       "zeta": "Stop it.",
@@ -74429,7 +74429,7 @@ const Tree = [
     {
       "_id": "68a6caef0de335ad0da72293",
       "alpha": "Because it's rude and unfriendly.",
-      "beta": "Because what?",
+      "beta": "So?",
       "gamma": "Are you being difficult on purpose?",
       "delta": "Probably.",
       "epilson": "Stop it.",
@@ -74442,7 +74442,7 @@ const Tree = [
     },
     {
       "_id": "68a6caf50de335ad0da72294",
-      "alpha": "Because what?",
+      "alpha": "So?",
       "beta": "Are you being difficult on purpose?",
       "gamma": "Probably.",
       "delta": "Stop it.",
@@ -75321,6 +75321,62 @@ const Tree = [
       "iota": "I have not. Why?",
       "kappa": "No reason. I also haven't seen one.",
       "omega": "Hmmm..."
+    },
+    {
+      "_id": "68a6e15e6a3f009f2bc5c13d",
+      "alpha": null,
+      "beta": null,
+      "gamma": null,
+      "delta": null,
+      "epilson": null,
+      "zeta": null,
+      "eta": null,
+      "theta": null,
+      "iota": null,
+      "kappa": "Peanuts are tasty.",
+      "omega": "How do you know?"
+    },
+    {
+      "_id": "68a6e1636a3f009f2bc5c13e",
+      "alpha": null,
+      "beta": null,
+      "gamma": null,
+      "delta": null,
+      "epilson": null,
+      "zeta": null,
+      "eta": null,
+      "theta": null,
+      "iota": "Peanuts are tasty.",
+      "kappa": "How do you know?",
+      "omega": "... I just know. Why?"
+    },
+    {
+      "_id": "68a6e18d6a3f009f2bc5c13f",
+      "alpha": null,
+      "beta": null,
+      "gamma": null,
+      "delta": null,
+      "epilson": null,
+      "zeta": null,
+      "eta": null,
+      "theta": "Peanuts are tasty.",
+      "iota": "How do you know?",
+      "kappa": "... I just know. Why?",
+      "omega": "Because you have to eat it to know that."
+    },
+    {
+      "_id": "68a6e1916a3f009f2bc5c140",
+      "alpha": null,
+      "beta": null,
+      "gamma": null,
+      "delta": null,
+      "epilson": null,
+      "zeta": null,
+      "eta": "Peanuts are tasty.",
+      "theta": "How do you know?",
+      "iota": "... I just know. Why?",
+      "kappa": "Because you have to eat it to know that.",
+      "omega": "True. Your point?"
     }
 ]
 
