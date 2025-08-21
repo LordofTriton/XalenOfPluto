@@ -1,3 +1,5 @@
+import Override from "./defaults";
+
 let DateTime = require("./dateTime");
 let Corrector = require("./corrector");
 
@@ -7,8 +9,6 @@ var emojiRegex = /^(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbf
 const emojiTest = str => emojiRegex.test(str);
 
 const AlphaTest = str => /[a-z]/i.test(str)
-
-const overlook = ["you"];
 
 // function StripMessage(text) {
 //     let returnText = text;
@@ -130,7 +130,7 @@ function GetMatch(store, message, matchThreshold, matchDuplicate = false, blockS
 
                 if (blockSingleWord && processedStore.split(" ").length < 2) continue;
 
-                if (processedMessage.includes(processedStore) && !overlook.includes(processedStore.trim())) {
+                if (processedMessage.includes(processedStore) && !Override.loneSense.includes(processedStore.trim())) {
                     if (processedStore.split(" ").length >= phrase.split(" ").length) {
                         if ((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
                             phraseIndex = processedMessage.indexOf(processedStore);
@@ -195,7 +195,7 @@ function Compare(store, message, matchThreshold) {
             let processedStore = ` ${storeMessage} `
             let processedMessage = ` ${userMessage} `
 
-            if (processedMessage.includes(processedStore) && !overlook.includes(processedStore.trim())) {
+            if (processedMessage.includes(processedStore) && !Override.loneSense.includes(processedStore.trim())) {
                 if (processedStore.split(" ").length >= phrase.split(" ").length) {
                     if ((processedMessage.indexOf(processedStore) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
                         phraseIndex = processedMessage.indexOf(processedStore);
@@ -215,7 +215,7 @@ function Compare(store, message, matchThreshold) {
             let processedStore = ` ${storeMessage} `
             let processedMessage = ` ${userMessage} `
 
-            if (processedStore.includes(processedMessage)) {
+            if (processedStore.includes(processedMessage) && !Override.loneSense.includes(processedMessage.trim())) {
                 if (processedStore.split(" ").length >= phrase.split(" ").length) {
                     if ((processedStore.indexOf(processedMessage) > phraseIndex && !phrase.includes(processedStore)) || processedStore.includes(phrase)) {
                         phraseIndex = processedStore.indexOf(processedMessage);

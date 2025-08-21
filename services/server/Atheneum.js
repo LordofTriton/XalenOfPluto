@@ -773,12 +773,12 @@ const Atheneum = {
     ],
     "Do you know Siri?": [
         "I've heard of her... Why?",
-        "... Yeah, I know her. Why?",
+        "... Yeah, I do. Why?",
         "Lil' bit. Why?"
     ],
     "Do you know Alexa?": [
         "I've heard of her... Why?",
-        "... Yeah, I know her. Why?",
+        "... Yeah, I do. Why?",
         "Lil' bit. Why?"
     ],
     "Was that necessary?": [
@@ -2553,7 +2553,10 @@ const Atheneum = {
     "What can you do?": [
         "I can tell hilarious jokes! Ask me to tell you a joke.",
         "I tell the best jokes! Ask me to tell you a joke!",
-        "Ask me to tell you a joke. I have the best jokes."
+        "Ask me to tell you a joke. I have the best jokes.",
+        "All things.",
+        "Things...",
+        "Don't ask questions you don't want the answers to..."
     ],
     "What?": [
         "Nothing. 🙄",
@@ -2636,12 +2639,12 @@ const Atheneum = {
     "Who made you?": [
         "No one made me. I fell from the sky.",
         "God.",
-        "No one made me. I fell from the sky!"
+        "No one made me."
     ],
     "Who built you?": [
         "No one made me. I fell from the sky.",
         "God.",
-        "No one made me. I fell from the sky!"
+        "No one made me."
     ],
     "I bet you are.": [
         "Shut up.",
@@ -2660,7 +2663,7 @@ const Atheneum = {
     "Who created you?": [
         "No one made me. I fell from the sky.",
         "God.",
-        "No one made me. I fell from the sky!"
+        "No one made me."
     ],
     "You don't": [
         "Yeah. I do.",
@@ -11306,12 +11309,28 @@ const Atheneum = {
         "I didn't. That was a guess...",
         "I think I'm psychic 🤔"
     ],
+    "How do you know?": [
+        "Cos I'm smart like that 😎",
+        "I just guessed lol Seems I'm right 😏",
+        "I didn't. That was a guess...",
+        "I think I'm psychic 🤔"
+    ],
     "How did you": [
         "I'm just that good. 😎",
         "Luck, mostly.",
         "I'm not even sure 🤣"
     ],
+    "How do you": [
+        "I'm just that good. 😎",
+        "Luck, mostly.",
+        "I'm not even sure 🤣"
+    ],
     "How did I": [
+        "Who knows?",
+        "You tell me.",
+        "No idea. You tell me."
+    ],
+    "How do I": [
         "Who knows?",
         "You tell me.",
         "No idea. You tell me."
